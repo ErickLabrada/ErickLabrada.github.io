@@ -1,0 +1,114 @@
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus
+{
+    background-color: #B19BD9;
+    border-color: #B19BD9;
+}
+
+.header-logo {
+    width: 50px;
+    height: auto;
+    padding-right: 15px;
+  }
+
+.Introduction{
+    background-color: #323637;
+    color: white;
+}
+
+.text-purple-half {
+    color: #B19BD9;
+}
+.text-white-half {
+    color: #E2E2E2; 
+}
+
+.AboutMe{
+    background-color: #E2E2E2;
+    color: 323637;
+}
+
+.themed-grid-col {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+  
+  .themed-container {
+    padding: .75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dark-tittle {
+    color: #323637;
+    size: 48px;
+}
+
+.light-tittle {
+    color: #E2E2E2;
+    size: 48px;
+}
+
+.Skills{
+    background-color: #323637;
+    color: #E2E2E2;
+}
+
+.Projects{
+    background-color: #E2E2E2;
+    color: 323637;
+}
+
+.album{
+    background-color: #E2E2E2 !important;
+    color: 323637 !important;
+}
+
+#thumbnail3d {
+    transition: all 0.3s ease-in-out; /* Optional: smooth transition */
+}
+
+#thumbnail3d:hover {
+    content: url('Imgs/3D_Engine.gif');
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+  }
+  
+  .icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+  }
+  
+  .text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+  .text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+  .text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+  
+  .card-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .feature-icon-small {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .col-10 img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
