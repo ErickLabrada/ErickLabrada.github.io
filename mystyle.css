@@ -1,5 +1,8 @@
 /* Global styles */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #212529 !important; /* Dark background for the whole page to match */
 }
 
@@ -129,8 +132,8 @@ body {
 
 .album .container {
   background-color: #323637 !important; /* Dark background for container */
-  padding: 0 !important; /* Remove padding */
-  margin: 0 !important; /* Remove margin */
+  padding: 1rem !important; /* Add padding */
+  margin: 1rem !important; /* Add margin */
 }
 
 .album .row {

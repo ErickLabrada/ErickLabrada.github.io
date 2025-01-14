@@ -18,21 +18,18 @@
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <img src="/Imgs/Logo.jpg" alt="Logo" class="header-logo">
-          </a>
+          <img src="/Imgs/Logo.jpg" alt="Logo" class="header-logo">
         </a>
-
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About Me</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Skills</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Projects</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Contact me</a></li>
+          <li><a href="index.html" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#AboutMe" class="nav-link px-2 text-white">About Me</a></li>
+          <li><a href="#Projects" class="nav-link px-2 text-white">Projects</a></li>
+          <li><a href="#Contact" class="nav-link px-2 text-white">Contact me</a></li>
         </ul>
       </div>
     </div>
   </header>
+
   <!--Introduction-->
   <div class="Introduction">
     <div class="container col-xxl-8 px-4 py-5">
@@ -49,9 +46,9 @@
           <p class="lead">
             Hi there! welcome to my portfolio. I'm Erick Labrada a passionate
             software engineer who loves learning all sorts of new skills and all
-            kinds of knowledge. With a keen interest in physics, astronomy and artifical inteligence,
-            I'm looking foward to improve my skills and use them in the development
-            of new tools that have a positive impact in the world.
+            kinds of knowledge. With a keen interest in physics, astronomy and artificial intelligence,
+            I'm looking forward to improving my skills and using them in the development
+            of new tools that have a positive impact on the world.
           </p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <a href="/Files/Resume.pdf" class="btn btn-primary">
@@ -60,32 +57,28 @@
             <a href="https://github.com/ErickLabrada" class="btn btn-outline-secondary btn-lg px-4" target="_blank">
               <i class="bi bi-github"></i> Github
             </a>
-
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <!-- About Me -->
-<div class="AboutMe">
-  <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-    <br>
-    <p class="dark-tittle" style="text-align: center;">About Me</p>
-  </h1>
-
-  <div class="about-content">
-    <p>Hello! I'm <strong>Erick Labrada</strong>, a <strong>Senior Software Engineering student</strong> at <strong>ITSON</strong>, with a deep passion for <strong>software development</strong>, <strong>astronomy</strong>, <strong>physics</strong>, and <strong>quantum computing</strong>. I believe in the power of technology to solve complex problems, and I’m excited to contribute to fields that merge my love for software with my interest in the universe and advanced sciences.</p>
-
-    <p>Over the years, my curiosity for technology has evolved into a focused pursuit of software engineering, where I’m developing skills in various programming languages, databases, and frameworks to build real-world applications.</p>
-
-    <p>Currently, I’m focused on expanding my knowledge in <strong>quantum computing</strong> and <strong>distributed systems</strong>, with the goal of applying these concepts to real-world challenges in science and technology. My projects reflect this interest, from <strong>AI-based neural networks</strong> to <strong>greenhouse management systems</strong> and <strong>3D engine development</strong>—each helping me gain a deeper understanding of how software can drive innovation in industries like <strong>astronomy</strong> and <strong>physics</strong>.</p>
-
-    <p>As I approach my graduation in May 2025, I’m actively seeking opportunities to work on <strong>cutting-edge projects</strong> that explore the intersection of <strong>software engineering</strong> and <strong>science</strong>, and I'm eager to continue learning and growing in the fields of <strong>quantum computing</strong> and <strong>AI</strong>.</p>
+  <div class="AboutMe" id="AboutMe">
+    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+      <p class="dark-tittle" style="text-align: center;">About Me</p>
+    </h1>
+    <div class="about-content">
+      <p>Hello! I'm <strong>Erick Labrada</strong>, a <strong>Senior Software Engineering student</strong> at
+        <strong>ITSON</strong>, with a deep passion for <strong>software development</strong>,
+        <strong>astronomy</strong>, <strong>physics</strong>, and <strong>quantum computing</strong>. I believe in the
+        power of technology to solve complex problems, and I’m excited to contribute to fields that merge my love for
+        software with my interest in the universe and advanced sciences.</p>
+    </div>
   </div>
-</div>
-  </div>
+
   <!--Projects-->
-  <div class="Projects">
+  <div class="Projects" id="Projects">
     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
       <br>
       <p class="light-tittle" style="text-align: center;">Projects</p>
@@ -94,35 +87,118 @@
     <div class="album py-5 bg-body-tertiary">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img id="thumbnail3d" src="Imgs/3D_EngineThumbnail.png" focusable="true" alt="">
+              <div class="card-body">
+                <h5 class="card-title">3D Render Engine</h5>
+                <p class="card-text">
+                  As the core of a bigger project, I built a 3D render engine in JAVA and documented
+                  in obsidian the different concepts I had to learn.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex justify-content-end">
+                    <div class="btn-group">
+                      <a href="https://github.com/ErickLabrada/3D_Engine" class="btn btn-primary btn-sm"
+                        target="_blank">
+                        <i class="bi bi-github"></i> Repository
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="card shadow-sm">
             <img id="thumbnail3d" src="Imgs/3D_EngineThumbnail.png" focusable="true" alt="">
             <div class="card-body">
+              <h5 class="card-title">3D Render Engine</h5>
               <p class="card-text">
                 As the core of a bigger project, I built a 3D render engine in JAVA and documented
-                in obsidian the different concepts I had to learn.  
+                in obsidian the different concepts I had to learn.
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex justify-content-end">
                   <div class="btn-group">
-                    <a href="renderEngine.html" class="btn btn-primary btn-sm">
-                      <i class="bi bi-book"></i> Read More
-                    </a>
-                    <a href="https://github.com/ErickLabrada/3D_Engine" class="btn btn-outline-secondary btn-sm" target="_blank">
+                    <a href="https://github.com/ErickLabrada/3D_Engine" class="btn btn-primary btn-sm" target="_blank">
                       <i class="bi bi-github"></i> Repository
                     </a>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
         </div>
-        </div>
+
+
 
       </div>
     </div>
+    <br><br>
+
   </div>
+  </div>
+
+  <footer class="text-center text-lg-start bg-dark text-light" id="Contact">
+    <!-- Social Media and Contact Section -->
+    <section class="container py-4">
+      <div class="row text-center text-md-start">
+        <!-- Social Media Links -->
+        <div class="col-md-3">
+          <h6 class="text-uppercase fw-bold mb-4">Follow Me</h6>
+          <a href="#" class="me-4 text-reset" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <br>
+          <a href="b #" class="me-4 text-reset" aria-label="Twitter">
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+          <br>
+          <a href="#" class="me-4 text-reset" aria-label="Google">
+            <i class="fab fa-google"></i> Google
+          </a>
+          <br>
+          <a href="#" class="me-4 text-reset" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+
+        <!-- LinkedIn and GitHub -->
+        <div class="col-md-3">
+          <h6 class="text-uppercase fw-bold mb-4">Professional</h6>
+          <a href="https://www.linkedin.com/in/ericklabrada" class="text-reset" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <br>
+          <a href="https://github.com/ErickLabrada" class="text-reset" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p>
+            <i class="bi bi-envelope"></i>
+            <a href="mailto:erick@example.com" class="text-reset">Erick.labrada233380@gmail.com</a>
+          </p>
+          <p>
+            <i class="bi bi-telephone"></i>
+            +52 (668) 116-3510
+          </p>
+        </div>
+
+        <!-- About -->
+        <div class="col-md-3">
+          <h6 class="text-uppercase fw-bold mb-4">About Me</h6>
+          <p>
+            Feel free to explore and contact me through any of my networks. I’m eager to learn and explore new
+            opportunities!
+          </p>
+        </div>
+      </div>
+    </section>
+  </footer>
 
 
 </body>
