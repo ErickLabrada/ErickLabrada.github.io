@@ -7,9 +7,7 @@
     "start": "astro dev",
   "build": "astro build && touch dist/.nojekyll",
     "preview": "astro preview",
-    "astro": "astro",
-    "prepare": "husky"
-    
+    "astro": "astro"    
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

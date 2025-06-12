@@ -1,5 +1,6 @@
+import { defineConfig } from "astro/config";
+
 export default defineConfig({
-  site: "https://ericklabrada.github.io/",
-  base: "/", // ✅ root for username pages
-  outDir: 'dist',
+  site: 'https://ericklabrada.github.io',
+  base: "ericklabrada.github.io",
 });
