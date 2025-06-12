@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+  "build": "astro build && touch dist/.nojekyll",
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "husky"
+    
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
