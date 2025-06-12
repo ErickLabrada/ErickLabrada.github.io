@@ -1,0 +1,220 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SkipLink from "@utils/SkipLink.astro";
+import Polaroid from "@components/Polaroid.astro";
+import BackToTop from "@utils/BackToTop.astro";
+import SectionDivider from "@components/DashedTitle.astro";
+import Header from "~/components/Header.astro";
+---
+
+<Layout title="Erick's Polaroids ">
+  <SkipLink />
+  <div class="sr-only" id="start"></div>
+
+<main>
+  <Header siteTitle="Erick's Polaroids " />
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-photo">
+      <Polaroid
+        imageSrc="/src/images/me.jpg  "
+        title="That's me!"
+      />
+    </div>
+    <div class="about-text">
+      <h1>Hello World, I'm Erick 👋</h1>
+      <p>
+        I'm a Software Engineering graduate and a Machine Learning Engineer passionate who loves learning and building real-world solutions.
+        I enjoy mixing tech with music and science, and exploring the creative boundaries of software development and AI.
+        This portfolio is a collection of things I’ve loved creating. <br><br>
+        Hope you enjoy flipping through it like old Polaroids. 
+      </p>
+      <a href="/Erick_CV.pdf" download class="download-cv-button">
+  Download CV
+</a>
+
+    </div>
+  </div>
+</section>
+<SectionDivider title="Projects" />
+ <section class="polaroid-gallery" id="projects">
+    <Polaroid imageSrc="/src/images/cat.jpeg" title="Placeholder" description="Placeholder description." />
+    <Polaroid imageSrc="/src/images/Platypus.png" title="Placeholder" description="Placeholder description." />
+    <Polaroid imageSrc="/src/images/PerryThePlatypus.png" title="Placeholder" description="Placeholder description." />
+    <Polaroid imageSrc="/src/images/cat.jpeg" title="Placeholder" description="Placeholder description." />
+    <Polaroid imageSrc="/src/images/Platypus.png" title="Placeholder" description="Placeholder description." />
+    <Polaroid imageSrc="/src/images/PerryThePlatypus.png" title="Placeholder" description="Placeholder description." />
+    <Polaroid imageSrc="/src/images/cat.jpeg" title="Placeholder" description="Placeholder description." />
+    <Polaroid imageSrc="/src/images/Platypus.png" title="Placeholder" description="Placeholder description." />
+    <Polaroid imageSrc="/src/images/PerryThePlatypus.png" title="Placeholder" description="Placeholder description." />
+  </section>
+<SectionDivider title="Contact" />
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <h1>Let’s Connect 🌌</h1>
+    <p>Whether it’s about AI, music, software or weird space stuff — feel free to reach out!</p>
+
+    <ul class="contact-list">
+      <li>
+        <a href="https://www.linkedin.com/in/ericklabrada/" target="_blank" rel="noopener" class="contact-link">
+          <img src="/src/images/linkedin.svg" alt="LinkedIn" />
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/ErickLabrada" target="_blank" rel="noopener" class="contact-link">
+          <img src="/src/images/github.svg" alt="GitHub" />
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a href="mailto:Erick.Labrada233380@gmail.com" class="contact-link">
+          <img src="/src/images/email.svg" alt="Email" />
+          Erick.Labrada233380@gmail.com
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+</main>
+
+<style>
+
+
+
+ .about {
+    padding: 60px 20px 40px;
+    margin-top: 30px;
+  }
+
+  .about-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.about-photo {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-text {
+  flex: 2 1 600px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #AAA;
+}
+
+.polaroid-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .download-cv-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333;
+  border: 2px dashed #aaa;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.download-cv-button:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.contact-section {
+  padding: 60px 20px 80px;
+  text-align: center;
+}
+
+.contact-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+}
+
+.contact-inner h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-inner p {
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #CCC;
+  text-decoration: none;
+  border: 2px dashed #aaa;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.contact-link img {
+  width: 24px;
+  height: 24px;
+}
+
+
+</style>
+
+
+  <section aria-label="Utilities">
+    <!-- You could also add a theme switch here or anything considered a utility -->
+    <BackToTop />
+  </section>
+</Layout>

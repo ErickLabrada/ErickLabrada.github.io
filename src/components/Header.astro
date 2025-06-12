@@ -1,0 +1,78 @@
+---
+import DashedTitle from "./DashedTitle.astro";
+import Polaroid from "./Polaroid.astro";
+
+// Optional props for dynamic title or nav items
+const { siteTitle = "Erick's Portfolio" } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">{siteTitle}</h1>
+    <nav class="nav">
+      <a href="#start">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+<DashedTitle></DashedTitle>
+</header>
+
+<style>
+  .site-header {
+    color: #fff;
+    padding: 20px;
+      position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* make sure it’s above other elements */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional subtle shadow */
+  background-color:#0c0e14; /* Dark mode */
+  background-image: url("/src/images/nnnoise-dark.svg");
+  background-repeat: repeat;
+  background-size: auto;
+  }
+
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    font-family: 'Courier New', Courier, monospace;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .nav a {
+    color: #ccc;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+
+  .nav a:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .nav a {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+</style>
