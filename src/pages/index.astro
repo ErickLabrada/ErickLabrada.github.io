@@ -35,15 +35,34 @@ import Header from "~/components/Header.astro";
 </section>
 <SectionDivider title="Projects" />
  <section class="polaroid-gallery" id="projects">
-<Polaroid imageSrc="/images/cat.jpeg" title="Placeholder" description="Placeholder description." />
-<Polaroid imageSrc="/images/Platypus.png" title="Placeholder" description="Placeholder description." />
-<Polaroid imageSrc="/images/PerryThePlatypus.png" title="Placeholder" description="Placeholder description." />
-<Polaroid imageSrc="/images/cat.jpeg" title="Placeholder" description="Placeholder description." />
-<Polaroid imageSrc="/images/Platypus.png" title="Placeholder" description="Placeholder description." />
-<Polaroid imageSrc="/images/PerryThePlatypus.png" title="Placeholder" description="Placeholder description." />
-<Polaroid imageSrc="/images/cat.jpeg" title="Placeholder" description="Placeholder description." />
-<Polaroid imageSrc="/images/Platypus.png" title="Placeholder" description="Placeholder description." />
-<Polaroid imageSrc="/images/PerryThePlatypus.png" title="Placeholder" description="Placeholder description." />
+
+  <Polaroid
+  imageSrc="/images/cat.jpeg"
+  title="AI Communication Assistant"
+  description="Multitenant AI assistant project."
+  fullDescription="During my internship, I built a multitenant AI assistant supporting dynamic intents, semantic filter extraction, and secure data handling using a hybrid of MongoDB and PostgreSQL."
+  githubUrl="https://github.com/erick/ai-assistant"
+  technologies={["Python","MongoDB", "Mistral", "Hugging Face"]}
+/>
+
+  <Polaroid
+  imageSrc="/images/Platypus.png"
+  title="3D Engine"
+  description="Lineal Algebra powered engine."
+  fullDescription="Driven by curiosity, I learnt the concepts required and built a 3D engine from scratch in java"
+  githubUrl="https://github.com/erick/ai-assistant"
+  technologies={["Java", "Lineal Algebra"]}
+/>
+
+  <Polaroid
+  imageSrc="/images/PerryThePlatypus.png"
+  title="Pokemon Identifier"
+  description="Convolutional Neural Network that distinguished between 4 pokemons."
+  fullDescription="As my final project for my AI class, I created and trained a CNN to recognize 4 pokemons"
+  githubUrl="https://github.com/erick/ai-assistant"
+  technologies={["Python", "Tensor Flow","Machine Learning"]}
+/>
+
   </section>
 <SectionDivider title="Contact" />
 

@@ -1,12 +1,94 @@
 <!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.14"><meta name="keywords" content="html, css, javascript, astro, static site generator"><meta name="description" content="Erick's Polaroids "><link rel="icon" type="image" href="/src/images/Logo.jpg"><link rel="canonical" href="https://ericklabrada.github.io/"><title>Erick&#39;s Polaroids </title><meta property="og:url" content="https://ericklabrada.github.io/"><meta property="og:type" content="website"><meta property="og:site_name" content="Erick's Polaroids "><meta property="og:description" content="Erick's Polaroids "><meta property="og:title" content="Erick's Polaroids "><meta property="og:image" content="https://ericklabrada.github.io/seo.png"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="Erick's Polaroids "><meta property="og:image:width" content="1600"><meta property="og:image:height" content="882"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Erick's Polaroids "><meta name="twitter:description" content="Erick's Polaroids "><meta name="twitter:image" content="https://ericklabrada.github.io/seo.png"><meta name="twitter:image:alt" content="Erick's Polaroids "><link rel="stylesheet" href="/_astro/index.Azhy43UO.css">
-<link rel="stylesheet" href="/_astro/index.C_FHF7Gn.css"></head> <body>  <div class="sr-only" id="start" data-astro-cid-j7pv25f6></div> <main data-astro-cid-j7pv25f6> <header class="site-header" data-astro-cid-3ef6ksr2> <div class="container" data-astro-cid-3ef6ksr2> <h1 class="logo" data-astro-cid-3ef6ksr2>Erick&#39;s Polaroids </h1> <nav class="nav" data-astro-cid-3ef6ksr2> <a href="/ericklabrada.github.io/#start" data-astro-cid-3ef6ksr2>Home</a> <a href="/ericklabrada.github.io/#about" data-astro-cid-3ef6ksr2>About</a> <a href="/ericklabrada.github.io/#projects" data-astro-cid-3ef6ksr2>Projects</a> <a href="/ericklabrada.github.io/#contact" data-astro-cid-3ef6ksr2>Contact</a> </nav> </div> <div class="dashed-title" data-astro-cid-32cffrpt> <h2 data-astro-cid-32cffrpt></h2> </div>  </header>  <section class="about" id="about" data-astro-cid-j7pv25f6> <div class="about-inner" data-astro-cid-j7pv25f6> <div class="about-photo" data-astro-cid-j7pv25f6> <div class="polaroid" style="transform: rotate(-2.015967397446233deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/me.jpg  " alt="That's me!" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>That&#39;s me!</div> <div class="description" data-astro-cid-upl4gapb></div> </div>  </div> <div class="about-text" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Hello World, I'm Erick 👋</h1> <p data-astro-cid-j7pv25f6>
+<link rel="stylesheet" href="/_astro/index.DL3wKFlY.css"></head> <body>  <div class="sr-only" id="start" data-astro-cid-j7pv25f6></div> <main data-astro-cid-j7pv25f6> <header class="site-header" data-astro-cid-3ef6ksr2> <div class="container" data-astro-cid-3ef6ksr2> <h1 class="logo" data-astro-cid-3ef6ksr2>Erick&#39;s Polaroids </h1> <nav class="nav" data-astro-cid-3ef6ksr2> <a href="/#start" data-astro-cid-3ef6ksr2>Home</a> <a href="/#about" data-astro-cid-3ef6ksr2>About</a> <a href="/#projects" data-astro-cid-3ef6ksr2>Projects</a> <a href="/#contact" data-astro-cid-3ef6ksr2>Contact</a> </nav> </div> <div class="dashed-title" data-astro-cid-32cffrpt> <h2 data-astro-cid-32cffrpt></h2> </div>  </header>  <section class="about" id="about" data-astro-cid-j7pv25f6> <div class="about-inner" data-astro-cid-j7pv25f6> <div class="about-photo" data-astro-cid-j7pv25f6> <div class="polaroid" style="transform: rotate(1.6800119054904163deg);" onclick="showModal('that's-me!')" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/me.jpg  " alt="That's me!" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>That&#39;s me!</div> <div class="description" data-astro-cid-upl4gapb></div> </div> <!-- Modal --> <div id="that's-me!" class="modal" data-astro-cid-upl4gapb> <div class="modal-content" data-astro-cid-upl4gapb> <span class="close" onclick="closeModal('that's-me!')" data-astro-cid-upl4gapb>&times;</span> <div class="modal-header" data-astro-cid-upl4gapb> <h2 data-astro-cid-upl4gapb>That&#39;s me!</h2> </div> <img src="/images/me.jpg  " alt="That's me!" class="modal-image" data-astro-cid-upl4gapb> <p class="modal-description" data-astro-cid-upl4gapb></p>  <br data-astro-cid-upl4gapb>  </div> </div>  <script>
+  function showModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'block';
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'none';
+  }
+
+  window.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+</script> </div> <div class="about-text" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Hello World, I'm Erick 👋</h1> <p data-astro-cid-j7pv25f6>
 I'm a Software Engineering graduate and a Machine Learning Engineer passionate who loves learning and building real-world solutions.
         I enjoy mixing tech with music and science, and exploring the creative boundaries of software development and AI.
         This portfolio is a collection of things I’ve loved creating. <br data-astro-cid-j7pv25f6><br data-astro-cid-j7pv25f6>
 Hope you enjoy flipping through it like old Polaroids.
 </p> <a href="/Erick_CV.pdf" download class="download-cv-button" data-astro-cid-j7pv25f6>
 Download CV
-</a> </div> </div> </section> <div class="dashed-title" data-astro-cid-32cffrpt> <h2 data-astro-cid-32cffrpt>Projects</h2> </div>  <section class="polaroid-gallery" id="projects" data-astro-cid-j7pv25f6> <div class="polaroid" style="transform: rotate(-2.881084820394147deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/cat.jpeg" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  <div class="polaroid" style="transform: rotate(-1.9541151511223207deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/Platypus.png" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  <div class="polaroid" style="transform: rotate(2.6264239666337605deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/PerryThePlatypus.png" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  <div class="polaroid" style="transform: rotate(1.9735980275378529deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/cat.jpeg" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  <div class="polaroid" style="transform: rotate(1.9276914317698175deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/Platypus.png" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  <div class="polaroid" style="transform: rotate(-1.308213254026115deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/PerryThePlatypus.png" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  <div class="polaroid" style="transform: rotate(1.6278157515304832deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/cat.jpeg" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  <div class="polaroid" style="transform: rotate(-2.0565478957049974deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/Platypus.png" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  <div class="polaroid" style="transform: rotate(-0.36407474449283894deg)" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/PerryThePlatypus.png" alt="Placeholder" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Placeholder</div> <div class="description" data-astro-cid-upl4gapb>Placeholder description.</div> </div>  </section> <div class="dashed-title" data-astro-cid-32cffrpt> <h2 data-astro-cid-32cffrpt>Contact</h2> </div>  <section class="contact-section" id="contact" data-astro-cid-j7pv25f6> <div class="contact-inner" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Let’s Connect 🌌</h1> <p data-astro-cid-j7pv25f6>Whether it’s about AI, music, software or weird space stuff — feel free to reach out!</p> <ul class="contact-list" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6> <a href="https://www.linkedin.com/in/ericklabrada/" target="_blank" rel="noopener" class="contact-link" data-astro-cid-j7pv25f6> <img src="/images/linkedin.svg" alt="LinkedIn" data-astro-cid-j7pv25f6>
+</a> </div> </div> </section> <div class="dashed-title" data-astro-cid-32cffrpt> <h2 data-astro-cid-32cffrpt>Projects</h2> </div>  <section class="polaroid-gallery" id="projects" data-astro-cid-j7pv25f6> <div class="polaroid" style="transform: rotate(0.8141036010262308deg);" onclick="showModal('ai-communication-assistant')" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/cat.jpeg" alt="AI Communication Assistant" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>AI Communication Assistant</div> <div class="description" data-astro-cid-upl4gapb>Multitenant AI assistant project.</div> </div> <!-- Modal --> <div id="ai-communication-assistant" class="modal" data-astro-cid-upl4gapb> <div class="modal-content" data-astro-cid-upl4gapb> <span class="close" onclick="closeModal('ai-communication-assistant')" data-astro-cid-upl4gapb>&times;</span> <div class="modal-header" data-astro-cid-upl4gapb> <h2 data-astro-cid-upl4gapb>AI Communication Assistant</h2> </div> <img src="/images/cat.jpeg" alt="AI Communication Assistant" class="modal-image" data-astro-cid-upl4gapb> <p class="modal-description" data-astro-cid-upl4gapb>During my internship, I built a multitenant AI assistant supporting dynamic intents, semantic filter extraction, and secure data handling using a hybrid of MongoDB and PostgreSQL.</p> <div class="tech-stack" data-astro-cid-upl4gapb> <h4 data-astro-cid-upl4gapb>Technologies Used</h4> <ul data-astro-cid-upl4gapb> <li data-astro-cid-upl4gapb>Python</li><li data-astro-cid-upl4gapb>MongoDB</li><li data-astro-cid-upl4gapb>Mistral</li><li data-astro-cid-upl4gapb>Hugging Face</li> </ul> </div> <br data-astro-cid-upl4gapb> <div class="github-button-container" data-astro-cid-upl4gapb> <a href="https://github.com/erick/ai-assistant" class="github-button" target="_blank" rel="noopener noreferrer" data-astro-cid-upl4gapb>
+View on GitHub
+</a> </div> </div> </div>  <script>
+  function showModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'block';
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'none';
+  }
+
+  window.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+</script> <div class="polaroid" style="transform: rotate(0.7449288224455395deg);" onclick="showModal('3d-engine')" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/Platypus.png" alt="3D Engine" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>3D Engine</div> <div class="description" data-astro-cid-upl4gapb>Lineal Algebra powered engine.</div> </div> <!-- Modal --> <div id="3d-engine" class="modal" data-astro-cid-upl4gapb> <div class="modal-content" data-astro-cid-upl4gapb> <span class="close" onclick="closeModal('3d-engine')" data-astro-cid-upl4gapb>&times;</span> <div class="modal-header" data-astro-cid-upl4gapb> <h2 data-astro-cid-upl4gapb>3D Engine</h2> </div> <img src="/images/Platypus.png" alt="3D Engine" class="modal-image" data-astro-cid-upl4gapb> <p class="modal-description" data-astro-cid-upl4gapb>Driven by curiosity, I learnt the concepts required and built a 3D engine from scratch in java</p> <div class="tech-stack" data-astro-cid-upl4gapb> <h4 data-astro-cid-upl4gapb>Technologies Used</h4> <ul data-astro-cid-upl4gapb> <li data-astro-cid-upl4gapb>Java</li><li data-astro-cid-upl4gapb>Lineal Algebra</li> </ul> </div> <br data-astro-cid-upl4gapb> <div class="github-button-container" data-astro-cid-upl4gapb> <a href="https://github.com/erick/ai-assistant" class="github-button" target="_blank" rel="noopener noreferrer" data-astro-cid-upl4gapb>
+View on GitHub
+</a> </div> </div> </div>  <script>
+  function showModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'block';
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'none';
+  }
+
+  window.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+</script> <div class="polaroid" style="transform: rotate(-1.8443061963635397deg);" onclick="showModal('pokemon-identifier')" data-astro-cid-upl4gapb> <div class="image-wrapper" data-astro-cid-upl4gapb> <img src="/images/PerryThePlatypus.png" alt="Pokemon Identifier" data-astro-cid-upl4gapb> </div> <div class="title" data-astro-cid-upl4gapb>Pokemon Identifier</div> <div class="description" data-astro-cid-upl4gapb>Convolutional Neural Network that distinguished between 4 pokemons.</div> </div> <!-- Modal --> <div id="pokemon-identifier" class="modal" data-astro-cid-upl4gapb> <div class="modal-content" data-astro-cid-upl4gapb> <span class="close" onclick="closeModal('pokemon-identifier')" data-astro-cid-upl4gapb>&times;</span> <div class="modal-header" data-astro-cid-upl4gapb> <h2 data-astro-cid-upl4gapb>Pokemon Identifier</h2> </div> <img src="/images/PerryThePlatypus.png" alt="Pokemon Identifier" class="modal-image" data-astro-cid-upl4gapb> <p class="modal-description" data-astro-cid-upl4gapb>As my final project for my AI class, I created and trained a CNN to recognize 4 pokemons</p> <div class="tech-stack" data-astro-cid-upl4gapb> <h4 data-astro-cid-upl4gapb>Technologies Used</h4> <ul data-astro-cid-upl4gapb> <li data-astro-cid-upl4gapb>Python</li><li data-astro-cid-upl4gapb>Tensor Flow</li><li data-astro-cid-upl4gapb>Machine Learning</li> </ul> </div> <br data-astro-cid-upl4gapb> <div class="github-button-container" data-astro-cid-upl4gapb> <a href="https://github.com/erick/ai-assistant" class="github-button" target="_blank" rel="noopener noreferrer" data-astro-cid-upl4gapb>
+View on GitHub
+</a> </div> </div> </div>  <script>
+  function showModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'block';
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'none';
+  }
+
+  window.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+</script> </section> <div class="dashed-title" data-astro-cid-32cffrpt> <h2 data-astro-cid-32cffrpt>Contact</h2> </div>  <section class="contact-section" id="contact" data-astro-cid-j7pv25f6> <div class="contact-inner" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Let’s Connect 🌌</h1> <p data-astro-cid-j7pv25f6>Whether it’s about AI, music, software or weird space stuff — feel free to reach out!</p> <ul class="contact-list" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6> <a href="https://www.linkedin.com/in/ericklabrada/" target="_blank" rel="noopener" class="contact-link" data-astro-cid-j7pv25f6> <img src="/images/linkedin.svg" alt="LinkedIn" data-astro-cid-j7pv25f6>
 LinkedIn
 </a> </li> <li data-astro-cid-j7pv25f6> <a href="https://github.com/ErickLabrada" target="_blank" rel="noopener" class="contact-link" data-astro-cid-j7pv25f6> <img src="/images/github.svg" alt="GitHub" data-astro-cid-j7pv25f6>
 GitHub
