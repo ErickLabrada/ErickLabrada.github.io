@@ -42,6 +42,26 @@ const rotation = (Math.random() * 6) - 3;
 </div>
 
 <style>
+
+@keyframes wiggle {
+  0% { transform: rotate(-1deg) scale(1.03); }
+  50% { transform: rotate(1deg) scale(1.04); }
+  100% { transform: rotate(-1deg) scale(1.03); }
+}
+
+.polaroid:hover {
+  animation: wiggle 0.3s ease-in-out forwards;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
   .polaroid {
     width: 240px;
     background: white;
