@@ -1,0 +1,140 @@
+---
+// ProjectCarousel.astro
+const { images = [], title = "Project Carousel" } = Astro.props;
+---
+
+<style>
+.carousel-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.polaroid {
+  background: white;
+  padding: 12px 12px 24px 12px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.polaroid p {
+  margin-top: 12px;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-button:hover {
+  background-color: black;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+</style>
+
+<!-- Optional: Shadows Into Light Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<div class="carousel-wrapper">
+  <h2 class="carousel-title">{title}</h2>
+  <div class="carousel-container">
+    <button class="carousel-button prev" aria-label="Previous">&#10094;</button>
+    <div class="carousel-track" id="carousel-track">
+      {images.map(({ src, caption = "" }, index: number) => (
+        <div class="carousel-slide">
+          <div class="polaroid">
+            <img src={src} alt={`Photo ${index + 1}`} />
+            <p>{caption}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <button class="carousel-button next" aria-label="Next">&#10095;</button>
+  </div>
+</div>
+
+<script>
+  const track = document.getElementById("carousel-track");
+  const prevBtn = document.querySelector(".carousel-button.prev");
+  const nextBtn = document.querySelector(".carousel-button.next");
+
+  let currentIndex = 0;
+
+  function updateSlide() {
+    if (track) {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  }
+
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", () => {
+      if (track) {
+        currentIndex = (currentIndex - 1 + track.children.length) % track.children.length;
+        updateSlide();
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (track) {
+        currentIndex = (currentIndex + 1) % track.children.length;
+        updateSlide();
+      }
+    });
+  }
+</script>

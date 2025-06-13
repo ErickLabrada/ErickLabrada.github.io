@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Polaroid from "@components/Polaroid.astro";
 import SectionDivider from "@components/DashedTitle.astro";
 import Header from "~/components/Header.astro";
+import ProjectCarousel from "@components/ProjectCarousel.astro";
 ---
 
 <Layout title="Erick's Polaroids ">
@@ -21,7 +22,7 @@ import Header from "~/components/Header.astro";
     <div class="about-text">
       <h1>Hello World, I'm Erick 👋</h1>
       <p>
-        I'm a Software Engineering graduate and a Machine Learning Engineer passionate who loves learning and building real-world solutions.
+        "I'm a Software Engineering graduate and aspiring Machine Learning Engineer passionate about building real-world solutions that bridge AI, science, and creativity.".
         I enjoy mixing tech with music and science, and exploring the creative boundaries of software development and AI.
         This portfolio is a collection of things I’ve loved creating. <br><br>
         Hope you enjoy flipping through it like old Polaroids. 
@@ -37,35 +38,118 @@ import Header from "~/components/Header.astro";
  <section class="polaroid-gallery" id="projects">
 
   <Polaroid
-  imageSrc="/images/cat.jpeg"
-  title="AI Communication Assistant"
-  description="Multitenant AI assistant project."
-  fullDescription="During my internship, I built a multitenant AI assistant supporting dynamic intents, semantic filter extraction, and secure data handling using a hybrid of MongoDB and PostgreSQL."
-  githubUrl="https://github.com/erick/ai-assistant"
-  technologies={["Python","MongoDB", "Mistral", "Hugging Face"]}
+  imageSrc="/images/AI_Assistant.jpg"
+  title=" AI Communication Assistant"
+  fullDescription="This project involved designing and implementing an AI-powered communication assistant tailored for dynamic user interaction. I developed the overall architecture and handled core backend logic using Python and MongoDB. The assistant integrates custom intent detection and a Retrieval-Augmented Generation (RAG) pipeline built with Hugging Face models to interpret user queries and fetch relevant business data. Due to an NDA, source code and interface visuals are not publicly available."
+  description="During my internship at Gila Software I built a Multi-component AI assistant with intent detection and a custom RAG system, designed for real-time business interactions."
+  technologies={["Python","MongoDB", "Hugging Face"]}
 />
 
   <Polaroid
-  imageSrc="/images/Platypus.png"
+  imageSrc="/images/PokemonAI.png"
+  title=" Pokémon Image Classifier (CNN)"
+  description=" A convolutional neural network trained to classify four Pokémon based on visual features — three visually similar, and one distinct to test model behavior."
+  fullDescription=" For my final project in an AI fundamentals course, I built an image classifier using a convolutional neural network (CNN) in TensorFlow. The model was trained to distinguish between four Pokémon: Growlithe, Charmander, Dragonite (visually similar), and Greninja (an outlier). This setup was chosen intentionally to observe how the CNN handles intra-class similarities and outlier detection. The model was developed and trained in a Jupyter Notebook, and evaluation was done using matplotlib visualizations of accuracy, loss, and classification predictions. This project strengthened my understanding of convolution layers, overfitting, and data preprocessing."
+  technologies={["Python", "Tensor Flow","Matplotlib","Pandas"]}
+/>
+
+  <Polaroid
+  imageSrc="/images/GreenHouse.png"
+  title=" Distributed Greenhouse Monitoring System"
+  description="Worked on the backend of a scalable multi-sensor data platform with real-time alerts and microservices architecture for greenhouse environment monitoring."
+  fullDescription="This project was developed for my distributed systems class and focused on designing a robust backend architecture to unify heterogeneous sensor data from multiple greenhouses. Sensors from different brands sent temperature and humidity readings in various formats (Fahrenheit, Celsius, JSON, XML). I built a middleware service that authenticates senders, standardizes data into a unified format, checks threshold violations, triggers alert notifications via SMS, and persists data to MongoDB. The system includes microservices for sensor management, alarms (using Twilio), reporting, and a REST API for third-party analytics access. The middleware communicates asynchronously with microservices through RabbitMQ and interacts with the frontend via HTTP requests. Configuration data is stored in MySQL for relational consistency. Additionally, I developed a greenhouse simulator on an ESP32 device that connects to the middleware through WebSockets to mimic real sensor data. The backend services are primarily written with Nest.js and TypeScript, the alarm microservice with Python Flask, and the simulation in Arduino C++."
+  githubUrl="https://github.com/ErickLabrada/Sistema-de-sensores-para-invernadero"
+  technologies={["Nest.js", "Typescript","Python","Flask", "RabbitMQ","MongoDB","MySQL","ESP32 & C++","Twilio API", "Web Sockets"]}
+/>
+
+  <Polaroid
+  imageSrc="/images/CIA.png"
+  title="Academic Information Center (CIA)"
+  description=" A streamlined, user-friendly university enrollment system clone featuring admin and student views, with curriculum validation and schedule conflict checks."
+  fullDescription="Developed as a team project for a web development class, CIA is a modernized clone of our university’s enrollment system. It provides two main interfaces: an administrator panel to configure courses and curricula, and a student portal for enrollment. The system enforces curricular planning rules by allowing students to enroll only in classes for which they have met prerequisites. It also checks for schedule conflicts to ensure a smooth registration process. The project used microfrontends for modular development and JWTs for secure authentication. Built with pure JavaScript, HTML, and CSS, CIA emphasizes simplicity and usability while handling complex enrollment logic."
+  githubUrl="https://github.com/DanielPenaGarcia/academic-information-center"
+  technologies={["JavaScript", "HTML","CSS","JWT", "Microfrontends"]}
+/>
+
+  <Polaroid
+  imageSrc="/images/3D_Engine.gif"
   title="3D Engine"
-  description="Lineal Algebra powered engine."
-  fullDescription="Driven by curiosity, I learnt the concepts required and built a 3D engine from scratch in java"
-  githubUrl="https://github.com/erick/ai-assistant"
+  description="A custom-built 3D engine developed from scratch in Java, with real-time rendering, transformations, and basic model manipulation."
+  fullDescription=" This project is a basic 3D engine developed using Java and linear algebra concepts. It allows for hardcoded 3D models to be defined, rendered, rotated, and colored in a 3D space. I implemented the engine from scratch as a way to explore applied linear algebra and foundational graphics programming. The renderer handles perspective projection, rotation matrices, and real-time updates through a basic UI. This project helped me build an intuitive understanding of 3D transformations and low-level rendering logic."
+  githubUrl="https://github.com/ErickLabrada/3D_Engine"
   technologies={["Java", "Lineal Algebra"]}
 />
 
   <Polaroid
-  imageSrc="/images/PerryThePlatypus.png"
-  title="Pokemon Identifier"
-  description="Convolutional Neural Network that distinguished between 4 pokemons."
-  fullDescription="As my final project for my AI class, I created and trained a CNN to recognize 4 pokemons"
-  githubUrl="https://github.com/erick/ai-assistant"
-  technologies={["Python", "Tensor Flow","Machine Learning"]}
+  imageSrc="/images/wbot.png"
+  title=" Photography Studio Manager"
+  description="Worked on the backend of a system for managing photography studio business data and appointments, integrated with a WhatsApp chatbot for customer interactions."
+  fullDescription="This project involved developing the backend of a web application tailored for photography studios to efficiently manage their business information and appointment schedules. A key feature is the integration with a WhatsApp bot, allowing customers to easily inquire about available packages, book services, and schedule appointments through conversational messaging. The backend was implemented using Nest.js with TypeScript and MySQL for reliable data management. Although this project does not include AI components, it demonstrates strong full-stack backend development and API integration skills."
+  githubUrl="https://github.com/ErickLabrada/Eilyn-Garcia-Fotografia-Sistema-Gestion"
+  technologies={["Nest.js", "Typescript","MySQL","BuilderBot"]}
 />
 
   </section>
-<SectionDivider title="Contact" />
 
+<SectionDivider title="Skills" />
+<section class="skills-section"id="skills">
+  <div class="skills-grid">
+    <div>
+      <h3>Programming Languages</h3>
+      <p>Python, TypeScript, JavaScript, Java, C++, SQL</p>
+    </div>
+    <div>
+      <h3>Frameworks & Libraries</h3>
+      <p>Flask, Nest.js, Express</p>
+    </div>
+    <div>
+      <h3>Tools</h3>
+      <p>Git, MongoDB, MySQL, RabbitMQ</p>
+    </div>
+    <div>
+      <h3>AI / ML</h3>
+      <p>Hugging Face, CNNs, RAG, Transformers</p>
+    </div>
+     <div>
+      <h3>Speaking Languages</h3>
+      <p>English & Spanish</p>
+    </div>
+  </div>
+</section>
+
+
+<SectionDivider title="Education" />
+<section class="education-section" id="education">
+  <h3>Software Engineering.</h3>
+  <p>Instituto Tecnologico de Sonora, Graduated 2025</p>
+  <p>Relevant Coursework:</p>
+  <ul>
+    <li>Machine Learning</li>
+    <li>Distributed Systems</li>
+    <li>Data Structures </li>
+    <li>Web Development</li>
+  </ul>
+</section>
+
+<SectionDivider title="Behind the Scenes 📸" />
+<section class="behind-scenes-section" id="behind-the-scenes">
+<ProjectCarousel id ="BehindScenes"
+  title=""
+  images={[
+    { src: "/images/BehindScenes/Night.png", caption: "One of many late nights stu-dying 😴" },
+    { src: "/images/BehindScenes/3d.png", caption: "First prototype of my 3D engine 🧮" },
+    { src: "/images/BehindScenes/mc.png", caption: "Believe it or not, they were working on a final project" },
+    { src: "/images/BehindScenes/friends1.jpg", caption: "Taking a break with my friends 😎"},
+    { src: "/images/BehindScenes/graph.png", caption: "The result was worth the effort"},
+    { src: "/images/BehindScenes/piano.png", caption: "The time I turned my microcontroller into a piano 🎹🎵"},
+    { src: "/images/BehindScenes/architecture.png", caption: "Designing my first distributed system 📐 " },
+    { src: "/images/BehindScenes/friends2.jpg", caption: "Celebrating the end of the semester! 🎉" }
+  ]}
+/>
+</section>
+
+
+<SectionDivider title="Contact" />
 <section class="contact-section" id="contact">
   <div class="contact-inner">
     <h1>Let’s Connect 🌌</h1>
@@ -93,12 +177,68 @@ import Header from "~/components/Header.astro";
     </ul>
   </div>
 </section>
-
-
 </main>
-
 <style>
 
+.skills-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.skills-grid h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #CCC;
+}
+
+.skills-grid p {
+  color: #AAA;
+  font-size: 0.95rem;
+}
+
+.education-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.education-section h3 {
+  font-size: 1.4rem;
+  color: #BBB;
+  margin-bottom: 10px;
+}
+
+.education-section p {
+  font-size: 1rem;
+  color: #CCC;
+  margin-bottom: 10px;
+}
+
+.education-section ul {
+  list-style: disc;
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #AAA;
+  text-align: left;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.education-section li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
 
 
  .about {

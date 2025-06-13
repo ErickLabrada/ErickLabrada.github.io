@@ -13,7 +13,7 @@ const { title } = Astro.props;
 const metaData = {
   keywords: "html, css, javascript, astro, static site generator",
   description: "Erick's Polaroids ",
-  imageType: "image/png",
+  imageType: "image/jpg",
   imageWidth: "1600",
   imageHeight: "882",
   type: "website",
@@ -22,7 +22,7 @@ const metaData = {
 };
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImageURL = new URL("/logo.png", Astro.url);
+const socialImageURL = new URL("/images/logo.png", Astro.url);
 ---
 
 <!doctype html>
@@ -33,7 +33,7 @@ const socialImageURL = new URL("/logo.png", Astro.url);
     <meta name="generator" content={Astro.generator} />
     <meta name="keywords" content={metaData.keywords} />
     <meta name="description" content={metaData.description} />
-    <link rel="icon" type="image" href="/src/images/Logo.jpg" />
+    <link rel="icon" type="image" href="/images/Logo.jpg" />
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <meta property="og:url" content={canonicalURL} />
