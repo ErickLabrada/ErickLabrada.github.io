@@ -7,6 +7,8 @@
       <HomeHero />
       <HomeInfoGrid />
       <ProjectsSection />
+      <SkillsSection />
+      <ContactSection />
       <HomeFooterQuote />
     </main>
   </div>
@@ -20,6 +22,8 @@ import HomeHero from '@/components/HomeHero.vue'
 import HomeInfoGrid from '@/components/HomeInfoGrid.vue'
 import HomeFooterQuote from '@/components/HomeFooterQuote.vue'
 import ProjectsSection from '@/components/ProjectsSection.vue'
+import SkillsSection from '@/components/SkillsSection.vue'
+import ContactSection from '@/components/ContactSection.vue'
 </script>
 
 <style scoped>

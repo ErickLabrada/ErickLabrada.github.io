@@ -25,11 +25,14 @@
         </span>
       </div>
 
-      <router-link to="/submit">
+      <a
+        href="assets/cv.pdf"
+        download
+      >
         <button class="primary-button">
           Download CV
         </button>
-      </router-link>
+      </a>
     </sl-card>
   </section>
 </template>

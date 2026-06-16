@@ -23,6 +23,7 @@ import profilePhoto from "@/assets/me.jpg";
         <li>Machine Learning & AI Engineering</li>
         <li>Tasks Automation</li>
         <li>Data Analysis</li>
+        <li>NLP</li>
         <li>Music</li>
         <li>Photography</li>
       </ul>

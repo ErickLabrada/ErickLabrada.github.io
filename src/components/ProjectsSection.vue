@@ -1,63 +1,161 @@
 <script setup lang="ts">
 import Polaroid from "@/components/Polaroid.vue";
+
+/* Images */
+import aiAssistant from "@/assets/projects/AI_Assistant.jpg";
+import sully from "@/assets/projects/sully.png";
+import anam from "@/assets/projects/ANAM.png";
 import me from "@/assets/me.jpg";
+import dailyAI from "@/assets/projects/DailyAI.png";
+import greenHouse from "@/assets/projects/GreenHouse.png";
+import cia from "@/assets/projects/CIA.png";
+import engine3d from "@/assets/projects/3D_Engine.gif";
+import wbot from "@/assets/projects/wbot.png";
 </script>
 
 <template>
   <section class="projects-section">
+    <!-- HEADER -->
     <header class="section-header">
-      <h2>Projects Archive</h2>
+      <p class="section-label">Archive</p>
 
-      <p>
-        A collection of professional work and personal experiments.
+      <h2>Things I've Built</h2>
+
+      <p class="section-description">
+        A collection of software, experiments, and occasional rabbit holes.
+        Some were built professionally, others started as curiosity and grew
+        into something larger.
       </p>
     </header>
 
-    <!-- FEATURED -->
+    <!-- PROFESSIONAL -->
     <div class="projects-group">
-      <h3>Featured Work</h3>
+      <div class="group-header">
+        <h3>Professional Work</h3>
+
+        <p>
+          Systems built for real teams, real users, and real business needs.
+        </p>
+      </div>
 
       <div class="featured-grid">
         <Polaroid
-          title="Kanban Automation System"
-          description="Workflow automation tool for issue tracking."
-          :image-src="me"
+          title="AI Communication Assistant"
+          description="Multi-component AI assistant for real-time business communication"
+          full-description="Designed and implemented an AI-powered assistant with intent detection and a custom RAG pipeline using Hugging Face models. Built backend with Python and MongoDB. NDA restricts public UI/source."
+          :image-src="aiAssistant"
           :rotation="-2"
-          year="2026"
-          :technologies="['Python', 'Playwright']"
+          :technologies="['Python', 'MongoDB', 'Hugging Face']"
         />
 
         <Polaroid
-          title="GitLab Review Analyzer"
-          description="Static analysis for merge requests."
-          :image-src="me"
+          title="Distributed Ticket Receiver"
+          description="Task management system for distributed workflows"
+          full-description="Real-time dashboard for automated task processing and synchronized updates across distributed services."
+          :image-src="sully"
           :rotation="2"
-          year="2026"
-          :technologies="['Python', 'NLP']"
+          :technologies="['Django', 'JavaScript', 'PostgreSQL', 'Redis']"
         />
 
         <Polaroid
-          title="Internal Dashboard Tools"
-          description="Engineering productivity tools."
-          :image-src="me"
+          title="Ticket Source Service Migration"
+          description="Refactor of legacy system into NestJS architecture"
+          full-description="Migrated a legacy JS system into NestJS, improving scalability and maintainability with structured backend design."
+          :image-src="anam"
           :rotation="-1"
-          year="2025"
-          :technologies="['Vue', 'Node']"
+          :technologies="['NestJS', 'PostgreSQL']"
         />
       </div>
     </div>
 
     <!-- PERSONAL -->
     <div class="projects-group">
-      <h3>Experiments & Personal Work</h3>
+      <div class="group-header">
+        <h3>Experiments & Side Quests</h3>
+
+        <p>
+          Learning projects, automation tools, strange ideas, and things I
+          wanted to see exist.
+        </p>
+      </div>
 
       <div class="stagger-grid">
-        <Polaroid class="p1" title="3D Engine" description="CPU rendering engine." :image-src="me" :rotation="-3" year="2025" />
-        <Polaroid class="p2" title="ML Classifier" description="Vision experiments." :image-src="me" :rotation="2" year="2025" />
-        <Polaroid class="p3" title="CLI Tool" description="Log parser." :image-src="me" :rotation="-1" year="2024" />
-        <Polaroid class="p4" title="Music Tracker" description="Practice tool." :image-src="me" :rotation="3" year="2024" />
-        <Polaroid class="p5" title="Data Sandbox" description="Charts & datasets." :image-src="me" :rotation="-2" year="2025" />
-        <Polaroid class="p6" title="UI Experiments" description="Interface prototypes." :image-src="me" :rotation="1" year="2025" />
+        <Polaroid
+          class="p1"
+          title="DailyAI"
+          description="Automated standup reporting tool using LLMs"
+          full-description="Scrapes kanban activity with Playwright, enriches via GitLab API, generates structured reports using LLMs, and outputs via text-to-speech for meetings."
+          :image-src="dailyAI"
+          :rotation="-3"
+          :technologies="['Python', 'Playwright', 'OpenAI API']"
+        />
+
+        <Polaroid
+          class="p2"
+          title="Distributed Greenhouse System"
+          description="IoT monitoring platform with microservices architecture"
+          full-description="Aggregates sensor data, detects thresholds, triggers SMS alerts via Twilio, and uses RabbitMQ for async communication. Includes ESP32 simulator."
+          :image-src="greenHouse"
+          :rotation="2"
+          :technologies="['NestJS', 'RabbitMQ', 'MongoDB', 'MySQL', 'ESP32']"
+        />
+
+        <Polaroid
+          class="p3"
+          title="Academic Information System (CIA)"
+          description="Enrollment system with validation and scheduling rules"
+          full-description="Microfrontend-based academic system with JWT auth, prerequisite validation, and schedule conflict detection."
+          :image-src="cia"
+          :rotation="-1"
+          :technologies="['JavaScript', 'JWT', 'Microfrontends']"
+        />
+
+        <Polaroid
+          class="p4"
+          title="3D Engine"
+          description="Custom software rendering engine"
+          full-description="Built from scratch using linear algebra concepts like projection matrices and rotation transforms for real-time rendering."
+          :image-src="engine3d"
+          :rotation="3"
+          :technologies="['Java', 'Linear Algebra']"
+        />
+
+        <Polaroid
+          class="p5"
+          title="Photography Studio System"
+          description="Backend + WhatsApp booking automation"
+          full-description="Backend system for studio management with WhatsApp chatbot integration for booking and inquiries."
+          :image-src="wbot"
+          :rotation="-2"
+          :technologies="['NestJS', 'TypeScript', 'MySQL', 'BuilderBot']"
+        />
+
+        <Polaroid
+          title="Sartre's Cat"
+          description="Anonymous feedback collection platform for self-reflection."
+          full-description="A personal experiment built around a simple question: how do people perceive me when they can answer completely anonymously? The platform collects written responses and stores them for later analysis. The long-term goal is to apply sentiment analysis, clustering, and NLP techniques to identify recurring themes, blind spots, and patterns in how others experience me."
+          :image-src="me"
+          :rotation="-2"
+          :technologies="['Vue', 'TypeScript', 'NLP', 'Data Analysis']"
+        />
+
+        <Polaroid
+          title="Peer Review Automation"
+          description="Automated analysis of merge requests and review patterns."
+          full-description="A backend automation system that analyzes code review behavior across GitLab merge requests. It extracts reviewer patterns, comment density, and quality signals to generate structured insights for engineering teams. Built to improve review consistency and highlight bottlenecks in the development workflow."
+          :image-src="me"
+          :rotation="2"
+          :technologies="['Python', 'GitLab API', 'NLP', 'Automation']"
+        />
+
+        <Polaroid
+          title="Prompt Generator"
+          description="AI-assisted bootstrap generation from Kanban tasks."
+          full-description="A personal productivity utility that extracts task information from a custom Kanban board and automatically generates structured prompts for AI-assisted development. The system gathers context from task metadata, requirements, and related artifacts, producing prompts that accelerate project bootstrapping, implementation planning, and documentation workflows."
+          :image-src="me"
+          :rotation="-1"
+          :technologies="['Python', 'Playwright', 'LLMs', 'Automation']"
+        />
       </div>
     </div>
   </section>
@@ -71,7 +169,7 @@ import me from "@/assets/me.jpg";
   gap: 60px;
 }
 
-/* Header */
+/* HEADER */
 .section-header h2 {
   font-size: 2rem;
   margin: 0;
@@ -83,11 +181,32 @@ import me from "@/assets/me.jpg";
   line-height: 1.6;
 }
 
-/* Group titles */
-.projects-group h3 {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #7f8aa3;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.section-description {
+  max-width: 650px;
+}
+
+/* GROUPS */
+.group-header {
+  margin-bottom: 24px;
+}
+
+.group-header h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
   color: #d7dbe6;
+}
+
+.group-header p {
+  color: #a8b0c2;
+  line-height: 1.6;
 }
 
 /* FEATURED GRID */
@@ -106,11 +225,51 @@ import me from "@/assets/me.jpg";
   align-items: start;
 }
 
-/* Stagger positions */
-.p1 { grid-column: 1 / 2; }
-.p2 { grid-column: 3 / 4; transform: translateY(30px); }
-.p3 { grid-column: 2 / 3; transform: translateY(-10px); }
-.p4 { grid-column: 4 / 5; transform: translateY(20px); }
-.p5 { grid-column: 1 / 3; transform: translateY(10px); }
-.p6 { grid-column: 3 / 5; transform: translateY(-5px); }
+/* STAGGER POSITIONING */
+.p1 {
+  grid-column: 1 / 2;
+}
+
+.p2 {
+  grid-column: 3 / 4;
+  transform: translateY(30px);
+}
+
+.p3 {
+  grid-column: 2 / 3;
+  transform: translateY(-10px);
+}
+
+.p4 {
+  grid-column: 4 / 5;
+  transform: translateY(20px);
+}
+
+.p5 {
+  grid-column: 1 / 3;
+  transform: translateY(10px);
+}
+
+@media (max-width: 1100px) {
+  .featured-grid,
+  .stagger-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .p1,
+  .p2,
+  .p3,
+  .p4,
+  .p5 {
+    grid-column: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-grid,
+  .stagger-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

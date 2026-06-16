@@ -1,13 +1,12 @@
-```vue id="sm6w58"
+vue id="sm6w58"
 <template>
   <footer class="footer-note">
     <p>
-      ”Existence precedes essence.”
+      "To create is to live twice."
     </p>
 
     <span>
-      — Jean-Paul Sartre,
-      Existencialism Is A Humanism
+      — Albert Camus
     </span>
   </footer>
 </template>
@@ -33,4 +32,3 @@
   color: #9ca3af;
 }
 </style>
-```
