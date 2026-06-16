@@ -1,0 +1,393 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  color: #fff;
+  background-color: #0c0e14;
+  background-image:
+    url('images/nnnoise-dark.svg'),
+    url('images/other-pattern.svg');
+  background-repeat: repeat, repeat;
+  background-position: top left, center;
+  background-size: auto, cover;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  padding: 16px 24px;
+  text-align: center;
+  top: 0;
+  z-index: 100;
+}
+
+
+
+
+/* About card layout */
+.about-card {
+  padding: 24px;
+}
+
+.about {
+  display: block; /* stop using flex for wrapping effect */
+}
+
+.about-photo {
+  float: left;
+  margin: 0 16px 12px 0;
+  width: 140px;         /* smaller fixed width */
+  max-width: 140px;     /* cap it */
+  flex-shrink: 0;       /* just in case flex is reintroduced */
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;    /* keeps it looking clean */
+}
+
+.about::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* Right content */
+.about-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.about-body h2 {
+  margin: 0 0 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.6rem;
+}
+
+/* Section headings */
+.subtle {
+  margin: 14px 0 8px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+/* Quick facts grid */
+.about-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px 16px;
+  margin-bottom: 12px;
+}
+.about-meta .label {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.about-meta .value {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chip-list sl-chip {
+  border: 1px solid #fff;       /* smaller outline */
+  border-radius: 16px;           /* rounded */
+  padding: 4px 10px;             /* snug padding around text */
+  background-color: rgba(255,255,255,0.05); 
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  width: auto;                   /* wrap to text */
+}
+
+
+
+/* Favorites as definition list */
+.fav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1rem 2rem; /* spacing between rows & columns */
+}
+
+.fav-item dt {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.fav-item dd {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #ddd;
+}
+
+
+/* Link */
+.text-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px dashed rgba(255,255,255,0.6);
+  padding-bottom: 2px;
+}
+.text-link:hover {
+  border-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-photo {
+    width: 60%;
+    max-width: 260px;
+  }
+  .fav-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.transparent-sidecard h2{
+    padding-bottom: 5px;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.header-wrapper h1 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.header-gif {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Layout Grid */
+.layout {
+  display: grid;
+
+  grid-template-columns: 220px minmax(0, 1fr) 220px;
+
+  gap: 20px;
+
+  padding: 20px;
+
+  align-items: start;
+}
+
+/* Sidebars */
+.sidebar {
+  display: flex;
+  flex-direction: column;  /* stack cards vertically */
+  align-items: stretch;    /* cards fill sidebar width */
+  text-align: center;
+  max-width: 220px;
+  gap: 16px;               /* space between stacked cards */
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Semi-transparent sidecards */
+.transparent-sidecard {
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 2px solid #fff;
+  box-shadow: none;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  flex-direction: column; /* stack main cards vertically */
+  gap: 20px;
+}
+
+/* Main card */
+.transparent-maincard {
+  background-color: rgba(40, 40, 40, 0.4);
+  border: 2px solid #fff;
+  box-shadow: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Text content inside main */
+.main-content h2 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.main-content h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 12px;
+}
+
+
+.sidebar h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 12px;
+}
+
+.sidebar a {
+  color: inherit;        /* takes the sidebar text color */
+  text-decoration: none; /* remove underline */
+  border-bottom: 1px dashed rgba(255,255,255,0.6); /* optional, like your text links */
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.bandcamp-wrapper iframe {
+  width: 100%;         /* fill card width */
+  height: 312px;       /* original Bandcamp height */
+  border-radius: 12px; /* rounded corners */
+}
+
+
+.sidebar a:hover {
+  color: #fff;           /* highlight on hover */
+  border-color: #fff;    /* match the hover color if using dashed underline */
+}
+
+/* Sidebar lists */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.sidebar li {
+  padding: 6px 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px dashed #777;
+  transition: all 0.2s ease;
+}
+
+.sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* Intro section layout inside main card */
+.intro-flex {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1 1 10px;
+}
+
+.intro-text h2 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.intro-text h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.intro-image {
+  flex: 0 0 150px;
+}
+
+.intro-image img {
+  display: block;        /* prevents inline-block artifacts */
+  width: auto;           /* keep original width */
+  max-width: 150px;      /* constrain it */
+  height: auto;          /* keep aspect ratio */
+  border-radius: 8px;
+}
+
+
+/* Responsive: wrap sidebars below main on small screens */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr; 
+  }
+
+  .sidebar {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .intro-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-image {
+    width: 50%;
+  }
+}
