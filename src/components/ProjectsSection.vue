@@ -5,7 +5,10 @@ import Polaroid from "@/components/Polaroid.vue";
 import aiAssistant from "@/assets/projects/AI_Assistant.jpg";
 import sully from "@/assets/projects/sully.png";
 import anam from "@/assets/projects/ANAM.png";
+import peerReview from "@/assets/projects/peer-review.png";
+import prompt from "@/assets/projects/prompt.png";
 import me from "@/assets/me.jpg";
+import sartre from "@/assets/projects/sartrecat.png";
 import dailyAI from "@/assets/projects/DailyAI.png";
 import greenHouse from "@/assets/projects/GreenHouse.png";
 import cia from "@/assets/projects/CIA.png";
@@ -134,7 +137,7 @@ import wbot from "@/assets/projects/wbot.png";
           title="Sartre's Cat"
           description="Anonymous feedback collection platform for self-reflection."
           full-description="A personal experiment built around a simple question: how do people perceive me when they can answer completely anonymously? The platform collects written responses and stores them for later analysis. The long-term goal is to apply sentiment analysis, clustering, and NLP techniques to identify recurring themes, blind spots, and patterns in how others experience me."
-          :image-src="me"
+          :image-src="sartre"
           :rotation="-2"
           :technologies="['Vue', 'TypeScript', 'NLP', 'Data Analysis']"
         />
@@ -143,7 +146,7 @@ import wbot from "@/assets/projects/wbot.png";
           title="Peer Review Automation"
           description="Automated analysis of merge requests and review patterns."
           full-description="A backend automation system that analyzes code review behavior across GitLab merge requests. It extracts reviewer patterns, comment density, and quality signals to generate structured insights for engineering teams. Built to improve review consistency and highlight bottlenecks in the development workflow."
-          :image-src="me"
+          :image-src="peerReview"
           :rotation="2"
           :technologies="['Python', 'GitLab API', 'NLP', 'Automation']"
         />
@@ -152,7 +155,7 @@ import wbot from "@/assets/projects/wbot.png";
           title="Prompt Generator"
           description="AI-assisted bootstrap generation from Kanban tasks."
           full-description="A personal productivity utility that extracts task information from a custom Kanban board and automatically generates structured prompts for AI-assisted development. The system gathers context from task metadata, requirements, and related artifacts, producing prompts that accelerate project bootstrapping, implementation planning, and documentation workflows."
-          :image-src="me"
+          :image-src="prompt"
           :rotation="-1"
           :technologies="['Python', 'Playwright', 'LLMs', 'Automation']"
         />

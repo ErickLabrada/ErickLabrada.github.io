@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import profilePhoto from "@/assets/me.jpg";
+import profilePhoto from "@/assets/profile.png";
 </script>
 
 <template>
@@ -53,6 +53,8 @@ import profilePhoto from "@/assets/me.jpg";
     12px
     12px
     56px;
+
+  margin-left: 50px;
 
   border: 1px solid #d9d4c8;
 

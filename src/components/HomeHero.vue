@@ -26,13 +26,13 @@
       </div>
 
       <a
-        href="assets/cv.pdf"
-        download
-      >
-        <button class="primary-button">
-          Download CV
-        </button>
-      </a>
+  :href="cv"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="primary-button"
+>
+  Resume
+</a>
     </sl-card>
   </section>
 </template>
@@ -127,3 +127,6 @@ h1 {
   opacity: 0.9;
 }
 </style>
+<script setup>
+import cv from '@/assets/cv.pdf'
+</script>
