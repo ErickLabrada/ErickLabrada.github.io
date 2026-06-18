@@ -162,9 +162,9 @@ import wbot from "@/assets/projects/wbot.png";
         />
          <Polaroid
           title="Open Go Readme"
-          description="CLI tool that generates README files from Go projects"
-          full-description="Scans Go repositories, builds AST-based file summaries, selects relevant files using an LLM, and generates structured README.md files using a two-pass context-aware pipeline."
-          :image-src="open-go"
+          description="CLI tool that generates README files from any repository"
+          full-description="Scans repositories, builds AST-based file summaries, selects relevant files using an LLM, and generates structured README.md files using a two-pass context-aware pipeline."
+          :image-src="opengo"
           :rotation="-1"
           :technologies="['Go', 'OpenAI API', 'AST parsing', 'CLI']"
         />
