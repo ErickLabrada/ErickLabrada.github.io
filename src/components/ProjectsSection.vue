@@ -10,6 +10,7 @@ import prompt from "@/assets/projects/prompt.png";
 import me from "@/assets/me.jpg";
 import sartre from "@/assets/projects/sartrecat.png";
 import dailyAI from "@/assets/projects/DailyAI.png";
+import opengo from "@/assets/projects/open-go-readme.png";
 import greenHouse from "@/assets/projects/GreenHouse.png";
 import cia from "@/assets/projects/CIA.png";
 import engine3d from "@/assets/projects/3D_Engine.gif";
@@ -158,6 +159,14 @@ import wbot from "@/assets/projects/wbot.png";
           :image-src="prompt"
           :rotation="-1"
           :technologies="['Python', 'Playwright', 'LLMs', 'Automation']"
+        />
+         <Polaroid
+          title="Open Go Readme"
+          description="CLI tool that generates README files from Go projects"
+          full-description="Scans Go repositories, builds AST-based file summaries, selects relevant files using an LLM, and generates structured README.md files using a two-pass context-aware pipeline."
+          :image-src="open-go"
+          :rotation="-1"
+          :technologies="['Go', 'OpenAI API', 'AST parsing', 'CLI']"
         />
       </div>
     </div>
