@@ -2,7 +2,6 @@
   "header": {
     "home": "Inicio"
   },
-
   "contact": {
     "contact": "Contacto",
     "title": "Construyamos Algo Interesante",
@@ -14,37 +13,37 @@
   },
 
   "homeHero": {
-    "label": "Portafolio y Archivo de Proyectos",
-    "title": "Hola mundo, soy Erick.",
-    "description": "Ingeniero enfocado en IA y desarrollo backend, basado en México, con pasión por el aprendizaje automático, la automatización y la creación de software que resuelve problemas del mundo real. Me interesa explorar la intersección entre la IA, la ciencia y la creatividad, ya sea desarrollando herramientas, analizando datos o ideando y desarrollando soluciones creativas. Este portafolio es una colección de proyectos, experimentos e ideas que me ha divertido crear.",
-    "note": "Espero que disfrutes recorrerlo como si estuvieras hojeando viejas Polaroids.",
+    "label": "Archivo de Portafolio y Proyectos",
+    "title": "Hola, soy Erick.",
+    "description": "Ingeniero enfocado en backend e IA, basado en México, desarrollando sistemas de producción, herramientas de automatización y aplicaciones impulsadas por IA. Mi experiencia abarca desarrollo backend, machine learning, pipelines de datos, migraciones de sistemas y herramientas para desarrolladores. Me interesa trabajar en la intersección entre la ingeniería de software y la IA, especialmente cuando se trata de convertir problemas complejos o repetitivos en sistemas prácticos.",
+    "note": "Una colección de cosas que he construido, desde sistemas de producción hasta experimentos y proyectos personales.",
     "cv": "Currículum"
   },
 
   "homeInfoGrid": {
-    "title": "Explorando Actualmente.",
+    "title": "Explorando Actualmente",
     "list": [
-      "Machine Learning e IA",
-      "Automatización de tareas",
-      "Análisis de datos",
-      "NLP",
-      "Música",
-      "Fotografía"
+      "Machine Learning e Ingeniería de IA",
+      "Automatización de Desarrollo y Tareas",
+      "Ingeniería y Análisis de Datos",
+      "Aplicaciones de NLP y LLM",
+      "Arquitectura de Software",
+      "Música y Proyectos Creativos"
     ]
   },
 
   "appraisal": {
     "label": "Madurez de Procesos",
     "title": "Evaluación CMMI Nivel 5",
-    "description": "Participé en trabajo de ingeniería dentro de una iniciativa de evaluación CMMI Nivel 5, aplicando prácticas estructuradas de desarrollo, documentación, revisión y calidad en proyectos de software en producción.",
+    "description": "Participé en actividades de ingeniería dentro de una iniciativa de evaluación CMMI Nivel 5, aplicando prácticas estructuradas de desarrollo, documentación, revisión y calidad en proyectos de software de producción.",
     "links": {
       "record": "Ver registro de evaluación",
       "certificate": "Abrir certificado"
     },
     "items": [
-      "Documentación de procesos y trazabilidad",
+      "Documentación y trazabilidad de procesos",
       "Revisiones estructuradas y controles de calidad",
-      "Mejora continua en flujos de entrega"
+      "Mejora continua de los flujos de entrega"
     ]
   },
 
@@ -52,95 +51,95 @@
     "header": {
       "label": "Archivo",
       "title": "Cosas que He Construido",
-      "description": "Una colección de software, experimentos y alguna que otra madriguera de conejo. Algunos fueron desarrollados profesionalmente; otros comenzaron por curiosidad y terminaron convirtiéndose en algo más grande."
+      "description": "Una colección de sistemas de producción, proyectos de ingeniería, experimentos y herramientas. Algunos fueron desarrollados profesionalmente para usuarios reales y necesidades de negocio; otros comenzaron como preguntas técnicas que quería explorar."
     },
 
     "professional": {
       "title": "Trabajo Profesional",
-      "description": "Sistemas construidos para equipos reales, usuarios reales y necesidades reales de negocio."
+      "description": "Sistemas desarrollados para equipos, usuarios y necesidades de negocio reales, a menudo bajo restricciones de producción y operación."
     },
 
     "personal": {
-      "title": "Experimentos y Proyectos Paralelos",
-      "description": "Proyectos de aprendizaje, herramientas de automatización, ideas extrañas y cosas que quería ver existir."
+      "title": "Experimentos y Proyectos Personales",
+      "description": "Experimentos técnicos, herramientas para desarrolladores, proyectos de automatización e ideas creadas para aprender, explorar o resolver algún problema que me resultara interesante."
     },
 
     "items": {
       "itzai": {
         "description": "Asistente de IA multicomponente para comunicación empresarial en tiempo real",
-        "fullDescription": "Durante mi estancia como becario en GILA Software, trabajé en un asistente de IA personalizable y multitenant para comunicación en lenguaje natural en tiempo real. Participé en el diseño de la arquitectura del sistema y desarrollé y orquesté varios componentes para el MVP, incluyendo pipelines de speech-to-text, text-to-speech, RAG y enrutamiento de solicitudes. Debido a un acuerdo de confidencialidad, no hay mucho que pueda mostrar o compartir sobre este proyecto, pero puedes leer más al respecto en las publicaciones oficiales de GILA.",
-        "challenges": "El principal desafío fue trabajar bajo restricciones de tiempo. Como el equipo estaba compuesto completamente por becarios y el tiempo de desarrollo era limitado, utilizar una base de datos vectorial o frameworks de IA agéntica como LangGraph no era viable para el MVP. Por ello, adapté la arquitectura a estas restricciones, implementando la lógica de orquestación y enrutamiento directamente en Python, además de ayudar a mis compañeros a mantener un proyecto estructurado y mantenible.",
-        "learnings": "Al comienzo de mi estancia tenía poca experiencia práctica con IA. GILA me dio la libertad de experimentar con distintos enfoques, lo que me permitió desarrollar una mayor comprensión de las aplicaciones prácticas de los LLM, los conceptos de RAG, el ecosistema de Hugging Face, la arquitectura de software, el trabajo en equipo y la organización de proyectos en Python."
+        "fullDescription": "Durante mi internship en GILA Software, trabajé en un asistente de IA personalizable y multitenant para comunicación en tiempo real mediante lenguaje natural. Contribuí a la arquitectura del sistema y desarrollé y orquesté varios componentes del MVP, incluyendo pipelines de speech-to-text, text-to-speech, RAG y enrutamiento de solicitudes. Debido a un acuerdo de confidencialidad, no puedo compartir detalles de implementación ni el código fuente, pero las publicaciones oficiales de GILA proporcionan contexto adicional sobre el proyecto.",
+        "challenges": "El principal desafío fue desarrollar un sistema de IA bajo restricciones de tiempo. Al tratarse de un equipo compuesto únicamente por interns y contar con una ventana de desarrollo limitada, tecnologías como bases de datos vectoriales y frameworks agénticos como LangGraph no eran prácticas para el MVP. Por ello, implementé directamente en Python la lógica de orquestación y enrutamiento, mientras contribuía a mantener una base de código estructurada y mantenible entre el equipo.",
+        "learnings": "Este fue el proyecto en el que desarrollé mi primera experiencia práctica significativa con IA. Adquirí experiencia práctica con aplicaciones de LLM, RAG, el ecosistema de Hugging Face, pipelines de voz, orquestación de sistemas y diseño de sistemas de IA teniendo en cuenta las restricciones de proyectos reales."
       },
 
-      "ticketReceiver": { 
-        "description": "Production ticketing and analytics system for distributed workflows", 
-        "fullDescription": "After joining MediaAerea, I was assigned to support, stabilize, and develop new features for an unstable production system within a distributed, multi-tenant ticketing platform. I helped improve system reliability while delivering new functionality, including real-time analytics dashboards that provided visibility into workload, productivity, and ticket resolution performance. The resulting improvements reduced average ticket resolution time by 34% and closure time by 35%, while increasing the number of tickets resolved before their promised date by 118% and before their deadline by 64%.", 
-        "challenges": "The main challenge was understanding an unfamiliar and largely undocumented codebase while learning the business rules behind a system actively used by clients. Hotfixes and new features had to be delivered without disrupting ongoing operations, requiring careful troubleshooting, validation, and coordination with DevOps.", 
-        "learnings": "This project gave me substantial experience working with production software: troubleshooting live systems, shipping patches and features, collaborating with DevOps, optimizing existing code, and turning operational data into actionable insights."
-       },
+      "ticketReceiver": {
+        "description": "Sistema de gestión de tareas para flujos de trabajo distribuidos",
+        "fullDescription": "Después de unirme a MediaAerea, fui asignado a dar soporte, estabilizar y desarrollar nuevas funcionalidades para un sistema de producción activo e inestable dentro de una plataforma de gestión de tickets distribuida y multitenant. Trabajando con el equipo, ayudé a mejorar la confiabilidad del sistema mientras continuábamos entregando nueva funcionalidad. Una de las principales adiciones fue un dashboard en tiempo real que proporcionaba información accesible y basada en datos sobre la productividad del equipo, la carga de trabajo y el rendimiento de los tickets. Estas mejoras contribuyeron a reducir en un 34% el tiempo promedio de resolución, reducir en un 35% el tiempo de cierre, aumentar en un 118% los tickets resueltos antes de su fecha prometida y aumentar en un 64% los tickets resueltos antes de su fecha límite.",
+        "challenges": "El principal desafío fue comprender una base de código desconocida y en gran parte sin documentar mientras aprendía las reglas de negocio detrás del sistema. Al mismo tiempo, el sistema era utilizado activamente por clientes, por lo que era necesario entregar hotfixes y nuevas funcionalidades sin interrumpir las operaciones existentes. Esto implicaba equilibrar confiabilidad, velocidad de desarrollo y requisitos de negocio cambiantes mientras trabajaba con datos y flujos de producción.",
+        "learnings": "Este proyecto me dio una experiencia considerable trabajando con software en producción: resolución de problemas en sistemas activos, entrega de parches y funcionalidades, colaboración con DevOps, análisis de datos operativos, optimización de código existente y trabajo con sistemas legacy donde la lógica de negocio no siempre está documentada explícitamente."
+      },
 
       "ticketMigration": {
-        "description": "Refactorización de un sistema legacy hacia una arquitectura NestJS",
-        "fullDescription": "Después de familiarizarme con el lado receptor del sistema, se me asignó un proyecto enfocado en resolver las limitaciones de un sistema core legacy que se había vuelto difícil de extender. El equipo decidió migrar el código base existente en JavaScript hacia una arquitectura moderna con NestJS, más adecuada para los nuevos requerimientos del cliente y el desarrollo futuro. Durante la migración, también rediseñé partes de los pipelines de datos y del sistema de generación de reportes, mejorando los tiempos de procesamiento y haciendo que el código fuera más fácil de depurar, mantener y extender.",
-        "challenges": "El principal desafío fue traducir el comportamiento de un sistema legacy a una arquitectura NestJS más limpia sin perder reglas de negocio implícitas que no estaban documentadas en el sistema original. Esto requirió comprender el comportamiento existente antes de decidir cómo debía rediseñarse cada componente.",
-        "learnings": "Aprendí a abordar las migraciones como un trabajo de documentación y descubrimiento tanto como de programación: primero identificar y comprender el comportamiento existente y después adaptar la arquitectura a esos requerimientos. También adquirí experiencia práctica diseñando pipelines de datos más mantenibles y optimizando flujos de generación de reportes."
+        "description": "Migración de un sistema legacy a una arquitectura con NestJS",
+        "fullDescription": "Después de familiarizarme con el lado de recepción del sistema, me uní a un proyecto enfocado en reemplazar un sistema central legacy que se había vuelto difícil de extender. El equipo migró la base de código existente en JavaScript a una arquitectura con NestJS, mejor adaptada a los requisitos del cliente y al desarrollo futuro. También rediseñé partes de los pipelines de datos y del sistema de generación de reportes para mejorar el rendimiento del procesamiento y facilitar la depuración, mantenimiento y extensión del código.",
+        "challenges": "El principal desafío fue traducir el comportamiento de un sistema legacy sin documentación a una arquitectura más limpia sin perder reglas de negocio implícitas. Antes de rediseñar componentes, tuve que comprender qué hacía realmente el sistema existente, incluyendo comportamientos que no estaban documentados explícitamente.",
+        "learnings": "Este proyecto me enseñó a tratar las migraciones como un trabajo tanto de ingeniería como de descubrimiento: primero comprender el comportamiento existente, documentar lo importante y solo después transformar la arquitectura. También fortaleció mi experiencia con pipelines de datos, generación de reportes y arquitectura backend mantenible."
       },
 
       "ecommerce-admin": {
         "description": "Plataforma administrativa para un sistema de comercio electrónico personalizado",
-        "fullDescription": "Contribuí principalmente a la generación de reportes, pipelines de datos, servicios de chat de atención al cliente y autenticación para el lado administrativo de un sistema de comercio electrónico personalizado. Trabajé en la estructuración y procesamiento de los datos requeridos por los equipos internos, además de desarrollar servicios que conectaban las interacciones de los clientes con los flujos de trabajo administrativos. Esta también fue mi primera experiencia como mentor de otro desarrollador, incluyendo revisión de merge requests, delegación de tareas y orientación técnica.",
-        "challenges": "Uno de los principales desafíos fue integrar agentes de programación al flujo de desarrollo sin perder el control sobre el código base ni sacrificar la calidad del código. Esto requirió encontrar un equilibrio entre delegar tareas repetitivas a herramientas de IA y mantener bajo control directo las decisiones de arquitectura, validación y las implementaciones críticas. También tuve que adaptarme a los procesos de desarrollo de software que la empresa estaba implementando mientras buscaba una evaluación CMMI Nivel 5, al mismo tiempo que asumía responsabilidades de mentoría por primera vez.",
-        "learnings": "Aprendí a integrar el desarrollo asistido por IA en un flujo de ingeniería manteniendo límites claros en torno a la arquitectura, validación y propiedad del código. También adquirí mi primera experiencia como mentor de otro desarrollador mediante la delegación de tareas, revisión de merge requests y orientación técnica. Además, me familiaricé con procesos estructurados de desarrollo y calidad asociados con la implementación de CMMI Nivel 5 de la empresa, comprendiendo mejor cómo las prácticas de desarrollo, documentación, revisiones y madurez de procesos se relacionan entre sí."
+        "fullDescription": "Contribuí principalmente a la generación de reportes, pipelines de datos, servicios de chat para atención al cliente y autenticación de la parte administrativa de un sistema de comercio electrónico personalizado. Trabajé en la estructuración y procesamiento de datos utilizados por equipos internos mientras desarrollaba servicios que conectaban las interacciones de los clientes con los flujos administrativos. Esta también fue mi primera experiencia como mentor de otro desarrollador, incluyendo delegación de tareas, revisiones de merge requests y orientación técnica.",
+        "challenges": "Uno de los principales desafíos fue integrar agentes de programación al flujo de desarrollo sin perder el control sobre la base de código ni sacrificar la calidad. Tuve que equilibrar la delegación de trabajo repetitivo a herramientas de IA con mantener bajo control directo del desarrollador las decisiones arquitectónicas, la validación y los cambios críticos. Al mismo tiempo, estaba adaptándome a la mentoría de otro desarrollador y a los procesos estructurados de desarrollo que se estaban introduciendo como parte de la iniciativa de evaluación CMMI Nivel 5 de la empresa.",
+        "learnings": "Este proyecto amplió mi experiencia más allá de la implementación hacia la coordinación de ingeniería. Adquirí experiencia práctica con desarrollo asistido por IA, revisión de código, delegación de tareas, mentoría y procesos estructurados de desarrollo de software, incluyendo documentación y prácticas de calidad asociadas con la implementación de CMMI Nivel 5 de la empresa."
       },
 
       "ecommerce-storefront": {
         "description": "Servicios orientados al cliente para un sistema de comercio electrónico personalizado",
-        "fullDescription": "Trabajé en paralelo con la plataforma administrativa, principalmente implementando servicios de chat de atención al cliente y asegurando que los datos generados por las interacciones con los clientes fueran consistentes con los pipelines utilizados por el sistema administrativo. Mi trabajo se enfocó en los servicios backend que conectaban las interacciones de los clientes con el resto de la plataforma de comercio electrónico.",
-        "challenges": "El principal desafío fue mantener la consistencia de los datos entre los servicios orientados al cliente y los pipelines administrativos. Las interacciones de los clientes debían procesarse de manera confiable, asegurando al mismo tiempo que la información utilizada por los reportes internos y los flujos operativos fuera precisa y estuviera sincronizada. Este trabajo también debía seguir los procesos estructurados de desarrollo y revisión que se estaban implementando como parte del proceso de CMMI Nivel 5 de la empresa.",
-        "learnings": "Aprendí más sobre el diseño de servicios backend que abarcan diferentes partes de un mismo sistema y sobre la importancia de mantener contratos de datos consistentes entre ellos. Trabajar en el chat de atención al cliente me proporcionó experiencia práctica con comunicación en tiempo real como parte de un flujo transaccional más amplio. También me familiaricé más con procesos estructurados de desarrollo de software, documentación, revisiones y prácticas de calidad mediante la implementación de CMMI Nivel 5 de la empresa."
+        "fullDescription": "Trabajé en paralelo con la plataforma administrativa, principalmente implementando servicios de chat para atención al cliente y asegurando que los datos generados por las interacciones con los clientes permanecieran consistentes con los pipelines utilizados por el sistema administrativo. Mi trabajo se enfocó en los servicios backend que conectaban las interacciones de los clientes con el resto de la plataforma de comercio electrónico.",
+        "challenges": "El principal desafío fue mantener un flujo de datos confiable entre los servicios orientados al cliente y los pipelines administrativos. Las interacciones de los clientes debían procesarse de manera consistente, asegurando al mismo tiempo que la información utilizada por los reportes internos y los flujos operativos permaneciera precisa y sincronizada.",
+        "learnings": "Este proyecto fortaleció mi experiencia diseñando servicios backend entre distintos límites del sistema y manteniendo contratos de datos consistentes entre ellos. También me dio experiencia práctica integrando comunicación en tiempo real dentro de un flujo transaccional más amplio."
       },
 
       "omniAerea": {
-        "description": "Plataforma interna de productividad para desarrollo asistido por IA",
-        "fullDescription": "Como respuesta al aumento de las expectativas de productividad tras la adopción del desarrollo asistido por IA, construí una herramienta interna para ayudar a mi equipo a manejar la carga de trabajo adicional. El sistema consiste en un paquete de Python que extrae información de nuestro tablero Kanban personalizado y del historial de Git para proporcionar contexto en revisiones de código, flujos de documentación y tareas de programación. El paquete está diseñado para ser agnóstico al agente y puede ser utilizado por distintos agentes de IA, mientras que un wrapper de plugin para Codex proporciona la orquestación y expone su funcionalidad mediante una interfaz unificada.",
-        "challenges": "El principal desafío fue diseñar la herramienta alrededor del flujo de desarrollo existente del equipo en lugar de introducir otro sistema de IA aislado. El paquete debía recopilar y estructurar información de múltiples fuentes internas de forma confiable, manteniéndose lo suficientemente flexible para soportar diferentes agentes y casos de uso. También tuve que diseñar la capa de orquestación para que los agentes pudieran acceder a estas capacidades sin acoplar estrechamente el paquete de Python subyacente a un modelo o framework específico.",
-        "learnings": "Aprendí a diseñar herramientas de IA como infraestructura reutilizable en lugar de como aplicaciones de propósito único. Esto me proporcionó experiencia práctica con arquitecturas agnósticas a agentes, orquestación de herramientas, integración de sistemas de IA con flujos de desarrollo existentes y uso de datos de proyectos y Git como contexto para tareas de desarrollo automatizadas."
+        "description": "Plataforma interna de productividad para desarrolladores asistida por IA",
+        "fullDescription": "Como respuesta al aumento de las expectativas de productividad tras la adopción del desarrollo asistido por IA, construí una herramienta interna para ayudar a mi equipo a manejar una mayor carga de trabajo. El sistema consiste en un paquete de Python que extrae información de nuestro tablero Kanban personalizado y del historial de Git para proporcionar contexto a revisiones de código, flujos de documentación y tareas de desarrollo. El paquete es agnóstico al agente y puede utilizarse con distintos agentes de IA, mientras que un wrapper de plugin para Codex orquesta su funcionalidad mediante una interfaz unificada. Este proyecto nos ayudó a mí y a mi equipo a reducir el tiempo dedicado a procesos burocráticos en un promedio de 15 minutos por tarea y una hora por revisión de código.",
+        "challenges": "El principal desafío fue integrar la IA al flujo de desarrollo existente del equipo en lugar de crear otra herramienta aislada. El sistema debía recopilar y estructurar información de múltiples fuentes internas, manteniendo suficiente flexibilidad para soportar distintos agentes y casos de uso. La capa de orquestación también debía permanecer desacoplada de cualquier modelo o framework específico.",
+        "learnings": "Este proyecto me dio experiencia práctica diseñando herramientas de IA como infraestructura reutilizable. Trabajé con arquitectura agnóstica al agente, orquestación de herramientas, flujos internos para desarrolladores y uso de datos de proyectos y Git como contexto para tareas de desarrollo automatizadas."
       },
 
       "engine3d": {
         "description": "Motor de renderizado de software personalizado",
-        "fullDescription": "Construido desde cero utilizando conceptos de álgebra lineal como matrices de proyección y transformaciones de rotación para renderizado en tiempo real.",
-        "challenges": "Construir el comportamiento de renderizado desde cero requirió convertir conceptos de álgebra lineal en transformaciones visibles y fáciles de depurar.",
-        "learnings": "Aprendí cómo funcionan la proyección, la rotación y los sistemas de coordenadas a un nivel mucho más profundo cuando no hay un motor gráfico que oculte las matemáticas."
+        "fullDescription": "Un motor de renderizado construido desde cero utilizando conceptos de álgebra lineal como matrices de proyección, transformaciones de coordenadas y transformaciones de rotación para renderizado en tiempo real.",
+        "challenges": "Sin un motor gráfico existente que manejara las matemáticas subyacentes, tuve que convertir conceptos de álgebra lineal en comportamientos de renderizado que pudieran observarse y depurarse.",
+        "learnings": "Construir el renderer desde cero me permitió comprender mejor la proyección, rotación, los sistemas de coordenadas y las matemáticas detrás de los gráficos en tiempo real."
       },
 
       "sartreCat": {
-        "description": "Plataforma anónima de recopilación de opiniones para autorreflexión",
-        "fullDescription": "Un experimento personal basado en una pregunta sencilla: ¿cómo me perciben los demás cuando pueden responder de manera completamente anónima? La plataforma recopila respuestas escritas de forma anónima y las almacena para su posterior análisis. El proyecto fue diseñado pensando en futuras experimentaciones con NLP, con planes para explorar análisis de sentimiento, clustering y otras técnicas para identificar temas recurrentes y patrones en las respuestas recopiladas.",
-        "challenges": "El principal desafío fue diseñar un sistema de retroalimentación que se mantuviera simple y accesible mientras recopilaba datos en una estructura que pudiera soportar análisis significativos posteriormente. Debido a que el experimento trabaja con respuestas subjetivas escritas, también tuve que considerar cómo la forma de recopilar las preguntas y respuestas podría afectar la utilidad de futuros análisis.",
-        "learnings": "Aprendí a diseñar la recopilación de datos teniendo en cuenta el análisis posterior sin sobrecomplicar la implementación inicial. El proyecto también me proporcionó una forma práctica de explorar conceptos de NLP aplicados a texto subjetivo y no estructurado, manteniendo el alcance lo suficientemente pequeño como para completarlo e iterarlo."
+        "description": "Plataforma anónima de recopilación de opiniones para la autorreflexión",
+        "fullDescription": "Un experimento personal construido alrededor de una pregunta sencilla: ¿cómo me perciben las personas cuando pueden responder de forma completamente anónima? La plataforma recopila respuestas escritas anónimas y las almacena para su posterior análisis. Fue diseñada pensando en futuros experimentos de NLP, incluyendo análisis de sentimiento, clustering y otras técnicas para identificar temas y patrones recurrentes.",
+        "challenges": "El desafío fue mantener sencilla la experiencia de proporcionar opiniones mientras se recopilaban los datos en una estructura que pudiera permitir análisis significativos posteriormente. Debido a que las respuestas son subjetivas y no estructuradas, el diseño del proceso de recopilación también debía considerar cómo estas decisiones podrían afectar el análisis futuro.",
+        "learnings": "El proyecto me enseñó a diseñar la recopilación de datos teniendo en cuenta el análisis posterior sin sobreingenierizar la implementación inicial. También me proporcionó un entorno práctico para explorar NLP sobre texto subjetivo y no estructurado."
       },
 
       "peerReview": {
         "description": "Análisis automatizado de merge requests y patrones de revisión de código",
-        "fullDescription": "Un sistema de automatización backend que analiza merge requests de GitLab y la actividad de revisión asociada. Extrae información como la participación de los revisores, patrones en los comentarios y datos del flujo de revisión para generar insights estructurados para equipos de ingeniería. El objetivo es ayudar a identificar cuellos de botella en las revisiones, patrones recurrentes y oportunidades para mejorar la consistencia del flujo de desarrollo.",
-        "challenges": "El principal desafío fue extraer información útil de la actividad de revisión sin tratar cada métrica como una medida objetiva de la calidad de una revisión. El comportamiento durante una revisión de código depende mucho del contexto, por lo que el sistema debía proporcionar señales útiles dejando la interpretación de esas señales en manos de los desarrolladores y equipos que las utilizan.",
-        "learnings": "Aprendí a abordar las métricas de ingeniería como herramientas de apoyo y no como sistemas de evaluación automatizada. Este proyecto fortaleció mi comprensión de la extracción de datos de flujos de desarrollo, el diseño de métricas y la importancia de proporcionar contexto al analizar procesos impulsados por personas."
+        "fullDescription": "Un sistema backend de automatización que analiza merge requests de GitLab y la actividad de revisión asociada. Extrae participación de revisores, patrones de comentarios y datos del flujo de trabajo para generar información estructurada para equipos de ingeniería, ayudando a identificar cuellos de botella y patrones recurrentes en el proceso de desarrollo.",
+        "challenges": "El principal desafío fue extraer señales útiles de la actividad de revisión sin tratar cada métrica como una medida objetiva de la calidad de una revisión. El comportamiento durante las revisiones de código depende mucho del contexto, por lo que el sistema debía proporcionar datos que ayudaran al análisis sin reducir el criterio humano a una única métrica.",
+        "learnings": "El proyecto fortaleció mi experiencia con analítica de ingeniería, extracción de datos de flujos de desarrollo y diseño de métricas. También reforzó la importancia de utilizar las métricas como contexto para la toma de decisiones y no como sustitutos del criterio humano."
       },
 
       "openGoReadme": {
         "description": "Herramienta CLI que genera archivos README a partir de cualquier repositorio",
-        "fullDescription": "Una herramienta CLI desarrollada en Go que genera automáticamente archivos README.md estructurados a partir de repositorios de software. Analiza la estructura del repositorio y el código fuente mediante resúmenes basados en AST, selecciona los archivos más relevantes mediante un LLM y genera la documentación mediante un pipeline de dos etapas consciente del contexto.",
-        "challenges": "El principal desafío fue determinar qué partes de un repositorio realmente proporcionan contexto útil para la documentación. Pasar todo un código base a un LLM es ineficiente y puede introducir ruido innecesario, por lo que el sistema combina análisis determinista mediante AST con selección de archivos basada en LLM antes de generar la documentación final.",
-        "learnings": "Aprendí a combinar análisis determinista de código con IA generativa dentro de un mismo pipeline. El proyecto también me proporcionó experiencia práctica diseñando estrategias de selección de contexto para aplicaciones con LLM y desarrollando herramientas para programadores en Go."
+        "fullDescription": "Una herramienta CLI desarrollada en Go que genera automáticamente archivos README.md estructurados a partir de repositorios de software. Analiza la estructura del repositorio y el código fuente mediante resúmenes basados en AST, selecciona archivos relevantes mediante un LLM y genera la documentación mediante un pipeline de dos etapas con selección de contexto.",
+        "challenges": "El principal desafío fue determinar qué partes de un repositorio proporcionan contexto útil para la documentación. Enviar un código completo a un LLM es ineficiente e introduce ruido innecesario, por lo que el sistema combina análisis determinista mediante AST con selección de archivos basada en LLM antes de generar la documentación final.",
+        "learnings": "El proyecto me enseñó a combinar análisis determinista de programas con IA generativa dentro de un mismo pipeline. También me dio experiencia práctica con selección de contexto para aplicaciones basadas en LLM y herramientas para desarrolladores en Go."
       },
 
       "facecat": {
-        "description": "Sistema básico de recomendación de contenido mediante clasificación de imágenes con CNN",
-        "fullDescription": "Un pequeño experimento de machine learning que utiliza una red neuronal convolucional para clasificar imágenes de mascotas en diferentes categorías y utilizar esas predicciones como base para un sistema de recomendación sencillo. El modelo fue construido con PyTorch y entrenado con un dataset personalizado pequeño, proporcionando una exploración práctica de la clasificación de imágenes y de las limitaciones de entrenar modelos de deep learning con datos limitados.",
-        "challenges": "El principal desafío fue trabajar con un dataset relativamente pequeño mientras intentaba obtener resultados útiles de clasificación. Con pocos ejemplos por clase, el rendimiento del modelo era muy sensible a la calidad de los datos, el preprocesamiento y la elección de la arquitectura, lo que requirió experimentar para comprender dónde el modelo estaba aprendiendo características visuales útiles y dónde simplemente estaba sobreajustando.",
-        "learnings": "Aprendí los fundamentos de construir y entrenar clasificadores de imágenes basados en CNN con PyTorch, incluyendo preparación de datasets, transfer learning, evaluación y los efectos de contar con datos de entrenamiento limitados. El proyecto también me proporcionó experiencia práctica comprendiendo la diferencia entre implementar un modelo de machine learning y obtener aplicaciones prácticas a partir de él."
+        "description": "Sistema básico de recomendación de mascotas mediante clasificación de imágenes con CNN",
+        "fullDescription": "Un pequeño experimento de machine learning que utiliza una red neuronal convolucional para clasificar imágenes de mascotas en distintas categorías y utilizar esas predicciones como base para un sistema sencillo de recomendación. Construido con PyTorch y entrenado con un dataset personalizado pequeño, el proyecto sirvió como una exploración práctica de clasificación de imágenes y de los desafíos de entrenar modelos de deep learning con datos limitados.",
+        "challenges": "El principal desafío fue obtener resultados de clasificación útiles a partir de un dataset relativamente pequeño. Con pocos ejemplos por clase, el rendimiento del modelo era sensible a la calidad de los datos, el preprocesamiento y las decisiones de arquitectura, lo que requirió experimentación para distinguir características aprendidas útiles de sobreajuste.",
+        "learnings": "El proyecto me dio experiencia práctica construyendo y entrenando clasificadores basados en CNN con PyTorch, incluyendo preparación de datasets, transfer learning, evaluación y trabajo con datos de entrenamiento limitados. También mostró la diferencia entre implementar un modelo de machine learning y obtener resultados confiables a partir de él."
       }
     },
 
@@ -150,40 +149,40 @@
       "notFound": "Proyecto no encontrado",
       "description": "Descripción",
       "challenges": "Desafíos",
-      "learnings": "Lo que aprendí"
+      "learnings": "Lo que Aprendí"
     }
   },
 
   "skills": {
     "header": {
       "label": "Capacidades",
-      "title": "Con Lo Que Trabajo"
+      "title": "Con Qué Trabajo"
     },
 
     "items": {
       "backend": {
         "title": "Desarrollo Backend",
-        "description": "Construcción de APIs, servicios, herramientas de automatización y aplicaciones escalables."
+        "description": "Construcción de APIs, servicios, herramientas de automatización, pipelines de datos y aplicaciones de producción."
       },
 
       "frameworks": {
         "title": "Frameworks",
-        "description": "Creación de aplicaciones mantenibles utilizando frameworks y librerías backend modernas."
+        "description": "Diseño de aplicaciones mantenibles utilizando frameworks y librerías modernas de backend."
       },
 
       "ai": {
         "title": "IA y Machine Learning",
-        "description": "Trabajo con modelos de lenguaje, sistemas de recuperación de información y flujos de trabajo de machine learning."
+        "description": "Construcción e integración de aplicaciones con LLM, sistemas de recuperación, agentes de IA y flujos de trabajo de machine learning."
       },
 
       "infrastructure": {
         "title": "Infraestructura",
-        "description": "Bases de datos, sistemas de mensajería, contenedores y herramientas de despliegue."
+        "description": "Trabajo con bases de datos, sistemas de mensajería, contenedores, control de versiones y herramientas de despliegue."
       },
 
       "languages": {
         "title": "Idiomas",
-        "description": "Cómodo trabajando en entornos y equipos internacionales.",
+        "description": "Capacidad para comunicarme y colaborar en entornos internacionales de ingeniería.",
         "technologies": "Español (Nativo) • Inglés (Fluido)"
       }
     }

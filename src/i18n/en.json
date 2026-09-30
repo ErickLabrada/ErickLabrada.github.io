@@ -1,5 +1,5 @@
 {
-    "header": {
+  "header": {
     "home": "Home"
   },
   "contact": {
@@ -65,7 +65,6 @@
     },
 
     "items": {
-
       "itzai": {
         "description": "Multi-component AI assistant for real-time business communication",
         "fullDescription": "During my internship at GILA Software, I worked on a customizable, multitenant AI assistant for real-time, natural-language-based communication. I contributed to the system architecture and built and orchestrated several components for the MVP, including speech-to-text, text-to-speech, RAG, and request-routing pipelines. Due to an NDA, I cannot share implementation details or source code, but GILA's official publications provide additional context about the project.",
@@ -75,9 +74,9 @@
 
       "ticketReceiver": {
         "description": "Production task management system for distributed workflows",
-        "fullDescription": "After joining MediaAerea, I was assigned to support, stabilize, and develop new features for an unstable production system. Working with the team, I helped improve the system's reliability while continuing to deliver new functionality. One of the main additions was a real-time dashboard providing accessible insights into team productivity and the current state of the workload.",
-        "challenges": "The main challenge was understanding an unfamiliar and largely undocumented codebase while learning the business rules behind it. At the same time, the system was actively used by clients, requiring hotfixes and new features to be delivered without disrupting ongoing operations. This meant balancing reliability, development speed, and changing business requirements.",
-        "learnings": "This project gave me substantial experience working with production software: troubleshooting live systems, shipping patches and features, collaborating with DevOps, optimizing existing code, and working within legacy systems where business logic is not always explicitly documented."
+        "fullDescription": "After joining MediaAerea, I was assigned to support, stabilize, and develop new features for an actively used and unstable production system within a distributed, multi-tenant ticketing platform. Working with the team, I helped improve system reliability while continuing to deliver new functionality. One of the main additions was a real-time dashboard that provided accessible, data-driven insights into team productivity, workload, and ticket performance. These improvements contributed to a 34% reduction in average ticket resolution time, a 35% reduction in closure time, a 118% increase in tickets resolved before their promised date, and a 64% increase in tickets resolved before their deadline.",
+        "challenges": "The main challenge was understanding an unfamiliar and largely undocumented codebase while learning the business rules behind it. At the same time, the system was actively used by clients, requiring hotfixes and new features to be delivered without disrupting ongoing operations. This meant balancing reliability, development speed, and changing business requirements while working with production data and workflows.",
+        "learnings": "This project gave me substantial experience working with production software: troubleshooting live systems, shipping patches and features, collaborating with DevOps, analyzing operational data, optimizing existing code, and working within legacy systems where business logic is not always explicitly documented."
       },
 
       "ticketMigration": {
@@ -103,7 +102,7 @@
 
       "omniAerea": {
         "description": "Internal AI-assisted developer productivity platform",
-        "fullDescription": "In response to increasing productivity expectations following the adoption of AI-assisted development, I built an internal tool to help my team handle additional workload. The system consists of a Python package that extracts information from our custom Kanban board and Git history to provide context for code reviews, documentation workflows, and coding tasks. The package is agent-agnostic and can be used by different AI agents, while a Codex plugin wrapper orchestrates its functionality through a unified interface.",
+        "fullDescription": "In response to increasing productivity expectations following the adoption of AI-assisted development, I built an internal tool to help my team handle additional workload. The system consists of a Python package that extracts information from our custom Kanban board and Git history to provide context for code reviews, documentation workflows, and coding tasks. The package is agent-agnostic and can be used by different AI agents, while a Codex plugin wrapper orchestrates its functionality through a unified interface. This project helped me and my team reduce time spent on bureaucratic processes by an average of 15 minutes per task and one hour per peer review.",
         "challenges": "The main challenge was integrating AI into the team's existing development workflow rather than creating another isolated tool. The system needed to gather and structure information from multiple internal sources while remaining flexible enough to support different agents and use cases. The orchestration layer also had to remain decoupled from any specific model or framework.",
         "learnings": "This project gave me practical experience designing AI tooling as reusable infrastructure. I worked with agent-agnostic architecture, tool orchestration, internal developer workflows, and using project and Git data as context for automated development tasks."
       },
