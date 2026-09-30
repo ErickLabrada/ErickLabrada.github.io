@@ -54,16 +54,22 @@ const { t } = useI18n()
 
 <style scoped>
 .contact-section {
+  width: 100%;
   margin-top: 80px;
   margin-bottom: 80px;
+}
+
+.contact-card {
+  display: block;
+  width: 100%;
 }
 
 .contact-card::part(base) {
   background: rgba(18, 21, 30, 0.72);
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 24px;
-  padding: 48px;
+  border-radius: 8px;
+  padding: 48px 32px;
   text-align: center;
 }
 
@@ -106,5 +112,15 @@ const { t } = useI18n()
 .contact-link:hover {
   transform: translateY(-2px);
   border-color: rgba(255,255,255,0.25);
+}
+
+@media (max-width: 768px) {
+  .contact-card::part(base) {
+    padding: 36px 20px;
+  }
+
+  .contact-link {
+    width: 100%;
+  }
 }
 </style>

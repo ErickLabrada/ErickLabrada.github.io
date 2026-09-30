@@ -13,7 +13,7 @@
   "homeHero": {
     "label": "Portfolio and Projects Archive",
     "title": "Hello World, I'm Erick.",
-    "description": "Software Engineering graduate based in México with a passion for machine learning, automation, and building software that solves real-world problems. I enjoy exploring the intersection of AI, science, and creativity—whether that's developing tools, analyzing data, or coming up with and developing creative solutions. This portfolio is a collection of projects, experiments, and ideas I've had fun creating.",
+    "description": "AI & Backend development focused engineer based in México with a passion for machine learning, automation, and building software that solves real-world problems. I enjoy exploring the intersection of AI, science, and creativity—whether that's developing tools, analyzing data, or coming up with and developing creative solutions. This portfolio is a collection of projects, experiments, and ideas I've had fun creating.",
     "note": "Hope you enjoy flipping through it like old Polaroids.",
     "cv": "Resume"
   },
@@ -43,54 +43,80 @@
       "description": "Learning projects, automation tools, strange ideas, and things I wanted to see exist."
     },
     "items": {
-      "aiAssistant": {
+      "itzai": {
         "description": "Multi-component AI assistant for real-time business communication",
-        "fullDescription": "Designed and implemented an AI-powered assistant with intent detection and a custom RAG pipeline using Hugging Face models. Built backend with Python and MongoDB. NDA restricts public UI/source."
+        "fullDescription": "During my internship at GILA Software, I worked on a customizable, multitenant AI assistant for real-time, natural-language-based communication. I helped design the system architecture and built and orchestrated several components for the MVP, including speech-to-text, text-to-speech, RAG, and request-routing pipelines. Unfortunately, due to an NDA theres not a lot I can say or show about this project, but you can read more about it on GILA's official posts",
+        "challenges": "The main challenge was working under tight time constraints. Since the team was composed entirely of interns and development time was limited, using a vector database or agentic AI frameworks such as LangGraph was not feasible for the MVP. I therefore adapted the architecture to these constraints, implementing the orchestration and routing logic in raw Python while also helping my teammates maintain a structured and maintainable project.",
+        "learnings": "At the beginning of my internship, I had limited practical experience with AI. GILA gave me the freedom to experiment with different approaches, which allowed me to develop a stronger understanding of practical LLM applications, RAG concepts, the Hugging Face ecosystem, software architecture, teamwork, and Python project organization."
       },
       "ticketReceiver": {
         "description": "Task management system for distributed workflows",
-        "fullDescription": "Real-time dashboard for automated task processing and synchronized updates across distributed services."
+        "fullDescription": "After joining MediaAerea, I was assigned to support, stabilize, and develop new features for an unstable production system. After several months of work and collaboration with the team, we were able to significantly improve the system's stability and reliability while continuing to deliver new functionality. One of the main additions was a real-time dashboard that provided clear, accessible insights into team productivity and the current state of the workload.",
+        "challenges": "Getting familiar with a new and largely undocumented codebase was challenging, but the biggest challenge was understanding the business rules behind the system while continuously delivering hotfixes and new features to production without disrupting client operations. This required balancing system stability, development speed, and the needs of active users.",
+        "learnings": "Through this project, I gained significant experience collaborating with a DevOps team, shipping features and patches to production, troubleshooting live systems, and optimizing existing software. I also developed a stronger understanding of working with legacy code and maintaining software under real-world operational constraints."
       },
       "ticketMigration": {
-        "description": "Refactor of legacy system into NestJS architecture",
-        "fullDescription": "Migrated a legacy JS system into NestJS, improving scalability and maintainability with structured backend design."
+        "description": "Refactor of a legacy system into a NestJS architecture",
+        "fullDescription": "After becoming familiar with the receiving side of the system, I was assigned to a project focused on addressing the limitations of a legacy core system that had become difficult to extend. The team decided to migrate the existing JavaScript codebase to a modern NestJS architecture better suited to the client's new requirements and future development. During the migration, I also redesigned parts of the data pipelines and report generation system, improving processing times while making the codebase easier to debug, maintain, and extend.",
+        "challenges": "The main challenge was translating the behavior of a legacy system into a cleaner NestJS architecture without losing implicit business rules that were not documented in the original codebase. This required understanding the existing behavior before deciding how each component should be redesigned.",
+        "learnings": "I learned to approach migrations as documentation and discovery work as much as coding: first identify and understand the existing behavior, then reshape the architecture around those requirements. I also gained practical experience designing more maintainable data pipelines and optimizing report generation workflows."
       },
-      "dailyAI": {
-        "description": "Automated standup reporting tool using LLMs",
-        "fullDescription": "Scrapes kanban activity with Playwright, enriches via GitLab API, generates structured reports using LLMs, and outputs via text-to-speech for meetings."
+      "ecommerce-admin": {
+        "description": "Administrative platform for a custom e-commerce system",
+        "fullDescription": "Contributed primarily to report generation, data pipelines, customer service chat services, and authentication for the administrative side of a custom e-commerce system. I worked on structuring and processing the data required by internal teams while also developing services that connected customer interactions with administrative workflows. This was also my first experience mentoring another developer, involving merge request reviews, task delegation, and technical guidance.",
+        "challenges": "One of the main challenges was integrating coding agents into the development workflow without losing control over the codebase or sacrificing code quality. This required finding a balance between delegating repetitive development tasks to AI tools while keeping architectural decisions, validation, and critical implementation work under direct developer control. I also had to adapt to working within the software development processes being introduced as the company pursued CMMI Level 5 appraisal, while simultaneously taking on mentoring responsibilities for the first time.",
+        "learnings": "I learned how to integrate AI-assisted development into an engineering workflow while maintaining clear boundaries around architecture, validation, and code ownership. I also gained my first experience mentoring another developer through task delegation, merge request reviews, and technical guidance. Additionally, I became familiar with structured software development and quality processes associated with the company's CMMI Level 5 implementation, giving me a better understanding of how development practices, documentation, reviews, and process maturity fit together."
       },
-      "greenhouse": {
-        "description": "IoT monitoring platform with microservices architecture",
-        "fullDescription": "Aggregates sensor data, detects thresholds, triggers SMS alerts via Twilio, and uses RabbitMQ for async communication. Includes ESP32 simulator."
+      "ecommerce-storefront": {
+        "description": "Customer-facing services for a custom e-commerce system",
+        "fullDescription": "Worked in parallel with the administrative platform, primarily implementing customer service chat services and ensuring that data generated by customer-facing interactions remained consistent with the pipelines used by the administrative system. My work focused on the backend services connecting customer interactions with the rest of the e-commerce platform.",
+        "challenges": "The main challenge was maintaining data consistency between customer-facing services and the administrative pipelines. Customer interactions needed to be processed reliably while ensuring that the information consumed by internal reporting and operational workflows remained accurate and synchronized. This work also had to follow the structured development and review processes being introduced as part of the company's CMMI Level 5 implementation.",
+        "learnings": "I learned more about designing backend services that span different parts of the same system and the importance of maintaining consistent data contracts between them. Working on the customer service chat gave me practical experience with real-time communication as part of a larger transactional workflow. I also became more familiar with structured software development processes, documentation, reviews, and quality practices through the company's CMMI Level 5 implementation."
       },
-      "cia": {
-        "description": "Enrollment system with validation and scheduling rules",
-        "fullDescription": "Microfrontend-based academic system with JWT auth, prerequisite validation, and schedule conflict detection."
+      "omniAerea": {
+        "description": "Internal AI-assisted developer productivity platform",
+        "fullDescription": "In response to increasing productivity expectations following the adoption of AI-assisted development, I built an internal tool to help my team handle the additional workload. The system consists of a Python package that extracts information from our custom Kanban board and Git history to provide context for code reviews, documentation workflows, and coding tasks. The package is designed to be agent-agnostic and can be used by different AI agents, while a Codex plugin wrapper provides orchestration and exposes its functionality through a unified interface.",
+        "challenges": "The main challenge was designing the tool around the team's existing development workflow rather than introducing another isolated AI system. The package needed to reliably gather and structure information from multiple internal sources while remaining flexible enough to support different agents and use cases. I also had to design the orchestration layer so that agents could access these capabilities without tightly coupling the underlying Python package to a specific model or framework.",
+        "learnings": "I learned how to design AI tooling as reusable infrastructure rather than as a single-purpose application. This gave me practical experience with agent-agnostic architecture, tool orchestration, integrating AI systems with existing development workflows, and using project and Git data as context for automated development tasks."
       },
       "engine3d": {
         "description": "Custom software rendering engine",
-        "fullDescription": "Built from scratch using linear algebra concepts like projection matrices and rotation transforms for real-time rendering."
-      },
-      "photography": {
-        "description": "Backend + WhatsApp booking automation",
-        "fullDescription": "Backend system for studio management with WhatsApp chatbot integration for booking and inquiries."
+        "fullDescription": "Built from scratch using linear algebra concepts like projection matrices and rotation transforms for real-time rendering.",
+        "challenges": "Building rendering behavior from scratch required turning linear algebra concepts into visible, debuggable transformations.",
+        "learnings": "I learned how projection, rotation, and coordinate systems work at a much deeper level when there is no graphics engine hiding the math."
       },
       "sartreCat": {
-        "description": "Anonymous feedback collection platform for self-reflection.",
-        "fullDescription": "A personal experiment built around a simple question: how do people perceive me when they can answer completely anonymously? The platform collects written responses and stores them for later analysis. The long-term goal is to apply sentiment analysis, clustering, and NLP techniques to identify recurring themes, blind spots, and patterns in how others experience me."
+        "description": "Anonymous feedback collection platform for self-reflection",
+        "fullDescription": "A personal experiment built around a simple question: how do people perceive me when they can answer completely anonymously? The platform collects anonymous written responses and stores them for later analysis. The project was designed with future NLP experimentation in mind, with plans to explore sentiment analysis, clustering, and other techniques for identifying recurring themes and patterns in the collected responses.",
+        "challenges": "The main challenge was designing a feedback system that remained simple and approachable while collecting data in a structure that could support meaningful analysis later. Because the experiment deals with subjective written responses, I also had to consider how the way questions and responses are collected could affect the usefulness of future analysis.",
+        "learnings": "I learned to design data collection with downstream analysis in mind without overengineering the initial implementation. The project also gave me a practical way to explore NLP concepts around subjective and unstructured text while keeping the scope small enough to complete and iterate on."
       },
       "peerReview": {
-        "description": "Automated analysis of merge requests and review patterns.",
-        "fullDescription": "A backend automation system that analyzes code review behavior across GitLab merge requests. It extracts reviewer patterns, comment density, and quality signals to generate structured insights for engineering teams. Built to improve review consistency and highlight bottlenecks in the development workflow."
-      },
-      "promptGenerator": {
-        "description": "AI-assisted bootstrap generation from Kanban tasks.",
-        "fullDescription": "A personal productivity utility that extracts task information from a custom Kanban board and automatically generates structured prompts for AI-assisted development. The system gathers context from task metadata, requirements, and related artifacts, producing prompts that accelerate project bootstrapping, implementation planning, and documentation workflows."
+        "description": "Automated analysis of merge requests and code review patterns",
+        "fullDescription": "A backend automation system that analyzes GitLab merge requests and their associated review activity. It extracts information such as reviewer participation, comment patterns, and review workflow data to generate structured insights for engineering teams. The goal is to help identify review bottlenecks, recurring patterns, and opportunities to improve the consistency of the development workflow.",
+        "challenges": "The main challenge was extracting useful information from review activity without treating every metric as an objective measure of review quality. Code review behavior is highly contextual, so the system needed to provide useful signals while leaving the interpretation of those signals to the developers and teams using them.",
+        "learnings": "I learned how to approach engineering analytics as a support tool rather than an automated judgment system. This project strengthened my understanding of data extraction from development workflows, metric design, and the importance of providing context when analyzing human-driven processes."
       },
       "openGoReadme": {
         "description": "CLI tool that generates README files from any repository",
-        "fullDescription": "Scans repositories, builds AST-based file summaries, selects relevant files using an LLM, and generates structured README.md files using a two-pass context-aware pipeline."
+        "fullDescription": "A Go CLI tool that automatically generates structured README.md files from software repositories. It analyzes the repository structure and source code using AST-based summaries, selects the most relevant files through an LLM, and generates documentation through a two-pass, context-aware pipeline.",
+        "challenges": "The main challenge was deciding which parts of a repository actually provide useful context for documentation. Passing an entire codebase to an LLM is inefficient and can introduce unnecessary noise, so the system combines deterministic AST analysis with LLM-based file selection before generating the final documentation.",
+        "learnings": "I learned how to combine deterministic program analysis with generative AI in a single pipeline. The project also gave me practical experience designing context selection strategies for LLM applications and building developer tooling in Go."
+      },
+      "facecat": {
+        "description": "Basic feed recommendation system using CNN-based image classification",
+        "fullDescription": "A small machine learning experiment that uses a convolutional neural network to classify images of pets into different categories and use those predictions as the basis for a simple recommendation system. The model was built with PyTorch and trained on a small custom dataset, providing a hands-on exploration of image classification and the practical limitations of training deep learning models with limited data.",
+        "challenges": "The main challenge was working with a relatively small dataset while trying to obtain useful classification results. With limited examples per class, model performance was highly sensitive to data quality, preprocessing, and the choice of architecture, requiring experimentation to understand where the model was learning useful visual features and where it was simply overfitting.",
+        "learnings": "I learned the fundamentals of building and training CNN-based image classifiers with PyTorch, including dataset preparation, transfer learning, evaluation, and the effects of limited training data. The project also gave me practical experience understanding the gap between implementing a machine learning model and obtaining practical applications from it."
       }
+    },
+    "post": {
+      "back": "Back to archive",
+      "technologies": "Technologies",
+      "notFound": "Project not found",
+      "description": "Description",
+      "challenges": "Challenges",
+      "learnings": "What I learnt"
     }
   },
   "skills": {

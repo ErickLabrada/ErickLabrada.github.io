@@ -3,18 +3,20 @@ import { useI18n } from "vue-i18n";
 import Polaroid from "@/components/Polaroid.vue";
 
 /* Images */
-import aiAssistant from "@/assets/projects/AI_Assistant.jpg";
+import itzai from "@/assets/projects/itzai.png";
 import sully from "@/assets/projects/sully.png";
 import anam from "@/assets/projects/ANAM.png";
 import peerReview from "@/assets/projects/peer-review.png";
 import prompt from "@/assets/projects/prompt.png";
 import sartre from "@/assets/projects/sartrecat.png";
-import dailyAI from "@/assets/projects/DailyAI.png";
+import omniAereaImage from "@/assets/projects/omniaerea.png";
 import opengo from "@/assets/projects/open-go-readme.png";
 import greenHouse from "@/assets/projects/GreenHouse.png";
 import cia from "@/assets/projects/CIA.png";
 import engine3d from "@/assets/projects/3D_Engine.gif";
-import wbot from "@/assets/projects/wbot.png";
+import facecat from "@/assets/projects/facecat.png";
+import ecommerceAdmin from "@/assets/projects/ecommerceAdmin.png";
+import ecommerceStorefront from "@/assets/projects/ecommerceStorefront.png";
 
 const { t } = useI18n();
 </script>
@@ -51,15 +53,17 @@ const { t } = useI18n();
       <div class="featured-grid">
         <Polaroid
           title="AI Communication Assistant"
-          :description="t('projects.items.aiAssistant.description')"
-          :full-description="t('projects.items.aiAssistant.fullDescription')"
-          :image-src="aiAssistant"
+          project-url="/projects/ai-assistant"
+          :description="t('projects.items.itzai.description')"
+          :full-description="t('projects.items.itzai.fullDescription')"
+          :image-src="itzai"
           :rotation="-2"
           :technologies="['Python', 'MongoDB', 'Hugging Face']"
         />
 
         <Polaroid
           title="Distributed Ticket Receiver"
+          project-url="/projects/ticket-receiver"
           :description="t('projects.items.ticketReceiver.description')"
           :full-description="t('projects.items.ticketReceiver.fullDescription')"
           :image-src="sully"
@@ -69,12 +73,34 @@ const { t } = useI18n();
 
         <Polaroid
           title="Ticket Source Service Migration"
+          project-url="/projects/ticket-migration"
           :description="t('projects.items.ticketMigration.description')"
           :full-description="t('projects.items.ticketMigration.fullDescription')"
           :image-src="anam"
           :rotation="-1"
           :technologies="['NestJS', 'PostgreSQL']"
         />
+
+        <Polaroid
+          title="Ecommerce Admin Site"
+          project-url="/projects/ecommerce-admin"
+          :description="t('projects.items.ecommerce-admin.description')"
+          :full-description="t('projects.items.ecommerce-admin.fullDescription')"
+          :image-src="ecommerceAdmin"
+          :rotation="1"
+          :technologies="['NestJS', 'Angular', 'PostgreSQL', 'Redis', 'WebSockets', 'Server-Sent Events']"
+        />
+
+        <Polaroid
+          title="Ecommerce storefront"
+          project-url="/projects/ecommerce-storefront"
+          :description="t('projects.items.ecommerce-storefront.description')"
+          :full-description="t('projects.items.ecommerce-storefront.fullDescription')"
+          :image-src="ecommerceStorefront"
+          :rotation="1"
+          :technologies="['NestJS', 'Svelte', 'PostgreSQL', 'Redis', 'WebSockets', 'Server-Sent Events']"
+        />
+
       </div>
     </div>
 
@@ -93,56 +119,31 @@ const { t } = useI18n();
       <div class="stagger-grid">
         <Polaroid
           class="p1"
-          title="DailyAI"
-          :description="t('projects.items.dailyAI.description')"
-          :full-description="t('projects.items.dailyAI.fullDescription')"
-          :image-src="dailyAI"
+          title="OmniAerea"
+          project-url="/projects/OmniAerea"
+          :description="t('projects.items.omniAerea.description')"
+          :full-description="t('projects.items.OmniAerea.fullDescription')"
+          :image-src="omniAereaImage"
           :rotation="-3"
           :technologies="['Python', 'Playwright', 'OpenAI API']"
         />
 
-        <Polaroid
-          class="p2"
-          title="Distributed Greenhouse System"
-          :description="t('projects.items.greenhouse.description')"
-          :full-description="t('projects.items.greenhouse.fullDescription')"
-          :image-src="greenHouse"
-          :rotation="2"
-          :technologies="['NestJS', 'RabbitMQ', 'MongoDB', 'MySQL', 'ESP32']"
-        />
-
-        <Polaroid
-          class="p3"
-          title="Academic Information System (CIA)"
-          :description="t('projects.items.cia.description')"
-          :full-description="t('projects.items.cia.fullDescription')"
-          :image-src="cia"
-          :rotation="-1"
-          :technologies="['JavaScript', 'JWT', 'Microfrontends']"
-        />
-
-        <Polaroid
+        <!-- <Polaroid
           class="p4"
           title="3D Engine"
+          project-url="/projects/3d-engine"
           :description="t('projects.items.engine3d.description')"
           :full-description="t('projects.items.engine3d.fullDescription')"
           :image-src="engine3d"
           :rotation="3"
           :technologies="['Java', 'Linear Algebra']"
         />
+      -->
 
-        <Polaroid
-          class="p5"
-          title="Photography Studio System"
-          :description="t('projects.items.photography.description')"
-          :full-description="t('projects.items.photography.fullDescription')"
-          :image-src="wbot"
-          :rotation="-2"
-          :technologies="['NestJS', 'TypeScript', 'MySQL', 'BuilderBot']"
-        />
 
         <Polaroid
           title="Sartre's Cat"
+          project-url="/projects/sartres-cat"
           :description="t('projects.items.sartreCat.description')"
           :full-description="t('projects.items.sartreCat.fullDescription')"
           :image-src="sartre"
@@ -152,6 +153,7 @@ const { t } = useI18n();
 
         <Polaroid
           title="Peer Review Automation"
+          project-url="/projects/peer-review"
           :description="t('projects.items.peerReview.description')"
           :full-description="t('projects.items.peerReview.fullDescription')"
           :image-src="peerReview"
@@ -160,16 +162,18 @@ const { t } = useI18n();
         />
 
         <Polaroid
-          title="Prompt Generator"
-          :description="t('projects.items.promptGenerator.description')"
-          :full-description="t('projects.items.promptGenerator.fullDescription')"
-          :image-src="prompt"
-          :rotation="-1"
-          :technologies="['Python', 'Playwright', 'LLMs', 'Automation']"
+          title="FaceCat"
+          project-url="/projects/facecat"
+          :description="t('projects.items.facecat.description')"
+          :full-description="t('projects.items.facecat.fullDescription')"
+          :image-src="facecat"
+          :rotation="-2"
+          :technologies="['python', 'pytorch', 'CNN', 'RabbitMQ']"
         />
 
         <Polaroid
           title="Open Go Readme"
+          project-url="/projects/open-go-readme"
           :description="t('projects.items.openGoReadme.description')"
           :full-description="t('projects.items.openGoReadme.fullDescription')"
           :image-src="opengo"
@@ -235,54 +239,43 @@ const { t } = useI18n();
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   align-items: start;
+  justify-items: center;
 }
 
 /* STAGGER GRID */
 .stagger-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
+  justify-content: center;
+  gap: 32px 28px;
   align-items: start;
+  justify-items: center;
 }
 
-/* STAGGER POSITIONING */
-.p1 {
-  grid-column: 1 / 2;
-}
-
+/* SUBTLE STAGGER POSITIONING */
 .p2 {
-  grid-column: 3 / 4;
-  transform: translateY(30px);
+  margin-top: 24px;
 }
 
 .p3 {
-  grid-column: 2 / 3;
-  transform: translateY(-10px);
+  margin-top: 8px;
 }
 
 .p4 {
-  grid-column: 4 / 5;
-  transform: translateY(20px);
+  margin-top: 20px;
 }
 
 .p5 {
-  grid-column: 1 / 3;
-  transform: translateY(10px);
+  margin-top: 4px;
 }
 
 @media (max-width: 1100px) {
-  .featured-grid,
-  .stagger-grid {
+  .featured-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .p1,
-  .p2,
-  .p3,
-  .p4,
-  .p5 {
-    grid-column: auto;
-    transform: none;
+  .stagger-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
   }
 }
 
@@ -290,6 +283,13 @@ const { t } = useI18n();
   .featured-grid,
   .stagger-grid {
     grid-template-columns: 1fr;
+  }
+
+  .p2,
+  .p3,
+  .p4,
+  .p5 {
+    margin-top: 0;
   }
 }
 </style>
