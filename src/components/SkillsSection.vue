@@ -1,59 +1,92 @@
+<script setup lang="ts">
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+</script>
+
 <template>
   <section class="skills-section">
     <div class="section-header">
-      <p class="section-label">Capabilities</p>
-      <h2>Things I Work With</h2>
+      <p class="section-label">
+        {{ t("skills.header.label") }}
+      </p>
+
+      <h2>
+        {{ t("skills.header.title") }}
+      </h2>
     </div>
 
-<div class="skills-grid">
-  <sl-card class="skill-card">
-    <h3>Backend Development</h3>
-    <p>
-      Building APIs, services, automation tools, and scalable
-      applications.
-    </p>
-    <span>Python • TypeScript • Java • Go</span>
-  </sl-card>
+    <div class="skills-grid">
+      <sl-card class="skill-card">
+        <h3>
+          {{ t("skills.items.backend.title") }}
+        </h3>
 
-  <sl-card class="skill-card">
-    <h3>Frameworks</h3>
-    <p>
-      Creating maintainable applications using modern backend
-      frameworks and libraries.
-    </p>
-    <span>NestJS • Flask • Express • Chi</span>
-  </sl-card>
+        <p>
+          {{ t("skills.items.backend.description") }}
+        </p>
 
-  <sl-card class="skill-card">
-    <h3>AI & Machine Learning</h3>
-    <p>
-      Working with language models, retrieval systems,
-      and machine learning workflows.
-    </p>
-    <span>
-      LangChain • LangGraph • Hugging Face • Transformers • RAG
-    </span>
-  </sl-card>
+        <span>
+          Python • TypeScript • Java • Go
+        </span>
+      </sl-card>
 
-  <sl-card class="skill-card">
-    <h3>Infrastructure</h3>
-    <p>
-      Databases, messaging systems, containers, and deployment tools.
-    </p>
-    <span>
-      PostgreSQL • MySQL • MongoDB • Redis • RabbitMQ • Docker • Git
-    </span>
-  </sl-card>
+      <sl-card class="skill-card">
+        <h3>
+          {{ t("skills.items.frameworks.title") }}
+        </h3>
 
-  <sl-card class="skill-card">
-    <h3>Languages</h3>
-    <p>
-      Comfortable working in international environments and teams.
-    </p>
-    <span>Spanish (Native) • English (Fluent)</span>
-  </sl-card>
-</div>
+        <p>
+          {{ t("skills.items.frameworks.description") }}
+        </p>
 
+        <span>
+          NestJS • Flask • Express • Chi
+        </span>
+      </sl-card>
+
+      <sl-card class="skill-card">
+        <h3>
+          {{ t("skills.items.ai.title") }}
+        </h3>
+
+        <p>
+          {{ t("skills.items.ai.description") }}
+        </p>
+
+        <span>
+          LangChain • LangGraph • Hugging Face • Transformers • RAG
+        </span>
+      </sl-card>
+
+      <sl-card class="skill-card">
+        <h3>
+          {{ t("skills.items.infrastructure.title") }}
+        </h3>
+
+        <p>
+          {{ t("skills.items.infrastructure.description") }}
+        </p>
+
+        <span>
+          PostgreSQL • MySQL • MongoDB • Redis • RabbitMQ • Docker • Git
+        </span>
+      </sl-card>
+
+      <sl-card class="skill-card">
+        <h3>
+          {{ t("skills.items.languages.title") }}
+        </h3>
+
+        <p>
+          {{ t("skills.items.languages.description") }}
+        </p>
+
+        <span>
+          {{ t("skills.items.languages.technologies") }}
+        </span>
+      </sl-card>
+    </div>
   </section>
 </template>
 
@@ -87,7 +120,7 @@
 .skill-card::part(base) {
   background: rgba(18, 21, 30, 0.72);
   backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 24px;
 }

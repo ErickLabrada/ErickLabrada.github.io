@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 import Polaroid from "@/components/Polaroid.vue";
 
 /* Images */
@@ -7,7 +8,6 @@ import sully from "@/assets/projects/sully.png";
 import anam from "@/assets/projects/ANAM.png";
 import peerReview from "@/assets/projects/peer-review.png";
 import prompt from "@/assets/projects/prompt.png";
-import me from "@/assets/me.jpg";
 import sartre from "@/assets/projects/sartrecat.png";
 import dailyAI from "@/assets/projects/DailyAI.png";
 import opengo from "@/assets/projects/open-go-readme.png";
@@ -15,38 +15,44 @@ import greenHouse from "@/assets/projects/GreenHouse.png";
 import cia from "@/assets/projects/CIA.png";
 import engine3d from "@/assets/projects/3D_Engine.gif";
 import wbot from "@/assets/projects/wbot.png";
+
+const { t } = useI18n();
 </script>
 
 <template>
   <section class="projects-section">
     <!-- HEADER -->
     <header class="section-header">
-      <p class="section-label">Archive</p>
+      <p class="section-label">
+        {{ t("projects.header.label") }}
+      </p>
 
-      <h2>Things I've Built</h2>
+      <h2>
+        {{ t("projects.header.title") }}
+      </h2>
 
       <p class="section-description">
-        A collection of software, experiments, and occasional rabbit holes.
-        Some were built professionally, others started as curiosity and grew
-        into something larger.
+        {{ t("projects.header.description") }}
       </p>
     </header>
 
     <!-- PROFESSIONAL -->
     <div class="projects-group">
       <div class="group-header">
-        <h3>Professional Work</h3>
+        <h3>
+          {{ t("projects.professional.title") }}
+        </h3>
 
         <p>
-          Systems built for real teams, real users, and real business needs.
+          {{ t("projects.professional.description") }}
         </p>
       </div>
 
       <div class="featured-grid">
         <Polaroid
           title="AI Communication Assistant"
-          description="Multi-component AI assistant for real-time business communication"
-          full-description="Designed and implemented an AI-powered assistant with intent detection and a custom RAG pipeline using Hugging Face models. Built backend with Python and MongoDB. NDA restricts public UI/source."
+          :description="t('projects.items.aiAssistant.description')"
+          :full-description="t('projects.items.aiAssistant.fullDescription')"
           :image-src="aiAssistant"
           :rotation="-2"
           :technologies="['Python', 'MongoDB', 'Hugging Face']"
@@ -54,8 +60,8 @@ import wbot from "@/assets/projects/wbot.png";
 
         <Polaroid
           title="Distributed Ticket Receiver"
-          description="Task management system for distributed workflows"
-          full-description="Real-time dashboard for automated task processing and synchronized updates across distributed services."
+          :description="t('projects.items.ticketReceiver.description')"
+          :full-description="t('projects.items.ticketReceiver.fullDescription')"
           :image-src="sully"
           :rotation="2"
           :technologies="['Django', 'JavaScript', 'PostgreSQL', 'Redis']"
@@ -63,8 +69,8 @@ import wbot from "@/assets/projects/wbot.png";
 
         <Polaroid
           title="Ticket Source Service Migration"
-          description="Refactor of legacy system into NestJS architecture"
-          full-description="Migrated a legacy JS system into NestJS, improving scalability and maintainability with structured backend design."
+          :description="t('projects.items.ticketMigration.description')"
+          :full-description="t('projects.items.ticketMigration.fullDescription')"
           :image-src="anam"
           :rotation="-1"
           :technologies="['NestJS', 'PostgreSQL']"
@@ -75,11 +81,12 @@ import wbot from "@/assets/projects/wbot.png";
     <!-- PERSONAL -->
     <div class="projects-group">
       <div class="group-header">
-        <h3>Experiments & Side Quests</h3>
+        <h3>
+          {{ t("projects.personal.title") }}
+        </h3>
 
         <p>
-          Learning projects, automation tools, strange ideas, and things I
-          wanted to see exist.
+          {{ t("projects.personal.description") }}
         </p>
       </div>
 
@@ -87,8 +94,8 @@ import wbot from "@/assets/projects/wbot.png";
         <Polaroid
           class="p1"
           title="DailyAI"
-          description="Automated standup reporting tool using LLMs"
-          full-description="Scrapes kanban activity with Playwright, enriches via GitLab API, generates structured reports using LLMs, and outputs via text-to-speech for meetings."
+          :description="t('projects.items.dailyAI.description')"
+          :full-description="t('projects.items.dailyAI.fullDescription')"
           :image-src="dailyAI"
           :rotation="-3"
           :technologies="['Python', 'Playwright', 'OpenAI API']"
@@ -97,8 +104,8 @@ import wbot from "@/assets/projects/wbot.png";
         <Polaroid
           class="p2"
           title="Distributed Greenhouse System"
-          description="IoT monitoring platform with microservices architecture"
-          full-description="Aggregates sensor data, detects thresholds, triggers SMS alerts via Twilio, and uses RabbitMQ for async communication. Includes ESP32 simulator."
+          :description="t('projects.items.greenhouse.description')"
+          :full-description="t('projects.items.greenhouse.fullDescription')"
           :image-src="greenHouse"
           :rotation="2"
           :technologies="['NestJS', 'RabbitMQ', 'MongoDB', 'MySQL', 'ESP32']"
@@ -107,8 +114,8 @@ import wbot from "@/assets/projects/wbot.png";
         <Polaroid
           class="p3"
           title="Academic Information System (CIA)"
-          description="Enrollment system with validation and scheduling rules"
-          full-description="Microfrontend-based academic system with JWT auth, prerequisite validation, and schedule conflict detection."
+          :description="t('projects.items.cia.description')"
+          :full-description="t('projects.items.cia.fullDescription')"
           :image-src="cia"
           :rotation="-1"
           :technologies="['JavaScript', 'JWT', 'Microfrontends']"
@@ -117,8 +124,8 @@ import wbot from "@/assets/projects/wbot.png";
         <Polaroid
           class="p4"
           title="3D Engine"
-          description="Custom software rendering engine"
-          full-description="Built from scratch using linear algebra concepts like projection matrices and rotation transforms for real-time rendering."
+          :description="t('projects.items.engine3d.description')"
+          :full-description="t('projects.items.engine3d.fullDescription')"
           :image-src="engine3d"
           :rotation="3"
           :technologies="['Java', 'Linear Algebra']"
@@ -127,8 +134,8 @@ import wbot from "@/assets/projects/wbot.png";
         <Polaroid
           class="p5"
           title="Photography Studio System"
-          description="Backend + WhatsApp booking automation"
-          full-description="Backend system for studio management with WhatsApp chatbot integration for booking and inquiries."
+          :description="t('projects.items.photography.description')"
+          :full-description="t('projects.items.photography.fullDescription')"
           :image-src="wbot"
           :rotation="-2"
           :technologies="['NestJS', 'TypeScript', 'MySQL', 'BuilderBot']"
@@ -136,8 +143,8 @@ import wbot from "@/assets/projects/wbot.png";
 
         <Polaroid
           title="Sartre's Cat"
-          description="Anonymous feedback collection platform for self-reflection."
-          full-description="A personal experiment built around a simple question: how do people perceive me when they can answer completely anonymously? The platform collects written responses and stores them for later analysis. The long-term goal is to apply sentiment analysis, clustering, and NLP techniques to identify recurring themes, blind spots, and patterns in how others experience me."
+          :description="t('projects.items.sartreCat.description')"
+          :full-description="t('projects.items.sartreCat.fullDescription')"
           :image-src="sartre"
           :rotation="-2"
           :technologies="['Vue', 'TypeScript', 'NLP', 'Data Analysis']"
@@ -145,8 +152,8 @@ import wbot from "@/assets/projects/wbot.png";
 
         <Polaroid
           title="Peer Review Automation"
-          description="Automated analysis of merge requests and review patterns."
-          full-description="A backend automation system that analyzes code review behavior across GitLab merge requests. It extracts reviewer patterns, comment density, and quality signals to generate structured insights for engineering teams. Built to improve review consistency and highlight bottlenecks in the development workflow."
+          :description="t('projects.items.peerReview.description')"
+          :full-description="t('projects.items.peerReview.fullDescription')"
           :image-src="peerReview"
           :rotation="2"
           :technologies="['Python', 'GitLab API', 'NLP', 'Automation']"
@@ -154,16 +161,17 @@ import wbot from "@/assets/projects/wbot.png";
 
         <Polaroid
           title="Prompt Generator"
-          description="AI-assisted bootstrap generation from Kanban tasks."
-          full-description="A personal productivity utility that extracts task information from a custom Kanban board and automatically generates structured prompts for AI-assisted development. The system gathers context from task metadata, requirements, and related artifacts, producing prompts that accelerate project bootstrapping, implementation planning, and documentation workflows."
+          :description="t('projects.items.promptGenerator.description')"
+          :full-description="t('projects.items.promptGenerator.fullDescription')"
           :image-src="prompt"
           :rotation="-1"
           :technologies="['Python', 'Playwright', 'LLMs', 'Automation']"
         />
-         <Polaroid
+
+        <Polaroid
           title="Open Go Readme"
-          description="CLI tool that generates README files from any repository"
-          full-description="Scans repositories, builds AST-based file summaries, selects relevant files using an LLM, and generates structured README.md files using a two-pass context-aware pipeline."
+          :description="t('projects.items.openGoReadme.description')"
+          :full-description="t('projects.items.openGoReadme.fullDescription')"
           :image-src="opengo"
           :rotation="-1"
           :technologies="['Go', 'OpenAI API', 'AST parsing', 'CLI']"

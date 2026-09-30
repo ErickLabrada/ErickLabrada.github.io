@@ -1,0 +1,125 @@
+{
+  "header": {
+    "home": "Inicio"
+  },
+  "contact": {
+    "contact": "Contacto",
+    "title": "Construyamos Algo Interesante",
+    "contact-description": "Ya sea ingeniería de software, IA, automatización, open source, música o un proyecto que te emocione, no dudes en contactarme."
+  },
+  "homeFooter": {
+    "quote": "Crear es vivir dos veces"
+  },
+  "homeHero": {
+    "label": "Archivo de Portafolio y Proyectos",
+    "title": "Hola Mundo, soy Erick.",
+    "description": "Ingeniero de Software egresado y ubicado en México, apasionado por el aprendizaje autómatico, la automatización y la creación de software que resuelve problemas del mundo real. Me gusta explorar la intersección entre la IA, la ciencia y la creatividad, ya sea desarrollando herramientas, analizando datos o ideando y desarrollando soluciones creativas. Este portafolio es una colección de proyectos, experimentos e ideas que me ha divertido crear.",
+    "note": "Espero que disfrutes recorriéndolo como si estuvieras hojeando viejas Polaroids.",
+    "cv": "Currículum"
+  },
+  "homeInfoGrid": {
+    "title": "Actualmente Explorando.",
+    "list": [
+      "Aprendizaje autómatico e Inteligencia Artificial",
+      "Automatización de Tareas",
+      "Análisis de Datos",
+      "Procesamiento de Lenguaje Natural",
+      "Música",
+      "Fotografía"
+    ]
+  },
+  "projects": {
+    "header": {
+      "label": "Archivo",
+      "title": "Cosas que He Construido",
+      "description": "Una colección de software, experimentos y algún que otro agujero de conejo. Algunos fueron desarrollados profesionalmente; otros comenzaron por curiosidad y terminaron convirtiéndose en algo más grande."
+    },
+    "professional": {
+      "title": "Trabajo Profesional",
+      "description": "Sistemas construidos para equipos reales, usuarios reales y necesidades empresariales reales."
+    },
+    "personal": {
+      "title": "Experimentos y Proyectos Personales",
+      "description": "Proyectos de aprendizaje, herramientas de automatización, ideas extrañas y cosas que simplemente quería ver existir."
+    },
+    "items": {
+      "aiAssistant": {
+        "description": "Asistente de IA multicomponente para comunicación empresarial en tiempo real",
+        "fullDescription": "Diseñé e implementé un asistente impulsado por IA con detección de intenciones y un pipeline RAG personalizado utilizando modelos de Hugging Face. Backend desarrollado con Python y MongoDB. Un acuerdo de confidencialidad limita la publicación de la interfaz y el código fuente."
+      },
+      "ticketReceiver": {
+        "description": "Sistema de gestión de tareas para flujos de trabajo distribuidos",
+        "fullDescription": "Dashboard en tiempo real para el procesamiento automatizado de tareas y la sincronización de actualizaciones entre servicios distribuidos."
+      },
+      "ticketMigration": {
+        "description": "Refactorización de un sistema legacy hacia una arquitectura NestJS",
+        "fullDescription": "Migración de un sistema legacy en JavaScript hacia NestJS, mejorando la escalabilidad y mantenibilidad mediante una arquitectura backend estructurada."
+      },
+      "dailyAI": {
+        "description": "Herramienta automatizada para generar reportes de standups usando LLMs",
+        "fullDescription": "Obtiene actividad de un tablero Kanban mediante Playwright, incorpora información de la API de GitLab, genera reportes estructurados utilizando LLMs y produce audio mediante text-to-speech para reuniones."
+      },
+      "greenhouse": {
+        "description": "Plataforma de monitoreo IoT con arquitectura de microservicios",
+        "fullDescription": "Agrega datos de sensores, detecta umbrales, activa alertas por SMS mediante Twilio y utiliza RabbitMQ para comunicación asíncrona. Incluye un simulador de ESP32."
+      },
+      "cia": {
+        "description": "Sistema de inscripción académica con reglas de validación y horarios",
+        "fullDescription": "Sistema académico basado en microfrontends con autenticación JWT, validación de prerrequisitos y detección de conflictos de horarios."
+      },
+      "engine3d": {
+        "description": "Motor personalizado de renderizado por software",
+        "fullDescription": "Construido desde cero utilizando conceptos de álgebra lineal como matrices de proyección y transformaciones de rotación para renderizado en tiempo real."
+      },
+      "photography": {
+        "description": "Backend + automatización de reservas mediante WhatsApp",
+        "fullDescription": "Sistema backend para la gestión de un estudio fotográfico con integración de un chatbot de WhatsApp para reservas y consultas."
+      },
+      "sartreCat": {
+        "description": "Plataforma anónima de recopilación de opiniones para la autorreflexión.",
+        "fullDescription": "Un experimento personal basado en una pregunta sencilla: ¿cómo me perciben los demás cuando pueden responder de forma completamente anónima? La plataforma recopila respuestas escritas y las almacena para su posterior análisis. El objetivo a largo plazo es aplicar análisis de sentimientos, clustering y técnicas de NLP para identificar temas recurrentes, puntos ciegos y patrones en la forma en que los demás me perciben."
+      },
+      "peerReview": {
+        "description": "Análisis automatizado de merge requests y patrones de revisión.",
+        "fullDescription": "Sistema backend de automatización que analiza el comportamiento durante las revisiones de código en merge requests de GitLab. Extrae patrones de los revisores, densidad de comentarios y señales de calidad para generar información estructurada para equipos de ingeniería. Diseñado para mejorar la consistencia de las revisiones y detectar cuellos de botella en el flujo de desarrollo."
+      },
+      "promptGenerator": {
+        "description": "Generación asistida por IA de prompts a partir de tareas de Kanban.",
+        "fullDescription": "Herramienta personal de productividad que extrae información de tareas desde un tablero Kanban personalizado y genera automáticamente prompts estructurados para desarrollo asistido por IA. El sistema recopila contexto de los metadatos de las tareas, requisitos y artefactos relacionados, produciendo prompts que aceleran la creación inicial de proyectos, la planificación de implementaciones y los flujos de documentación."
+      },
+      "openGoReadme": {
+        "description": "Herramienta CLI que genera archivos README a partir de cualquier repositorio",
+        "fullDescription": "Analiza repositorios, construye resúmenes de archivos basados en AST, selecciona los archivos relevantes mediante un LLM y genera archivos README.md estructurados utilizando un pipeline de dos fases consciente del contexto."
+      }
+    }
+  },
+  "skills": {
+    "header": {
+      "label": "Capacidades",
+      "title": "Con Qué Trabajo"
+    },
+    "items": {
+      "backend": {
+        "title": "Desarrollo Backend",
+        "description": "Desarrollo de APIs, servicios, herramientas de automatización y aplicaciones escalables."
+      },
+      "frameworks": {
+        "title": "Frameworks",
+        "description": "Creación de aplicaciones mantenibles utilizando frameworks y librerías modernas de backend."
+      },
+      "ai": {
+        "title": "IA y Machine Learning",
+        "description": "Trabajo con modelos de lenguaje, sistemas de recuperación de información y flujos de trabajo de machine learning."
+      },
+      "infrastructure": {
+        "title": "Infraestructura",
+        "description": "Bases de datos, sistemas de mensajería, contenedores y herramientas de despliegue."
+      },
+      "languages": {
+        "title": "Idiomas",
+        "description": "Experiencia trabajando en equipos y entornos internacionales.",
+        "technologies": "Español (Nativo) • Inglés (Fluido)"
+      }
+    }
+  }
+}

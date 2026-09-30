@@ -1,0 +1,125 @@
+{
+  "header": {
+    "home": "Home"
+  },
+  "contact": {
+    "contact": "Contact",
+    "title": "Let's Build Something Interesting",
+    "contact-description": "Whether it's software engineering, AI, automation, open source, music, or a project you're excited about, feel free to reach out."
+  },
+  "homeFooter": {
+    "quote": "To create is to live twice"
+  },
+  "homeHero": {
+    "label": "Portfolio and Projects Archive",
+    "title": "Hello World, I'm Erick.",
+    "description": "Software Engineering graduate based in México with a passion for machine learning, automation, and building software that solves real-world problems. I enjoy exploring the intersection of AI, science, and creativity—whether that's developing tools, analyzing data, or coming up with and developing creative solutions. This portfolio is a collection of projects, experiments, and ideas I've had fun creating.",
+    "note": "Hope you enjoy flipping through it like old Polaroids.",
+    "cv": "Resume"
+  },
+  "homeInfoGrid": {
+    "title": "Currently Exploring.",
+    "list": [
+      "Machine Learning & AI Engineering",
+      "Task Automation",
+      "Data Analysis",
+      "NLP",
+      "Music",
+      "Photography"
+    ]
+  },
+  "projects": {
+    "header": {
+      "label": "Archive",
+      "title": "Things I've Built",
+      "description": "A collection of software, experiments, and occasional rabbit holes. Some were built professionally, others started as curiosity and grew into something larger."
+    },
+    "professional": {
+      "title": "Professional Work",
+      "description": "Systems built for real teams, real users, and real business needs."
+    },
+    "personal": {
+      "title": "Experiments & Side Quests",
+      "description": "Learning projects, automation tools, strange ideas, and things I wanted to see exist."
+    },
+    "items": {
+      "aiAssistant": {
+        "description": "Multi-component AI assistant for real-time business communication",
+        "fullDescription": "Designed and implemented an AI-powered assistant with intent detection and a custom RAG pipeline using Hugging Face models. Built backend with Python and MongoDB. NDA restricts public UI/source."
+      },
+      "ticketReceiver": {
+        "description": "Task management system for distributed workflows",
+        "fullDescription": "Real-time dashboard for automated task processing and synchronized updates across distributed services."
+      },
+      "ticketMigration": {
+        "description": "Refactor of legacy system into NestJS architecture",
+        "fullDescription": "Migrated a legacy JS system into NestJS, improving scalability and maintainability with structured backend design."
+      },
+      "dailyAI": {
+        "description": "Automated standup reporting tool using LLMs",
+        "fullDescription": "Scrapes kanban activity with Playwright, enriches via GitLab API, generates structured reports using LLMs, and outputs via text-to-speech for meetings."
+      },
+      "greenhouse": {
+        "description": "IoT monitoring platform with microservices architecture",
+        "fullDescription": "Aggregates sensor data, detects thresholds, triggers SMS alerts via Twilio, and uses RabbitMQ for async communication. Includes ESP32 simulator."
+      },
+      "cia": {
+        "description": "Enrollment system with validation and scheduling rules",
+        "fullDescription": "Microfrontend-based academic system with JWT auth, prerequisite validation, and schedule conflict detection."
+      },
+      "engine3d": {
+        "description": "Custom software rendering engine",
+        "fullDescription": "Built from scratch using linear algebra concepts like projection matrices and rotation transforms for real-time rendering."
+      },
+      "photography": {
+        "description": "Backend + WhatsApp booking automation",
+        "fullDescription": "Backend system for studio management with WhatsApp chatbot integration for booking and inquiries."
+      },
+      "sartreCat": {
+        "description": "Anonymous feedback collection platform for self-reflection.",
+        "fullDescription": "A personal experiment built around a simple question: how do people perceive me when they can answer completely anonymously? The platform collects written responses and stores them for later analysis. The long-term goal is to apply sentiment analysis, clustering, and NLP techniques to identify recurring themes, blind spots, and patterns in how others experience me."
+      },
+      "peerReview": {
+        "description": "Automated analysis of merge requests and review patterns.",
+        "fullDescription": "A backend automation system that analyzes code review behavior across GitLab merge requests. It extracts reviewer patterns, comment density, and quality signals to generate structured insights for engineering teams. Built to improve review consistency and highlight bottlenecks in the development workflow."
+      },
+      "promptGenerator": {
+        "description": "AI-assisted bootstrap generation from Kanban tasks.",
+        "fullDescription": "A personal productivity utility that extracts task information from a custom Kanban board and automatically generates structured prompts for AI-assisted development. The system gathers context from task metadata, requirements, and related artifacts, producing prompts that accelerate project bootstrapping, implementation planning, and documentation workflows."
+      },
+      "openGoReadme": {
+        "description": "CLI tool that generates README files from any repository",
+        "fullDescription": "Scans repositories, builds AST-based file summaries, selects relevant files using an LLM, and generates structured README.md files using a two-pass context-aware pipeline."
+      }
+    }
+  },
+  "skills": {
+    "header": {
+      "label": "Capabilities",
+      "title": "Things I Work With"
+    },
+    "items": {
+      "backend": {
+        "title": "Backend Development",
+        "description": "Building APIs, services, automation tools, and scalable applications."
+      },
+      "frameworks": {
+        "title": "Frameworks",
+        "description": "Creating maintainable applications using modern backend frameworks and libraries."
+      },
+      "ai": {
+        "title": "AI & Machine Learning",
+        "description": "Working with language models, retrieval systems, and machine learning workflows."
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Databases, messaging systems, containers, and deployment tools."
+      },
+      "languages": {
+        "title": "Languages",
+        "description": "Comfortable working in international environments and teams.",
+        "technologies": "Spanish (Native) • English (Fluent)"
+      }
+    }
+  }
+}

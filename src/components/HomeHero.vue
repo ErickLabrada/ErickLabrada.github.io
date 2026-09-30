@@ -1,27 +1,30 @@
+
+<script setup>
+import { useI18n } from 'vue-i18n'
+import cv from '@/assets/cv.pdf'
+
+const { t } = useI18n()
+</script>
+
 <template>
   <section class="hero-section">
     <sl-card class="hero-card">
       <p class="hero-label">
-        Portfolio and Projects Archive
+        {{ t('homeHero.label') }}
       </p>
 
       <h1>
-        Hello World, I'm Erick.
+         {{ t('homeHero.title') }}
       </h1>
 
       <p class="hero-description">
-          Software Engineering graduate with a passion for machine learning,
-          automation, and building software that solves real-world problems.
-          I enjoy exploring the intersection of AI, science, and creativity—
-          whether that's developing tools, analyzing data, or writing music.
-          This portfolio is a collection of projects, experiments, and ideas
-          I've had fun creating.
+           {{ t('homeHero.description') }}
 
       </p>
 
       <div class="hero-warning">
         <span>
-           Hope you enjoy flipping through it like old Polaroids.
+            {{ t('homeHero.note') }}
         </span>
       </div>
 
@@ -31,7 +34,7 @@
   rel="noopener noreferrer"
   class="primary-button"
 >
-  Resume
+   {{ t('homeHero.cv') }}
 </a>
     </sl-card>
   </section>
@@ -127,6 +130,3 @@ h1 {
   opacity: 0.9;
 }
 </style>
-<script setup>
-import cv from '@/assets/cv.pdf'
-</script>

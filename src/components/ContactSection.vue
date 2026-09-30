@@ -1,18 +1,24 @@
+
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
+
+
 <template>
   <section class="contact-section">
     <sl-card class="contact-card">
       <p class="section-label">
-        Contact
+       {{ t('contact.contact')}}
       </p>
 
   <h2>
-    Let's Build Something Interesting
+    {{t('contact.title')}}
   </h2>
 
   <p class="contact-description">
-    Whether it's software engineering, AI, automation,
-    open source, music, or a project you're excited about,
-    feel free to reach out.
+    {{t('contact.contact-description')}}
   </p>
 
   <div class="contact-links">

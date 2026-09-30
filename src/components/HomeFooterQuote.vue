@@ -1,8 +1,14 @@
-vue id="sm6w58"
+
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
+
 <template>
   <footer class="footer-note">
     <p>
-      "To create is to live twice."
+      {{ t('homeFooter.quote') }}
     </p>
 
     <span>

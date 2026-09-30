@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import profilePhoto from "@/assets/profile.png";
+import { useI18n } from 'vue-i18n'
+
+const { t, tm } = useI18n()
+
 </script>
 
 <template>
@@ -16,17 +20,17 @@ import profilePhoto from "@/assets/profile.png";
 
     <sl-card class="info-card">
       <h2>
-        Currently Exploring
+        {{ t('homeInfoGrid.title') }}
       </h2>
 
-      <ul>
-        <li>Machine Learning & AI Engineering</li>
-        <li>Tasks Automation</li>
-        <li>Data Analysis</li>
-        <li>NLP</li>
-        <li>Music</li>
-        <li>Photography</li>
-      </ul>
+              <ul>
+  <li
+    v-for="item in tm('homeInfoGrid.list')"
+    :key="item"
+  >
+    {{ item }}
+  </li>
+</ul>
     </sl-card>
   </section>
 </template>
