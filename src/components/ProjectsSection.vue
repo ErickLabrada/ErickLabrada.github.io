@@ -7,13 +7,9 @@ import itzai from "@/assets/projects/itzai.png";
 import sully from "@/assets/projects/sully.png";
 import anam from "@/assets/projects/ANAM.png";
 import peerReview from "@/assets/projects/peer-review.png";
-import prompt from "@/assets/projects/prompt.png";
 import sartre from "@/assets/projects/sartrecat.png";
 import omniAereaImage from "@/assets/projects/omniaerea.png";
 import opengo from "@/assets/projects/open-go-readme.png";
-import greenHouse from "@/assets/projects/GreenHouse.png";
-import cia from "@/assets/projects/CIA.png";
-import engine3d from "@/assets/projects/3D_Engine.gif";
 import facecat from "@/assets/projects/facecat.png";
 import ecommerceAdmin from "@/assets/projects/ecommerceAdmin.png";
 import ecommerceStorefront from "@/assets/projects/ecommerceStorefront.png";
@@ -109,9 +105,9 @@ const { t } = useI18n();
         <Polaroid
           class="p1"
           title="OmniAerea"
-          project-url="/projects/OmniAerea"
+          project-url="/projects/omniaerea"
           :description="t('projects.items.omniAerea.description')"
-          :full-description="t('projects.items.OmniAerea.fullDescription')"
+          :full-description="t('projects.items.omniAerea.fullDescription')"
           :image-src="omniAereaImage"
           :rotation="-3"
           :technologies="['Python', 'Playwright', 'OpenAI API']"

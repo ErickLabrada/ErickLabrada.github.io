@@ -9,12 +9,9 @@ import itzai from "@/assets/projects/itzai.png";
 import sully from "@/assets/projects/sully.png";
 import anam from "@/assets/projects/ANAM.png";
 import peerReview from "@/assets/projects/peer-review.png";
-import prompt from "@/assets/projects/prompt.png";
 import sartre from "@/assets/projects/sartrecat.png";
 import omniAereaImage from "@/assets/projects/omniaerea.png";
 import opengo from "@/assets/projects/open-go-readme.png";
-import greenHouse from "@/assets/projects/GreenHouse.png";
-import cia from "@/assets/projects/CIA.png";
 import engine3d from "@/assets/projects/3D_Engine.gif";
 import facecat from "@/assets/projects/facecat.png";
 import ecommerceAdmin from "@/assets/projects/ecommerceAdmin.png";
@@ -98,16 +95,9 @@ const projects: Record<string, Project> = {
     "facecat": {
     title: "Feed Algorithm",
     translationKey: "facecat",
-    categoryKey: "facecat.title",
+    categoryKey: "personal.title",
     image: facecat,
     technologies: ["python", "pytorch", "CNN", "RabbitMQ"],
-  },
-  "prompt-generator": {
-    title: "Prompt Generator",
-    translationKey: "promptGenerator",
-    categoryKey: "personal.title",
-    image: prompt,
-    technologies: ["Python", "Playwright", "LLMs", "Automation"],
   },
   "open-go-readme": {
     title: "Open Go Readme",
