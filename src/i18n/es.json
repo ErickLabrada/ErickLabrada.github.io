@@ -14,7 +14,7 @@
   },
 
   "homeHero": {
-    "label": "Archivo de Portafolio y Proyectos",
+    "label": "Portafolio y Archivo de Proyectos",
     "title": "Hola mundo, soy Erick.",
     "description": "Ingeniero enfocado en IA y desarrollo backend, basado en México, con pasión por el aprendizaje automático, la automatización y la creación de software que resuelve problemas del mundo real. Me interesa explorar la intersección entre la IA, la ciencia y la creatividad, ya sea desarrollando herramientas, analizando datos o ideando y desarrollando soluciones creativas. Este portafolio es una colección de proyectos, experimentos e ideas que me ha divertido crear.",
     "note": "Espero que disfrutes recorrerlo como si estuvieras hojeando viejas Polaroids.",
@@ -30,6 +30,21 @@
       "NLP",
       "Música",
       "Fotografía"
+    ]
+  },
+
+  "appraisal": {
+    "label": "Madurez de Procesos",
+    "title": "Evaluación CMMI Nivel 5",
+    "description": "Participé en trabajo de ingeniería dentro de una iniciativa de evaluación CMMI Nivel 5, aplicando prácticas estructuradas de desarrollo, documentación, revisión y calidad en proyectos de software en producción.",
+    "links": {
+      "record": "Ver registro de evaluación",
+      "certificate": "Abrir certificado"
+    },
+    "items": [
+      "Documentación de procesos y trazabilidad",
+      "Revisiones estructuradas y controles de calidad",
+      "Mejora continua en flujos de entrega"
     ]
   },
 
@@ -58,12 +73,12 @@
         "learnings": "Al comienzo de mi estancia tenía poca experiencia práctica con IA. GILA me dio la libertad de experimentar con distintos enfoques, lo que me permitió desarrollar una mayor comprensión de las aplicaciones prácticas de los LLM, los conceptos de RAG, el ecosistema de Hugging Face, la arquitectura de software, el trabajo en equipo y la organización de proyectos en Python."
       },
 
-      "ticketReceiver": {
-        "description": "Sistema de gestión de tareas para flujos de trabajo distribuidos",
-        "fullDescription": "Después de incorporarme a MediaAerea, se me asignó la tarea de dar soporte, estabilizar y desarrollar nuevas funcionalidades para un sistema de producción inestable. Después de varios meses de trabajo y colaboración con el equipo, logramos mejorar significativamente la estabilidad y confiabilidad del sistema mientras continuábamos entregando nuevas funcionalidades. Una de las principales adiciones fue un dashboard en tiempo real que proporcionaba información clara y accesible sobre la productividad del equipo y el estado actual de la carga de trabajo.",
-        "challenges": "Familiarizarme con un código base nuevo y con poca documentación fue un desafío, pero la mayor dificultad fue comprender las reglas de negocio del sistema mientras entregaba continuamente hotfixes y nuevas funcionalidades en producción sin interrumpir las operaciones de los clientes. Esto requirió equilibrar la estabilidad del sistema, la velocidad de desarrollo y las necesidades de los usuarios activos.",
-        "learnings": "A través de este proyecto, adquirí experiencia colaborando con un equipo de DevOps, entregando funcionalidades y parches a producción, solucionando problemas en sistemas en funcionamiento y optimizando software existente. También desarrollé una mayor comprensión del trabajo con código legacy y del mantenimiento de software bajo restricciones operativas reales."
-      },
+      "ticketReceiver": { 
+        "description": "Production ticketing and analytics system for distributed workflows", 
+        "fullDescription": "After joining MediaAerea, I was assigned to support, stabilize, and develop new features for an unstable production system within a distributed, multi-tenant ticketing platform. I helped improve system reliability while delivering new functionality, including real-time analytics dashboards that provided visibility into workload, productivity, and ticket resolution performance. The resulting improvements reduced average ticket resolution time by 34% and closure time by 35%, while increasing the number of tickets resolved before their promised date by 118% and before their deadline by 64%.", 
+        "challenges": "The main challenge was understanding an unfamiliar and largely undocumented codebase while learning the business rules behind a system actively used by clients. Hotfixes and new features had to be delivered without disrupting ongoing operations, requiring careful troubleshooting, validation, and coordination with DevOps.", 
+        "learnings": "This project gave me substantial experience working with production software: troubleshooting live systems, shipping patches and features, collaborating with DevOps, optimizing existing code, and turning operational data into actionable insights."
+       },
 
       "ticketMigration": {
         "description": "Refactorización de un sistema legacy hacia una arquitectura NestJS",

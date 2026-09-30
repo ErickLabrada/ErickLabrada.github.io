@@ -6,6 +6,7 @@
     <main class="home-container">
       <HomeHero />
       <HomeInfoGrid />
+      <AppraisalSection />
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
@@ -20,6 +21,7 @@ import NoiseOverlay from '@/components/NoiseOverlay.vue'
 import Header from '@/components/Header.vue'
 import HomeHero from '@/components/HomeHero.vue'
 import HomeInfoGrid from '@/components/HomeInfoGrid.vue'
+import AppraisalSection from '@/components/AppraisalSection.vue'
 import HomeFooterQuote from '@/components/HomeFooterQuote.vue'
 import ProjectsSection from '@/components/ProjectsSection.vue'
 import SkillsSection from '@/components/SkillsSection.vue'

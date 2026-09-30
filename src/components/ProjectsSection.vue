@@ -23,23 +23,12 @@ const { t } = useI18n();
 
 <template>
   <section class="projects-section">
-    <!-- HEADER -->
-    <header class="section-header">
-      <p class="section-label">
-        {{ t("projects.header.label") }}
-      </p>
-
-      <h2>
-        {{ t("projects.header.title") }}
-      </h2>
-
-      <p class="section-description">
-        {{ t("projects.header.description") }}
-      </p>
-    </header>
 
     <!-- PROFESSIONAL -->
     <div class="projects-group">
+            <p class="section-label">
+        {{ t("projects.header.label") }}
+      </p>
       <div class="group-header">
         <h3>
           {{ t("projects.professional.title") }}
@@ -187,13 +176,17 @@ const { t } = useI18n();
 
 <style scoped>
 .projects-section {
-  margin-top: 80px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
 /* HEADER */
+.section-header {
+  margin-bottom: -32px;
+}
+
 .section-header h2 {
   font-size: 2rem;
   margin: 0;

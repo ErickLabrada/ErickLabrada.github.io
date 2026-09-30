@@ -98,7 +98,7 @@ const projects: Record<string, Project> = {
     "facecat": {
     title: "Feed Algorithm",
     translationKey: "facecat",
-    categoryKey: "personal.title",
+    categoryKey: "facecat.title",
     image: facecat,
     technologies: ["python", "pytorch", "CNN", "RabbitMQ"],
   },
@@ -292,7 +292,7 @@ const projectItemPath = computed(() => `projects.items.${project.value?.translat
 
   overflow-wrap: anywhere;
 
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2.0 rem, 5vw, 4.5rem);
   line-height: 1.05;
 }
 
