@@ -22,10 +22,6 @@ const { t } = useI18n();
           {{ t("skills.items.backend.title") }}
         </h3>
 
-        <p>
-          {{ t("skills.items.backend.description") }}
-        </p>
-
         <span>
           Python • TypeScript • Java • Go
         </span>
@@ -35,10 +31,6 @@ const { t } = useI18n();
         <h3>
           {{ t("skills.items.frameworks.title") }}
         </h3>
-
-        <p>
-          {{ t("skills.items.frameworks.description") }}
-        </p>
 
         <span>
           NestJS • Flask • Express • Chi
@@ -50,10 +42,6 @@ const { t } = useI18n();
           {{ t("skills.items.ai.title") }}
         </h3>
 
-        <p>
-          {{ t("skills.items.ai.description") }}
-        </p>
-
         <span>
           LangChain • LangGraph • Hugging Face • Transformers • RAG
         </span>
@@ -64,10 +52,6 @@ const { t } = useI18n();
           {{ t("skills.items.infrastructure.title") }}
         </h3>
 
-        <p>
-          {{ t("skills.items.infrastructure.description") }}
-        </p>
-
         <span>
           PostgreSQL • MySQL • MongoDB • Redis • RabbitMQ • Docker • Git
         </span>
@@ -77,10 +61,6 @@ const { t } = useI18n();
         <h3>
           {{ t("skills.items.languages.title") }}
         </h3>
-
-        <p>
-          {{ t("skills.items.languages.description") }}
-        </p>
 
         <span>
           {{ t("skills.items.languages.technologies") }}
@@ -113,11 +93,13 @@ const { t } = useI18n();
 
 .skills-grid {
   display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
 .skill-card::part(base) {
+  height: 100%;
+  min-height: 150px;
   background: rgba(18, 21, 30, 0.72);
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -126,17 +108,17 @@ const { t } = useI18n();
 }
 
 .skill-card h3 {
-  margin-bottom: 12px;
-}
-
-.skill-card p {
-  color: #c7cedb;
-  line-height: 1.7;
-  margin-bottom: 16px;
+  margin: 0 0 18px;
+  min-height: 2.4em;
+  color: #f3f4f6;
+  font-size: 1.05rem;
+  line-height: 1.2;
 }
 
 .skill-card span {
-  color: #8b93a7;
-  font-size: 0.9rem;
+  display: block;
+  color: #aeb7ca;
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 </style>

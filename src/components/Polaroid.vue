@@ -15,7 +15,7 @@ defineProps({
   <router-link
     :to="projectUrl"
     class="polaroid"
-    :style="{ '--rotation': `${rotation}deg` }"
+    :style="{ '--rotation': rotation + 'deg' }"
   >
     <div class="photo">
       <img :src="imageSrc" :alt="title" />
@@ -35,7 +35,7 @@ defineProps({
         class="technologies"
       >
         <span
-          v-for="technology in technologies.slice(0, 3)"
+          v-for="technology in technologies"
           :key="technology"
           class="technology"
         >
@@ -47,116 +47,158 @@ defineProps({
 </template>
 
 <style scoped>
-/* ===================== */
-/* POLAROID CARD */
-/* ===================== */
-
 .polaroid {
-  display: block;
-
-  width: min(100%, 280px);
-  min-height: 430px;
-  padding: 10px 10px 18px;
-
-  background: #f5f1e8;
-  border: 1px solid #d9d4c8;
-
-  transform: rotate(var(--rotation));
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 260px);
+  min-height: 386px;
+  padding: 9px 9px 16px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 42%),
+    #f5f1e8;
+  border: 1px solid #d8d0bf;
+  border-radius: 2px;
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.5) inset,
+    0 14px 28px rgba(0, 0, 0, 0.28);
+  color: inherit;
   cursor: pointer;
-  user-select: none;
-
   text-decoration: none;
+  transform: rotate(var(--rotation));
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+  user-select: none;
 }
 
-.polaroid:hover {
-  transform: rotate(0deg) scale(1.04);
-  z-index: 10;
+.polaroid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(42, 36, 28, 0.08) 0.6px, transparent 0.7px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18), transparent 28%, rgba(74, 61, 45, 0.06));
+  background-size: 7px 7px, 100% 100%;
+  opacity: 0.42;
+}
 
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+.polaroid:hover,
+.polaroid:focus-visible {
+  z-index: 10;
+  border-color: #c7bda8;
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.55) inset,
+    0 20px 42px rgba(0, 0, 0, 0.38);
+  transform: rotate(0deg) translateY(-6px) scale(1.025);
+}
+
+.polaroid:focus-visible {
+  outline: 3px solid rgba(243, 244, 246, 0.7);
+  outline-offset: 5px;
 }
 
 .photo {
+  position: relative;
   overflow: hidden;
-  background: #ddd;
+  background: #d8d8d2;
+  border: 1px solid rgba(55, 45, 32, 0.16);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16) inset;
+}
+
+.photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 45%, rgba(0, 0, 0, 0.16));
 }
 
 .photo img {
-  width: 100%;
   display: block;
-
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-
   transition: transform 0.3s ease;
 }
 
-.polaroid:hover img {
-  transform: scale(1.03);
+.polaroid:hover img,
+.polaroid:focus-visible img {
+  transform: scale(1.035);
 }
 
 .caption {
+  position: relative;
+  z-index: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
-  min-height: 132px;
-
-  margin-top: 14px;
+  justify-content: center;
+  min-height: 142px;
+  padding: 12px 7px 0;
   text-align: center;
 }
 
 .caption h3 {
   margin: 0;
-
-  color: #222;
-  font-size: 1.15rem;
-
-  font-family: "Caveat", "Patrick Hand", cursive;
+  color: #25211b;
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
 }
 
 .caption p {
-  margin: 6px 0 0;
-
-  color: #555;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  display: -webkit-box;
+  margin: 7px 0 0;
+  overflow: hidden;
+  color: #5f574b;
+  font-size: 0.78rem;
+  line-height: 1.42;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px;
-
-  margin-top: auto;
-  padding-top: 12px;
+  gap: 5px;
+  margin-top: 12px;
+  padding-top: 0;
 }
 
 .technology {
+  max-width: 100%;
   padding: 4px 7px;
-
-  border: 1px solid #d9d4c8;
+  overflow: hidden;
+  border: 1px solid #d2c7b2;
   border-radius: 999px;
-
-  color: #686154;
-  font-size: 0.68rem;
+  color: #6c6253;
+  font-size: 0.66rem;
   line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .year {
   display: block;
-
   margin-top: 10px;
-
-  font-size: 0.75rem;
-  color: #888;
-
+  color: #887e6c;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .polaroid {
+    width: min(100%, 300px);
+    min-height: 380px;
+    transform: rotate(0deg);
+  }
 }
 </style>

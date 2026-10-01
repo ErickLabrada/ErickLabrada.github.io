@@ -38,8 +38,25 @@ const { t } = useI18n()
             :href="cv"
             target="_blank"
             rel="noopener noreferrer"
+            download
             class="primary-button"
           >
+            <svg
+              class="download-icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
             {{ t('homeHero.cv') }}
           </a>
         </div>
@@ -143,6 +160,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   border: none;
   background: #f3f4f6;
   color: #0c0e14;
@@ -153,6 +171,12 @@ h1 {
   transition: 0.2s ease;
   font-weight: 600;
   text-decoration: none;
+}
+
+.download-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
 }
 
 .primary-button:hover {

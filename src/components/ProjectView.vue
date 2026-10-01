@@ -5,113 +5,16 @@ import { useI18n } from "vue-i18n";
 
 import NoiseOverlay from "@/components/NoiseOverlay.vue";
 import Header from "@/components/Header.vue";
-import itzai from "@/assets/projects/itzai.png";
-import sully from "@/assets/projects/sully.png";
-import anam from "@/assets/projects/ANAM.png";
-import peerReview from "@/assets/projects/peer-review.png";
-import sartre from "@/assets/projects/sartrecat.png";
-import omniAereaImage from "@/assets/projects/omniaerea.png";
-import opengo from "@/assets/projects/open-go-readme.png";
-import engine3d from "@/assets/projects/3D_Engine.gif";
-import facecat from "@/assets/projects/facecat.png";
-import ecommerceAdmin from "@/assets/projects/ecommerceAdmin.png";
-import ecommerceStorefront from "@/assets/projects/ecommerceStorefront.png";
-
-type Project = {
-  title: string;
-  translationKey: string;
-  categoryKey: string;
-  image: string;
-  technologies: string[];
-};
+import { projectsBySlug } from "@/data/projects";
 
 const route = useRoute();
 const { t } = useI18n();
 
-const projects: Record<string, Project> = {
-  "ai-assistant": {
-    title: "AI Communication Assistant",
-    translationKey: "itzai",
-    categoryKey: "professional.title",
-    image: itzai,
-    technologies: ["Python", "MongoDB", "Hugging Face"],
-  },
-  "ticket-receiver": {
-    title: "Distributed Ticket Receiver",
-    translationKey: "ticketReceiver",
-    categoryKey: "professional.title",
-    image: sully,
-    technologies: ["Django", "JavaScript", "PostgreSQL", "Redis"],
-  },
-  "ticket-migration": {
-    title: "Ticket Source Service Migration",
-    translationKey: "ticketMigration",
-    categoryKey: "professional.title",
-    image: anam,
-    technologies: ["NestJS", "PostgreSQL"],
-  },
-  "ecommerce-admin": {
-    title: "Ecommerce Admin Site",
-    translationKey: "ecommerce-admin",
-    categoryKey: "professional.title",
-    image: ecommerceAdmin,
-    technologies: ["NestJS", "Angular", "PostgreSQL", "Redis", "WebSockets", "Server-Sent Events"],
-  },
-  "ecommerce-storefront": {
-    title: "Ecommerce Storefront",
-    translationKey: "ecommerce-storefront",
-    categoryKey: "professional.title",
-    image: ecommerceStorefront,
-    technologies: ["NestJS", "Svelte", "PostgreSQL", "Redis", "WebSockets", "Server-Sent Events"],
-  },
-  "omniaerea": {
-    title: "OmniAerea",
-    translationKey: "omniAerea",
-    categoryKey: "personal.title",
-    image: omniAereaImage,
-    technologies: ["Python", "Playwright", "OpenAI API"],
-  },
-  "3d-engine": {
-    title: "3D Engine",
-    translationKey: "engine3d",
-    categoryKey: "personal.title",
-    image: engine3d,
-    technologies: ["Java", "Linear Algebra"],
-  },
-  "sartres-cat": {
-    title: "Sartre's Cat",
-    translationKey: "sartreCat",
-    categoryKey: "personal.title",
-    image: sartre,
-    technologies: ["Vue", "TypeScript", "NLP", "Data Analysis"],
-  },
-  "peer-review": {
-    title: "Peer Review Automation",
-    translationKey: "peerReview",
-    categoryKey: "personal.title",
-    image: peerReview,
-    technologies: ["Python", "GitLab API", "NLP", "Automation"],
-  },
-    "facecat": {
-    title: "Feed Algorithm",
-    translationKey: "facecat",
-    categoryKey: "personal.title",
-    image: facecat,
-    technologies: ["python", "pytorch", "CNN", "RabbitMQ"],
-  },
-  "open-go-readme": {
-    title: "Open Go Readme",
-    translationKey: "openGoReadme",
-    categoryKey: "personal.title",
-    image: opengo,
-    technologies: ["Go", "OpenAI API", "AST Parsing", "CLI"],
-  },
-};
-
 const slug = computed(() => route.params.slug as string);
 const normalizedSlug = computed(() => slug.value.toLowerCase());
-const project = computed(() => projects[normalizedSlug.value]);
+const project = computed(() => projectsBySlug[normalizedSlug.value]);
 const projectItemPath = computed(() => `projects.items.${project.value?.translationKey}`);
+const projectCategoryPath = computed(() => `projects.${project.value?.category}.title`);
 </script>
 
 <template>
@@ -129,7 +32,7 @@ const projectItemPath = computed(() => `projects.items.${project.value?.translat
         <div class="post-summary">
           <header class="post-header">
             <p class="post-label">
-              {{ t(`projects.${project.categoryKey}`) }}
+              {{ t(projectCategoryPath) }}
             </p>
 
             <h1>
