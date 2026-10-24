@@ -95,16 +95,6 @@ export const projects: Project[] = [
     visibleInArchive: false,
   },
   {
-    slug: "sartres-cat",
-    title: "Sartre's Cat",
-    translationKey: "sartreCat",
-    category: "personal",
-    image: sartre,
-    technologies: ["Vue", "TypeScript", "Python", "Hugging Face", "Docker"],
-    rotation: -0.9,
-    visibleInArchive: true,
-  },
-  {
     slug: "peer-review",
     title: "Peer Review Automation",
     translationKey: "peerReview",
