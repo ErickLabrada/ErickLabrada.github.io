@@ -13,8 +13,8 @@
   "homeHero": {
     "label": "Portfolio and Projects Archive",
     "title": "Hello World, I'm Erick.",
-    "description": "Backend and AI-focused engineer building production systems, automation tools, and AI-powered applications. I turn complex workflows into practical, maintainable software.",
-    "cv": "Resume",
+    "description": "I build backend services, AI applications, and developer tools with Python, TypeScript, and Go. My work spans production ticketing systems, e-commerce services, and LLM orchestration.",
+    "cv": "Download résumé",
     "location": "Mexico"
   },
   "homeInfoGrid": {
@@ -50,11 +50,11 @@
     },
     "professional": {
       "title": "Professional Work",
-      "description": "Systems built for real teams, users, and business requirements, often under production and operational constraints."
+      "description": "Explore my contributions to production systems, legacy migrations, e-commerce services, and AI applications."
     },
     "personal": {
       "title": "Experiments & Side Projects",
-      "description": "Technical experiments, developer tools, automation projects, and ideas built to learn, explore, or solve a problem I found interesting."
+      "description": "Developer tools, automation, and machine learning experiments, with notes on the problems, constraints, and lessons behind them."
     },
     "items": {
       "salesAgentAI": {
@@ -152,7 +152,7 @@
         "learnings": "The project strengthened my experience with engineering analytics, data extraction from development workflows, and metric design. It also reinforced the importance of treating metrics as context for decision-making rather than as substitutes for human judgment."
       },
       "openGoReadme": {
-        "description": "CLI tool that generates README files from any repository",
+        "description": "Go CLI combining AST-based repository summaries with LLM-assisted documentation",
         "fullDescription": "A Go CLI tool that automatically generates structured README.md files from software repositories. It analyzes repository structure and source code using AST-based summaries, selects relevant files through an LLM, and generates documentation through a two-pass, context-aware pipeline.",
         "challenges": "The main challenge was determining which parts of a repository provide useful context for documentation. Passing an entire codebase to an LLM is inefficient and introduces unnecessary noise, so the system combines deterministic AST analysis with LLM-based file selection before generating the final documentation.",
         "learnings": "The project taught me how to combine deterministic program analysis with generative AI in a single pipeline. It also gave me practical experience with context selection for LLM applications and developer tooling in Go."

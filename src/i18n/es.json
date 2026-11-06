@@ -13,8 +13,8 @@
   "homeHero": {
     "label": "Archivo de Portafolio y Proyectos",
     "title": "Hola, soy Erick.",
-    "description": "Ingeniero enfocado en backend e IA. Construyo sistemas de producción, herramientas de automatización y aplicaciones impulsadas por IA, convirtiendo flujos complejos en software práctico y mantenible.",
-    "cv": "Currículum",
+    "description": "Desarrollo servicios backend, aplicaciones de IA y herramientas para desarrolladores con Python, TypeScript y Go. Mi trabajo abarca sistemas de tickets en producción, servicios de comercio electrónico y orquestación de LLM.",
+    "cv": "Descargar CV",
     "location": "México"
   },
   "homeInfoGrid": {
@@ -50,11 +50,11 @@
     },
     "professional": {
       "title": "Trabajo Profesional",
-      "description": "Sistemas desarrollados para equipos, usuarios y necesidades de negocio reales, a menudo bajo restricciones de producción y operación."
+      "description": "Conoce mis contribuciones a sistemas en producción, migraciones de sistemas heredados, servicios de comercio electrónico y aplicaciones de IA."
     },
     "personal": {
       "title": "Experimentos y Proyectos Personales",
-      "description": "Experimentos técnicos, herramientas para desarrolladores, proyectos de automatización e ideas creadas para aprender, explorar o resolver algún problema que me resultara interesante."
+      "description": "Herramientas para desarrolladores, automatización y experimentos de aprendizaje automático, con notas sobre sus problemas, limitaciones y aprendizajes."
     },
     "items": {
       "salesAgentAI": {
@@ -152,7 +152,7 @@
         "learnings": "El proyecto fortaleció mi experiencia con analítica de ingeniería, extracción de datos de flujos de desarrollo y diseño de métricas. También reforzó la importancia de utilizar las métricas como contexto para la toma de decisiones y no como sustitutos del criterio humano."
       },
       "openGoReadme": {
-        "description": "Herramienta CLI que genera archivos README a partir de cualquier repositorio",
+        "description": "CLI en Go que combina resúmenes de repositorios basados en AST con documentación asistida por LLM",
         "fullDescription": "Una herramienta CLI desarrollada en Go que genera automáticamente archivos README.md estructurados a partir de repositorios de software. Analiza la estructura del repositorio y el código fuente mediante resúmenes basados en AST, selecciona archivos relevantes mediante un LLM y genera la documentación mediante un pipeline de dos etapas con selección de contexto.",
         "challenges": "El principal desafío fue determinar qué partes de un repositorio proporcionan contexto útil para la documentación. Enviar un código completo a un LLM es ineficiente e introduce ruido innecesario, por lo que el sistema combina análisis determinista mediante AST con selección de archivos basada en LLM antes de generar la documentación final.",
         "learnings": "El proyecto me enseñó a combinar análisis determinista de programas con IA generativa dentro de un mismo pipeline. También me dio experiencia práctica con selección de contexto para aplicaciones basadas en LLM y herramientas para desarrolladores en Go."
