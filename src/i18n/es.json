@@ -31,10 +31,10 @@
   "appraisal": {
     "label": "Madurez de Procesos",
     "title": "Evaluación CMMI Nivel 5",
-    "description": "Participé en actividades de ingeniería dentro de una iniciativa de evaluación CMMI Nivel 5, aplicando prácticas estructuradas de desarrollo, documentación, revisión y calidad en proyectos de software de producción.",
+    "description": "Participé como desarrollador en el proceso de evaluación CMMI Nivel 5 de mi empresa y recibí un certificado de participación.",
     "links": {
-      "record": "Ver registro de evaluación",
-      "certificate": "Abrir certificado"
+      "record": "Ver registro de evaluación de la empresa",
+      "certificate": "Ver mi certificado de participación"
     },
     "items": [
       "Documentación y trazabilidad de procesos",
@@ -58,44 +58,84 @@
     },
     "items": {
       "salesAgentAI": {
-        "description": "Agentes de IA configurables para ventas de hardware y consultas de productos",
+        "description": "Proyecto privado de IA aún no lanzado: configuración, enrutamiento, streaming y ejecución acotada de herramientas.",
         "fullDescription": "En MEDIAÉREA, contribuí a Sales Agent AI, un framework en Python para asistentes de ventas de hardware. Mi trabajo se centró en infraestructura reutilizable para agentes: configuración YAML validada con Pydantic, registro e instanciación de agentes, contexto de conversación y un cliente LLM asíncrono con respuestas en streaming mediante LiteLLM/Ollama. También implementé un orquestador que dirige solicitudes a agentes especializados y un ciclo acotado de llamadas a herramientas que conecta las preguntas sobre productos con el pipeline existente de lenguaje natural a SQL, SmartQuery. Añadí comandos de CLI para conversaciones interactivas y pruebas de humo, pruebas automatizadas, scripts de validación y documentación técnica.",
         "challenges": "El principal reto de ingeniería fue coordinar las respuestas del modelo, el historial de conversación y la ejecución de herramientas, manteniendo la configuración de los agentes separada de su comportamiento en ejecución. El enrutamiento y las llamadas a herramientas requerían manejar JSON malformado, agentes o herramientas no disponibles y errores de ejecución. Trabajé en mecanismos de respaldo, ejecución acotada y pruebas de estos flujos, incluyendo pruebas aisladas que no requerían un modelo en ejecución.",
-        "learnings": "Este proyecto fortaleció mi experiencia construyendo infraestructura reutilizable para agentes, más allá de prompts aislados. Trabajé con integración asíncrona de LLM, creación de agentes basada en configuración, enrutamiento de solicitudes, ejecución de herramientas y pruebas de flujos que dependen de modelos. También reforzó el valor de las demostraciones por CLI y la documentación técnica para facilitar la validación y extensión de un sistema de IA en evolución."
+        "learnings": "Este proyecto fortaleció mi experiencia construyendo infraestructura reutilizable para agentes, más allá de prompts aislados. Trabajé con integración asíncrona de LLM, creación de agentes basada en configuración, enrutamiento de solicitudes, ejecución de herramientas y pruebas de flujos que dependen de modelos. También reforzó el valor de las demostraciones por CLI y la documentación técnica para facilitar la validación y extensión de un sistema de IA en evolución.",
+        "availability": "Proyecto privado de la empresa · Aún no lanzado. Este caso de estudio describe mi contribución; no hay aplicación ni código fuente públicos disponibles."
       },
       "itzai": {
-        "description": "Asistente de IA multicomponente para comunicación empresarial en tiempo real",
+        "description": "Orquestación en Python de voz, recuperación de información y enrutamiento de solicitudes para un asistente de IA.",
         "fullDescription": "Durante mi internship en GILA Software, trabajé en un asistente de IA personalizable y multitenant para comunicación en tiempo real mediante lenguaje natural. Contribuí a la arquitectura del sistema y desarrollé y orquesté varios componentes del MVP, incluyendo pipelines de speech-to-text, text-to-speech, RAG y enrutamiento de solicitudes. Debido a un acuerdo de confidencialidad, no puedo compartir detalles de implementación ni el código fuente, pero las publicaciones oficiales de GILA proporcionan contexto adicional sobre el proyecto.",
         "challenges": "El principal desafío fue desarrollar un sistema de IA bajo restricciones de tiempo. Al tratarse de un equipo compuesto únicamente por interns y contar con una ventana de desarrollo limitada, tecnologías como bases de datos vectoriales y frameworks agénticos como LangGraph no eran prácticas para el MVP. Por ello, implementé directamente en Python la lógica de orquestación y enrutamiento, mientras contribuía a mantener una base de código estructurada y mantenible entre el equipo.",
         "learnings": "Este fue el proyecto en el que desarrollé mi primera experiencia práctica significativa con IA. Adquirí experiencia práctica con aplicaciones de LLM, RAG, el ecosistema de Hugging Face, pipelines de voz, orquestación de sistemas y diseño de sistemas de IA teniendo en cuenta las restricciones de proyectos reales."
       },
       "ticketReceiver": {
-        "description": "Sistema de gestión de tareas para flujos de trabajo distribuidos",
-        "fullDescription": "Después de unirme a MediaAerea, fui asignado a dar soporte, estabilizar y desarrollar nuevas funcionalidades para un sistema de producción activo e inestable dentro de una plataforma de gestión de tickets distribuida y multitenant. Trabajando con el equipo, ayudé a mejorar la confiabilidad del sistema mientras continuábamos entregando nueva funcionalidad. Una de las principales adiciones fue un dashboard en tiempo real que proporcionaba información accesible y basada en datos sobre la productividad del equipo, la carga de trabajo y el rendimiento de los tickets. Estas mejoras contribuyeron a reducir en un 34% el tiempo promedio de resolución, reducir en un 35% el tiempo de cierre, aumentar en un 118% los tickets resueltos antes de su fecha prometida y aumentar en un 64% los tickets resueltos antes de su fecha límite.",
+        "description": "SaaS privado de tickets: mantenimiento y un dashboard en tiempo real, con mejoras reportadas en el flujo de trabajo.",
+        "fullDescription": "Después de incorporarme a MEDIAÉREA, me asignaron dar soporte, estabilizar y desarrollar nuevas funcionalidades para un sistema en producción dentro de un SaaS privado de tickets, distribuido y multitenant. Junto con el equipo, ayudé a mejorar la confiabilidad del sistema mientras continuábamos entregando funcionalidades. Mis contribuciones incluyeron un dashboard en tiempo real con información accesible, basada en datos, sobre productividad, carga de trabajo y desempeño de tickets. A continuación se presenta la comparación interna a nivel de sistema asociada con su despliegue.",
         "challenges": "El principal desafío fue comprender una base de código desconocida y en gran parte sin documentar mientras aprendía las reglas de negocio detrás del sistema. Al mismo tiempo, el sistema era utilizado activamente por clientes, por lo que era necesario entregar hotfixes y nuevas funcionalidades sin interrumpir las operaciones existentes. Esto implicaba equilibrar confiabilidad, velocidad de desarrollo y requisitos de negocio cambiantes mientras trabajaba con datos y flujos de producción.",
-        "learnings": "Este proyecto me dio una experiencia considerable trabajando con software en producción: resolución de problemas en sistemas activos, entrega de parches y funcionalidades, colaboración con DevOps, análisis de datos operativos, optimización de código existente y trabajo con sistemas legacy donde la lógica de negocio no siempre está documentada explícitamente."
+        "learnings": "Este proyecto me dio una experiencia considerable trabajando con software en producción: resolución de problemas en sistemas activos, entrega de parches y funcionalidades, colaboración con DevOps, análisis de datos operativos, optimización de código existente y trabajo con sistemas legacy donde la lógica de negocio no siempre está documentada explícitamente.",
+        "availability": "SaaS privado · Caso de estudio público de mi contribución de ingeniería. El acceso a la aplicación y el código fuente son privados.",
+        "results": {
+          "title": "Resultados del dashboard",
+          "context": "El dashboard se solicitó el 22 de septiembre de 2025 y se desplegó el 10 de octubre de 2025. Estos resultados provienen de una comparación interna a nivel de sistema antes y después del despliegue, junto con mi contribución al dashboard; no aíslan el efecto del dashboard.",
+          "caption": "Comparación interna a nivel de sistema",
+          "columns": {
+            "metric": "Métrica",
+            "before": "Antes",
+            "after": "Después",
+            "change": "Cambio"
+          },
+          "rows": [
+            {
+              "metric": "Tiempo promedio de resolución",
+              "before": "1.501,70 horas",
+              "after": "984,05 horas",
+              "change": "−517,65 horas · reducción del 34,47 %"
+            },
+            {
+              "metric": "Tiempo promedio de cierre",
+              "before": "1.538,82 horas",
+              "after": "987,99 horas",
+              "change": "−550,83 horas · reducción del 35,80 %"
+            },
+            {
+              "metric": "Resueltos antes de la fecha prometida",
+              "before": "8,41 %",
+              "after": "18,35 %",
+              "change": "+9,94 puntos porcentuales · aumento relativo del 118,19 %"
+            },
+            {
+              "metric": "Resueltos antes de la fecha límite",
+              "before": "16,96 %",
+              "after": "27,85 %",
+              "change": "+10,89 puntos porcentuales · aumento relativo del 64,21 %"
+            }
+          ],
+          "note": "No se proporcionaron las fechas exactas de los periodos de medición ni los tamaños de muestra. Los valores originales de referencia contenían puntos decimales adicionales; 1.501,70 y 1.538,82 horas son valores interpretados, consistentes con las reducciones y los valores posteriores reportados."
+        }
       },
       "ticketMigration": {
-        "description": "Migración de un sistema legacy a una arquitectura con NestJS",
+        "description": "Migración de JavaScript legacy a NestJS, pipelines de datos y generación de reportes.",
         "fullDescription": "Después de familiarizarme con el lado de recepción del sistema, me uní a un proyecto enfocado en reemplazar un sistema central legacy que se había vuelto difícil de extender. El equipo migró la base de código existente en JavaScript a una arquitectura con NestJS, mejor adaptada a los requisitos del cliente y al desarrollo futuro. También rediseñé partes de los pipelines de datos y del sistema de generación de reportes para mejorar el rendimiento del procesamiento y facilitar la depuración, mantenimiento y extensión del código.",
         "challenges": "El principal desafío fue traducir el comportamiento de un sistema legacy sin documentación a una arquitectura más limpia sin perder reglas de negocio implícitas. Antes de rediseñar componentes, tuve que comprender qué hacía realmente el sistema existente, incluyendo comportamientos que no estaban documentados explícitamente.",
         "learnings": "Este proyecto me enseñó a tratar las migraciones como un trabajo tanto de ingeniería como de descubrimiento: primero comprender el comportamiento existente, documentar lo importante y solo después transformar la arquitectura. También fortaleció mi experiencia con pipelines de datos, generación de reportes y arquitectura backend mantenible."
       },
       "ecommerce-admin": {
-        "description": "Plataforma administrativa para un sistema de comercio electrónico personalizado",
+        "description": "Servicios backend para reportes, autenticación y chat de atención al cliente.",
         "fullDescription": "Contribuí principalmente a la generación de reportes, pipelines de datos, servicios de chat para atención al cliente y autenticación de la parte administrativa de un sistema de comercio electrónico personalizado. Trabajé en la estructuración y procesamiento de datos utilizados por equipos internos mientras desarrollaba servicios que conectaban las interacciones de los clientes con los flujos administrativos. Esta también fue mi primera experiencia como mentor de otro desarrollador, incluyendo delegación de tareas, revisiones de merge requests y orientación técnica.",
         "challenges": "Uno de los principales desafíos fue integrar agentes de programación al flujo de desarrollo sin perder el control sobre la base de código ni sacrificar la calidad. Tuve que equilibrar la delegación de trabajo repetitivo a herramientas de IA con mantener bajo control directo del desarrollador las decisiones arquitectónicas, la validación y los cambios críticos. Al mismo tiempo, estaba adaptándome a la mentoría de otro desarrollador y a los procesos estructurados de desarrollo que se estaban introduciendo como parte de la iniciativa de evaluación CMMI Nivel 5 de la empresa.",
         "learnings": "Este proyecto amplió mi experiencia más allá de la implementación hacia la coordinación de ingeniería. Adquirí experiencia práctica con desarrollo asistido por IA, revisión de código, delegación de tareas, mentoría y procesos estructurados de desarrollo de software, incluyendo documentación y prácticas de calidad asociadas con la implementación de CMMI Nivel 5 de la empresa."
       },
       "ecommerce-storefront": {
-        "description": "Servicios orientados al cliente para un sistema de comercio electrónico personalizado",
+        "description": "Servicios de chat y flujo de datos consistente entre servicios de comercio electrónico.",
         "fullDescription": "Trabajé en paralelo con la plataforma administrativa, principalmente implementando servicios de chat para atención al cliente y asegurando que los datos generados por las interacciones con los clientes permanecieran consistentes con los pipelines utilizados por el sistema administrativo. Mi trabajo se enfocó en los servicios backend que conectaban las interacciones de los clientes con el resto de la plataforma de comercio electrónico.",
         "challenges": "El principal desafío fue mantener un flujo de datos confiable entre los servicios orientados al cliente y los pipelines administrativos. Las interacciones de los clientes debían procesarse de manera consistente, asegurando al mismo tiempo que la información utilizada por los reportes internos y los flujos operativos permaneciera precisa y sincronizada.",
         "learnings": "Este proyecto fortaleció mi experiencia diseñando servicios backend entre distintos límites del sistema y manteniendo contratos de datos consistentes entre ellos. También me dio experiencia práctica integrando comunicación en tiempo real dentro de un flujo transaccional más amplio."
       },
       "omniAerea": {
-        "description": "Plataforma interna de productividad para desarrolladores asistida por IA",
-        "fullDescription": "Como respuesta al aumento de las expectativas de productividad tras la adopción del desarrollo asistido por IA, construí una herramienta interna para ayudar a mi equipo a manejar una mayor carga de trabajo. El sistema consiste en un paquete de Python que extrae información de nuestro tablero Kanban personalizado y del historial de Git para proporcionar contexto a revisiones de código, flujos de documentación y tareas de desarrollo. El paquete es agnóstico al agente y puede utilizarse con distintos agentes de IA, mientras que un wrapper de plugin para Codex orquesta su funcionalidad mediante una interfaz unificada. Este proyecto nos ayudó a mí y a mi equipo a reducir el tiempo dedicado a procesos burocráticos en un promedio de 15 minutos por tarea y una hora por revisión de código.",
+        "description": "Recopilación de contexto de Kanban y Git para flujos de desarrollo asistidos por IA.",
+        "fullDescription": "Como respuesta al aumento de las expectativas de productividad tras la adopción del desarrollo asistido por IA, construí una herramienta interna para ayudar a mi equipo a manejar una mayor carga de trabajo. El sistema consiste en un paquete de Python que extrae información de nuestro tablero Kanban personalizado y del historial de Git para proporcionar contexto a revisiones de código, flujos de documentación y tareas de desarrollo. El paquete es agnóstico al agente y puede utilizarse con distintos agentes de IA, mientras que un wrapper de plugin para Codex orquesta su funcionalidad mediante una interfaz unificada. Mi equipo y yo reportamos un ahorro promedio de 15 minutos por tarea y una hora por revisión de código. El resumen proporcionado no documenta el método ni el periodo de medición.",
         "challenges": "El principal desafío fue integrar la IA al flujo de desarrollo existente del equipo en lugar de crear otra herramienta aislada. El sistema debía recopilar y estructurar información de múltiples fuentes internas, manteniendo suficiente flexibilidad para soportar distintos agentes y casos de uso. La capa de orquestación también debía permanecer desacoplada de cualquier modelo o framework específico.",
         "learnings": "Este proyecto me dio experiencia práctica diseñando herramientas de IA como infraestructura reutilizable. Trabajé con arquitectura agnóstica al agente, orquestación de herramientas, flujos internos para desarrolladores y uso de datos de proyectos y Git como contexto para tareas de desarrollo automatizadas."
       },
@@ -128,9 +168,10 @@
       "back": "Volver al archivo",
       "technologies": "Tecnologías",
       "notFound": "Proyecto no encontrado",
-      "description": "Descripción",
+      "description": "Mi contribución",
       "challenges": "Desafíos",
-      "learnings": "Lo que Aprendí"
+      "learnings": "Lo que Aprendí",
+      "readCaseStudy": "Leer caso de estudio"
     }
   },
   "skills": {

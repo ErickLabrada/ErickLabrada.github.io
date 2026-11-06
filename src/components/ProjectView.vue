@@ -8,7 +8,7 @@ import Header from '@/components/Header.vue'
 import { projectsBySlug } from '@/data/projects'
 
 const route = useRoute()
-const { t } = useI18n()
+const { t, te, tm } = useI18n()
 
 const slug = computed(() => route.params.slug as string)
 const normalizedSlug = computed(() => slug.value.toLowerCase())
@@ -32,6 +32,9 @@ const projectItemPath = computed(() => `projects.items.${project.value?.translat
 
             <p class="post-description">
               {{ t(`${projectItemPath}.description`) }}
+            </p>
+            <p v-if="te(`${projectItemPath}.availability`)" class="availability-note">
+              {{ t(`${projectItemPath}.availability`) }}
             </p>
           </header>
 
@@ -66,6 +69,47 @@ const projectItemPath = computed(() => `projects.items.${project.value?.translat
           <p>
             {{ t(`${projectItemPath}.fullDescription`) }}
           </p>
+        </section>
+
+        <section v-if="te(`${projectItemPath}.results.title`)" class="results-section">
+          <h2>{{ t(`${projectItemPath}.results.title`) }}</h2>
+          <div class="results-content">
+            <p>{{ t(`${projectItemPath}.results.context`) }}</p>
+            <div
+              class="results-table"
+              role="region"
+              :aria-label="t(`${projectItemPath}.results.caption`)"
+              tabindex="0"
+            >
+              <table>
+                <caption>
+                  {{
+                    t(`${projectItemPath}.results.caption`)
+                  }}
+                </caption>
+                <thead>
+                  <tr>
+                    <th
+                      v-for="column in ['metric', 'before', 'after', 'change']"
+                      :key="column"
+                      scope="col"
+                    >
+                      {{ t(`${projectItemPath}.results.columns.${column}`) }}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="row in tm(`${projectItemPath}.results.rows`)" :key="row.metric">
+                    <th scope="row">{{ row.metric }}</th>
+                    <td>{{ row.before }}</td>
+                    <td>{{ row.after }}</td>
+                    <td>{{ row.change }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="results-note">{{ t(`${projectItemPath}.results.note`) }}</p>
+          </div>
         </section>
 
         <section>
@@ -146,6 +190,12 @@ const projectItemPath = computed(() => `projects.items.${project.value?.translat
   line-height: 1.7;
   margin-top: 24px;
 }
+.availability-note {
+  color: var(--accent);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-top: 20px;
+}
 .post-meta {
   margin-top: 30px;
   border-top: 1px solid var(--line);
@@ -205,6 +255,47 @@ const projectItemPath = computed(() => `projects.items.${project.value?.translat
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.9;
+}
+.results-content {
+  min-width: 0;
+}
+.results-table {
+  overflow-x: auto;
+  margin-block: 24px;
+}
+.results-table table {
+  width: 100%;
+  min-width: 550px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+}
+.results-table caption {
+  text-align: left;
+  color: var(--muted);
+  padding-bottom: 16px;
+}
+.results-table th,
+.results-table td {
+  padding: 16px 14px 16px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.results-table th {
+  font-weight: 500;
+}
+.results-table td {
+  color: var(--muted);
+}
+.results-table td:last-child {
+  color: var(--accent);
+  padding-right: 0;
+}
+.post-content .results-note {
+  font-size: 0.85rem;
+  line-height: 1.75;
 }
 .project-not-found {
   padding-block: 120px;

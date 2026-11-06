@@ -12,7 +12,9 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "test:project-pages": "node --test scripts/generate-project-pages.test.mjs",
+    "build:pages": "npm run build && npm run test:project-pages && node scripts/generate-project-pages.mjs"
   },
   "dependencies": {
     "@shoelace-style/shoelace": "^2.20.1",

@@ -41,6 +41,33 @@ pnpm dev
 pnpm build
 ```
 
+### Build for GitHub Pages
+
+```sh
+pnpm build:pages
+```
+
+This runs the production build and route regression tests, then creates
+`dist/projects/<slug>/index.html` for every project declared in `src/data/projects.ts`,
+including projects hidden from the archive. Each entry reuses Vite's bundled HTML
+and root-relative assets, with an English project title and description. The generator
+parses the TypeScript data without executing asset imports and rejects duplicate or
+unsafe slugs and missing metadata. Unknown project paths have no generated entry and
+retain GitHub Pages' normal 404 behavior.
+
+For a local hosting check, serve `dist` with a static server without SPA fallback:
+
+```sh
+python3 -m http.server 4173 --directory dist
+```
+
+Open and refresh `/projects/sales-agent-ai/`, `/projects/ticket-receiver/`, and
+`/projects/open-go-readme/`; verify their images and both languages. Confirm an
+unknown project path returns HTTP 404. GitHub Pages redirects directory URLs to
+their trailing-slash equivalents. Repeat these checks on the public site after
+deployment before sharing the direct case-study links. Initial English metadata
+is generated at build time; in-app and localized metadata updates are separate work.
+
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh

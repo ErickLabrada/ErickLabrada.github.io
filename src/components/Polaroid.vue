@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 defineProps({
   imageSrc: { type: String, required: true },
   portrait: { type: Boolean, default: false },
@@ -32,6 +36,8 @@ defineProps({
           {{ technology }}
         </span>
       </div>
+
+      <span class="case-study-link">{{ t('projects.post.readCaseStudy') }}</span>
     </div>
   </router-link>
 </template>
@@ -109,6 +115,14 @@ defineProps({
   color: #655e50;
   font-size: 0.7rem;
   line-height: 1.5;
+}
+.case-study-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .year {
   font-size: 0.8rem;
