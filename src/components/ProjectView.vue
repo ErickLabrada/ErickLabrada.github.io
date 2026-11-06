@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useRoute, RouterLink } from "vue-router";
-import { useI18n } from "vue-i18n";
+import { computed } from 'vue'
+import { useRoute, RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
-import NoiseOverlay from "@/components/NoiseOverlay.vue";
-import Header from "@/components/Header.vue";
-import { projectsBySlug } from "@/data/projects";
+import NoiseOverlay from '@/components/NoiseOverlay.vue'
+import Header from '@/components/Header.vue'
+import { projectsBySlug } from '@/data/projects'
 
-const route = useRoute();
-const { t } = useI18n();
+const route = useRoute()
+const { t } = useI18n()
 
-const slug = computed(() => route.params.slug as string);
-const normalizedSlug = computed(() => slug.value.toLowerCase());
-const project = computed(() => projectsBySlug[normalizedSlug.value]);
-const projectItemPath = computed(() => `projects.items.${project.value?.translationKey}`);
-const projectCategoryPath = computed(() => `projects.${project.value?.category}.title`);
+const slug = computed(() => route.params.slug as string)
+const normalizedSlug = computed(() => slug.value.toLowerCase())
+const project = computed(() => projectsBySlug[normalizedSlug.value])
+const projectItemPath = computed(() => `projects.items.${project.value?.translationKey}`)
 </script>
 
 <template>
@@ -22,19 +21,11 @@ const projectCategoryPath = computed(() => `projects.${project.value?.category}.
     <NoiseOverlay />
     <Header />
 
-    <article
-      v-if="project"
-      class="project-post"
-    >
-
-
+    <article v-if="project" class="project-post">
+      <RouterLink to="/#projects" class="back-link">← {{ t('projects.post.back') }}</RouterLink>
       <section class="post-hero">
         <div class="post-summary">
           <header class="post-header">
-            <p class="post-label">
-              {{ t(projectCategoryPath) }}
-            </p>
-
             <h1>
               {{ project.title }}
             </h1>
@@ -46,33 +37,30 @@ const projectCategoryPath = computed(() => `projects.${project.value?.category}.
 
           <div class="post-meta">
             <span class="meta-label">
-              {{ t("projects.post.technologies") }}
+              {{ t('projects.post.technologies') }}
             </span>
 
             <div class="tech-list">
-              <span
-                v-for="technology in project.technologies"
-                :key="technology"
-                class="tech-tag"
-              >
+              <span v-for="technology in project.technologies" :key="technology" class="tech-tag">
                 {{ technology }}
               </span>
             </div>
           </div>
         </div>
 
-        <figure class="post-image">
-          <img
-            :src="project.image"
-            :alt="project.title"
-          />
+        <figure
+          class="post-image"
+          :class="{ 'post-image-portrait': project.imageOrientation === 'portrait' }"
+        >
+          <img v-if="project.image" :src="project.image" :alt="project.title" />
+          <div v-else class="image-placeholder" aria-hidden="true"></div>
         </figure>
       </section>
 
       <div class="post-content">
         <section>
           <h2>
-            {{ t("projects.post.description") }}
+            {{ t('projects.post.description') }}
           </h2>
 
           <p>
@@ -82,7 +70,7 @@ const projectCategoryPath = computed(() => `projects.${project.value?.category}.
 
         <section>
           <h2>
-            {{ t("projects.post.challenges") }}
+            {{ t('projects.post.challenges') }}
           </h2>
 
           <p>
@@ -92,7 +80,7 @@ const projectCategoryPath = computed(() => `projects.${project.value?.category}.
 
         <section>
           <h2>
-            {{ t("projects.post.learnings") }}
+            {{ t('projects.post.learnings') }}
           </h2>
 
           <p>
@@ -102,17 +90,12 @@ const projectCategoryPath = computed(() => `projects.${project.value?.category}.
       </div>
     </article>
 
-    <section
-      v-else
-      class="project-not-found"
-    >
+    <section v-else class="project-not-found">
       <h1>
-        {{ t("projects.post.notFound") }}
+        {{ t('projects.post.notFound') }}
       </h1>
 
-      <RouterLink to="/">
-        ← {{ t("projects.post.back") }}
-      </RouterLink>
+      <RouterLink to="/"> ← {{ t('projects.post.back') }} </RouterLink>
     </section>
   </div>
 </template>
@@ -121,212 +104,136 @@ const projectCategoryPath = computed(() => `projects.${project.value?.category}.
 .project-page {
   position: relative;
   min-height: 100vh;
-
-  background: #0c0e14;
-  color: #f3f4f6;
+  overflow: clip;
 }
-
 .project-post,
 .project-not-found {
   position: relative;
   z-index: 1;
-}
-
-.project-post {
-  width: min(1100px, 92%);
+  width: var(--page-width);
   margin: 0 auto;
-  padding: 44px 0 120px;
+  padding: 40px 0 100px;
 }
-
 .back-link {
-  display: inline-block;
-
-  margin-bottom: 60px;
-
-  color: #9ba4b8;
+  display: inline-flex;
+  padding: 10px 0;
+  margin-bottom: 48px;
+  color: var(--muted);
   text-decoration: none;
-
-  transition: color 0.2s ease;
+  font-size: 0.9rem;
 }
-
 .back-link:hover {
-  color: #f3f4f6;
+  color: var(--accent);
 }
-
 .post-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
-  gap: 56px;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
   align-items: center;
 }
-
 .post-summary {
   min-width: 0;
 }
-
-.post-header {
-  margin-bottom: 36px;
-}
-
-.post-label {
-  margin-bottom: 12px;
-
-  color: #7f8aa3;
-  font-size: 0.8rem;
-
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
 .post-header h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1.03;
   margin: 0;
-
-  max-width: 100%;
-
   overflow-wrap: anywhere;
-
-  font-size: clamp(2.0 rem, 5vw, 4.5rem);
-  line-height: 1.05;
 }
-
 .post-description {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
   margin-top: 24px;
-
-  color: #aeb6c7;
-
-  overflow-wrap: anywhere;
-
-  font-size: 1.15rem;
-  line-height: 1.8;
 }
-
-.post-image {
-  margin: 0;
-  padding: 24px;
-
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
-
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-}
-
-.post-image img {
-  display: block;
-
-  width: 100%;
-  aspect-ratio: 16 / 11;
-  max-height: 512px;
-
-  object-fit: contain;
-}
-
 .post-meta {
-  padding: 24px 0 0;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 30px;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
 }
-
 .meta-label {
-  display: block;
-
-  margin-bottom: 14px;
-
-  color: #7f8aa3;
-
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
-
 .tech-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 8px 18px;
+  margin-top: 12px;
 }
-
 .tech-tag {
-  padding: 6px 10px;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 999px;
-
-  max-width: 100%;
-
-  color: #bfc7d8;
-
-  overflow-wrap: anywhere;
-
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--paper);
 }
-
-.post-content {
+.post-image {
+  margin: 0;
+  padding: 14px 14px 48px;
+  background: var(--paper);
+  transform: rotate(2deg);
+  box-shadow: 0 24px 50px #0004;
+}
+.post-image img {
+  display: block;
   width: 100%;
-
-  margin: 84px 0 0;
+  height: auto;
 }
-
+.image-placeholder {
+  aspect-ratio: 16 / 9;
+  background: #dedbd3;
+}
+.post-image-portrait {
+  width: min(100%, 320px);
+  justify-self: center;
+}
+.post-content {
+  margin-top: 96px;
+}
 .post-content section {
-  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
 }
-
 .post-content h2 {
-  margin-bottom: 20px;
-
-  font-size: 1.8rem;
+  margin: 0;
+  font-size: 2.15rem;
 }
-
 .post-content p {
-  color: #b8c0d0;
-
+  max-width: 70ch;
+  margin: 0;
+  color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.9;
 }
-
 .project-not-found {
-  padding: 120px 24px;
-
+  padding-block: 120px;
   text-align: center;
 }
-
-.project-not-found a {
-  color: #b8c0d0;
+.project-not-found h1 {
+  font-size: 3rem;
 }
-
-@media (max-width: 860px) {
+.project-not-found a {
+  color: var(--paper);
+}
+@media (max-width: 760px) {
   .post-hero {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: 36px;
   }
-
-  .post-image {
-    order: -1;
-  }
-}
-
-@media (max-width: 768px) {
-  .project-post {
-    padding-top: 28px;
-  }
-
   .back-link {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
-
-  .post-header h1 {
-    font-size: clamp(2.25rem, 13vw, 4rem);
-  }
-
-  .post-content {
-    margin-top: 50px;
-  }
-
   .post-image {
-    padding: 16px;
+    max-width: 520px;
   }
-
-  .post-image img {
-    aspect-ratio: 4 / 3;
+  .post-content {
+    margin-top: 64px;
+  }
+  .post-content section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-block: 30px;
   }
 }
 </style>

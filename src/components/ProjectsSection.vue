@@ -1,26 +1,22 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-import Polaroid from "@/components/Polaroid.vue";
-import { personalProjects, professionalProjects } from "@/data/projects";
+import { useI18n } from 'vue-i18n'
+import Polaroid from '@/components/Polaroid.vue'
+import { personalProjects, professionalProjects } from '@/data/projects'
 
-const { t } = useI18n();
+const { t } = useI18n()
 </script>
 
 <template>
-  <section class="projects-section">
+  <section id="projects" class="projects-section">
     <!-- PROFESSIONAL -->
     <div class="projects-group">
-      <p class="section-label">
-        {{ t("projects.header.label") }}
-      </p>
-
       <div class="group-header">
-        <h3>
-          {{ t("projects.professional.title") }}
-        </h3>
+        <h2>
+          {{ t('projects.professional.title') }}
+        </h2>
 
         <p>
-          {{ t("projects.professional.description") }}
+          {{ t('projects.professional.description') }}
         </p>
       </div>
 
@@ -33,6 +29,7 @@ const { t } = useI18n();
           :description="t(`projects.items.${project.translationKey}.description`)"
           :full-description="t(`projects.items.${project.translationKey}.fullDescription`)"
           :image-src="project.image"
+          :portrait="project.imageOrientation === 'portrait'"
           :rotation="project.rotation"
           :technologies="project.technologies"
         />
@@ -42,12 +39,12 @@ const { t } = useI18n();
     <!-- PERSONAL -->
     <div class="projects-group">
       <div class="group-header">
-        <h3>
-          {{ t("projects.personal.title") }}
-        </h3>
+        <h2>
+          {{ t('projects.personal.title') }}
+        </h2>
 
         <p>
-          {{ t("projects.personal.description") }}
+          {{ t('projects.personal.description') }}
         </p>
       </div>
 
@@ -60,6 +57,7 @@ const { t } = useI18n();
           :description="t(`projects.items.${project.translationKey}.description`)"
           :full-description="t(`projects.items.${project.translationKey}.fullDescription`)"
           :image-src="project.image"
+          :portrait="project.imageOrientation === 'portrait'"
           :rotation="project.rotation"
           :technologies="project.technologies"
         />
@@ -70,95 +68,75 @@ const { t } = useI18n();
 
 <style scoped>
 .projects-section {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 100px;
+  scroll-margin-top: 32px;
 }
-
-/* HEADER */
-.section-header {
-  margin-bottom: -32px;
+.group-header {
+  border-top: 1px solid var(--line);
+  padding-top: 30px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
 }
-
-.section-header h2 {
-  font-size: 2rem;
+.group-header h2 {
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
   margin: 0;
 }
-
-.section-header p {
-  margin-top: 10px;
-  color: #b5bfd1;
-  line-height: 1.6;
-}
-
-.section-label {
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #7f8aa3;
-  font-size: 0.8rem;
-  margin-bottom: 8px;
-}
-
-.section-description {
-  max-width: 650px;
-}
-
-/* GROUPS */
-.group-header {
-  margin-bottom: 24px;
-}
-
-.group-header h3 {
-  margin-bottom: 8px;
-  font-size: 1.3rem;
-  color: #d7dbe6;
-}
-
 .group-header p {
-  color: #a8b0c2;
-  line-height: 1.6;
+  margin: 0;
+  max-width: 56ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
-
-/* PROJECT GRIDS */
 .featured-grid,
 .stagger-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 260px));
-  justify-content: center;
-  gap: 28px 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px 34px;
   align-items: start;
-  justify-items: center;
+  padding: 10px 8px;
 }
-
-/* SUBTLE STAGGER POSITIONING */
-.p2 {
-  margin-top: 24px;
+.featured-grid > :nth-child(3n + 2),
+.stagger-grid > :nth-child(3n + 2) {
+  margin-top: 32px;
 }
-
-.p3 {
-  margin-top: 8px;
-}
-
-.p4 {
-  margin-top: 20px;
-}
-
-.p5 {
-  margin-top: 4px;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .featured-grid,
   .stagger-grid {
-    grid-template-columns: 1fr;
+    gap: 32px 22px;
   }
-
-  .p2,
-  .p3,
-  .p4,
-  .p5 {
+}
+@media (max-width: 760px) {
+  .group-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .featured-grid,
+  .stagger-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+  }
+  .featured-grid > :nth-child(3n + 2),
+  .stagger-grid > :nth-child(3n + 2) {
     margin-top: 0;
+  }
+  .projects-section {
+    gap: 64px;
+  }
+}
+@media (max-width: 480px) {
+  .featured-grid,
+  .stagger-grid {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 34px;
+    padding-inline: 15px;
   }
 }
 </style>

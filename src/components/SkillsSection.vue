@@ -1,124 +1,113 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
+import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n();
+const { t } = useI18n()
 </script>
 
 <template>
   <section class="skills-section">
     <div class="section-header">
-      <p class="section-label">
-        {{ t("skills.header.label") }}
-      </p>
-
       <h2>
-        {{ t("skills.header.title") }}
+        {{ t('skills.header.title') }}
       </h2>
     </div>
 
     <div class="skills-grid">
-      <sl-card class="skill-card">
+      <div class="skill-card">
         <h3>
-          {{ t("skills.items.backend.title") }}
+          {{ t('skills.items.backend.title') }}
+        </h3>
+
+        <span> Python • TypeScript • Java • Go </span>
+      </div>
+
+      <div class="skill-card">
+        <h3>
+          {{ t('skills.items.frameworks.title') }}
+        </h3>
+
+        <span> NestJS • Flask • Express • Chi </span>
+      </div>
+
+      <div class="skill-card">
+        <h3>
+          {{ t('skills.items.ai.title') }}
+        </h3>
+
+        <span> LangChain • LangGraph • Hugging Face • Transformers • RAG </span>
+      </div>
+
+      <div class="skill-card">
+        <h3>
+          {{ t('skills.items.infrastructure.title') }}
+        </h3>
+
+        <span> PostgreSQL • MySQL • MongoDB • Redis • RabbitMQ • Docker • Git </span>
+      </div>
+
+      <div class="skill-card">
+        <h3>
+          {{ t('skills.items.languages.title') }}
         </h3>
 
         <span>
-          Python • TypeScript • Java • Go
+          {{ t('skills.items.languages.technologies') }}
         </span>
-      </sl-card>
-
-      <sl-card class="skill-card">
-        <h3>
-          {{ t("skills.items.frameworks.title") }}
-        </h3>
-
-        <span>
-          NestJS • Flask • Express • Chi
-        </span>
-      </sl-card>
-
-      <sl-card class="skill-card">
-        <h3>
-          {{ t("skills.items.ai.title") }}
-        </h3>
-
-        <span>
-          LangChain • LangGraph • Hugging Face • Transformers • RAG
-        </span>
-      </sl-card>
-
-      <sl-card class="skill-card">
-        <h3>
-          {{ t("skills.items.infrastructure.title") }}
-        </h3>
-
-        <span>
-          PostgreSQL • MySQL • MongoDB • Redis • RabbitMQ • Docker • Git
-        </span>
-      </sl-card>
-
-      <sl-card class="skill-card">
-        <h3>
-          {{ t("skills.items.languages.title") }}
-        </h3>
-
-        <span>
-          {{ t("skills.items.languages.technologies") }}
-        </span>
-      </sl-card>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
 .skills-section {
-  margin-top: 80px;
+  margin-top: 112px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
 }
-
-.section-label {
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #8b93a7;
-  font-size: 0.8rem;
-  margin-bottom: 12px;
-}
-
-.section-header {
-  margin-bottom: 32px;
-}
-
 .section-header h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.3rem, 4vw, 3.25rem);
+  margin: 0;
+  max-width: 10ch;
 }
-
 .skills-grid {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
-
-.skill-card::part(base) {
-  height: 100%;
-  min-height: 150px;
-  background: rgba(18, 21, 30, 0.72);
-  backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 24px;
+.skill-card {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
 }
-
+.skill-card:first-child {
+  padding-top: 0;
+}
 .skill-card h3 {
-  margin: 0 0 18px;
-  min-height: 2.4em;
-  color: #f3f4f6;
-  font-size: 1.05rem;
-  line-height: 1.2;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
 }
-
 .skill-card span {
-  display: block;
-  color: #aeb7ca;
-  font-size: 0.92rem;
-  line-height: 1.7;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+@media (max-width: 760px) {
+  .skills-section {
+    margin-top: 72px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .section-header h2 {
+    max-width: none;
+  }
+  .skill-card {
+    gap: 20px;
+  }
 }
 </style>

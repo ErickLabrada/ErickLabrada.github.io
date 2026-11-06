@@ -57,6 +57,12 @@
       "description": "Technical experiments, developer tools, automation projects, and ideas built to learn, explore, or solve a problem I found interesting."
     },
     "items": {
+      "salesAgentAI": {
+        "description": "Configurable AI agents for hardware sales and product queries",
+        "fullDescription": "At MEDIAÉREA, I contributed to Sales Agent AI, a Python framework for hardware sales assistants. My work focused on reusable agent infrastructure: YAML configuration validated with Pydantic, agent registration and instantiation, conversation context, and an asynchronous LLM client supporting streamed responses through LiteLLM/Ollama. I also implemented an orchestrator that routes requests to specialized agents and a bounded tool-calling loop that connects product questions to the existing SmartQuery natural-language-to-SQL pipeline. I added CLI commands for interactive conversations and smoke checks, automated tests, validation scripts, and technical documentation.",
+        "challenges": "The main engineering challenge was coordinating model responses, conversation history, and tool execution while keeping agent configuration separate from runtime behavior. Routing and tool calls required handling malformed JSON, unavailable agents or tools, and execution errors. I worked on fallback behavior, bounded execution, and tests for these paths, including isolated tests that did not require a live model.",
+        "learnings": "This project strengthened my experience building reusable agent infrastructure rather than isolated prompts. I worked with asynchronous LLM integration, configuration-driven agent creation, request routing, tool execution, and testing model-dependent workflows. It also reinforced the value of CLI demonstrations and technical documentation for making an evolving AI system easier to validate and extend."
+      },
       "itzai": {
         "description": "Multi-component AI assistant for real-time business communication",
         "fullDescription": "During my internship at GILA Software, I worked on a customizable, multitenant AI assistant for real-time, natural-language-based communication. I contributed to the system architecture and built and orchestrated several components for the MVP, including speech-to-text, text-to-speech, RAG, and request-routing pipelines. Due to an NDA, I cannot share implementation details or source code, but GILA's official publications provide additional context about the project.",
@@ -98,12 +104,6 @@
         "fullDescription": "A rendering engine built from scratch using linear algebra concepts such as projection matrices, coordinate transformations, and rotation transforms for real-time rendering.",
         "challenges": "Without an existing graphics engine handling the underlying mathematics, I had to translate concepts from linear algebra into rendering behavior that could be observed and debugged.",
         "learnings": "Building the renderer from scratch gave me a deeper understanding of projection, rotation, coordinate systems, and the mathematics behind real-time graphics."
-      },
-      "sartreCat": {
-        "description": "Anonymous feedback collection platform for self-reflection",
-        "fullDescription": "A personal experiment built around a simple question: how do people perceive me when they can answer completely anonymously? The platform collects anonymous written responses and stores them for later analysis. It was designed with future NLP experimentation in mind, including sentiment analysis, clustering, and other techniques for identifying recurring themes and patterns.",
-        "challenges": "The challenge was keeping the feedback experience simple while collecting data in a structure that could support meaningful analysis later. Because the responses are subjective and unstructured, the design of the collection process also had to account for how those choices could affect future analysis.",
-        "learnings": "The project taught me to design data collection with downstream analysis in mind without overengineering the initial implementation. It also gave me a practical environment for exploring NLP over subjective, unstructured text."
       },
       "peerReview": {
         "description": "Automated analysis of merge requests and code review patterns",
@@ -159,6 +159,25 @@
         "title": "Languages",
         "description": "Comfortable communicating and collaborating in international engineering environments.",
         "technologies": "Spanish (Native) • English (Fluent)"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "roles": {
+      "mediaaerea": {
+        "title": "Full Stack Developer & AI Developer",
+        "type": "Full-time",
+        "start": "Jul 2025",
+        "end": "Present",
+        "location": "Ciudad Obregón, Sonora, Mexico · Hybrid"
+      },
+      "gila": {
+        "title": "AI Software Developer",
+        "type": "Internship",
+        "start": "Feb 2025",
+        "end": "May 2025",
+        "location": "Remote"
       }
     }
   }

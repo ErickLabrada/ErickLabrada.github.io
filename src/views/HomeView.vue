@@ -5,15 +5,15 @@
 
     <main class="home-container">
       <HomeHero />
-      <AppraisalSection />
       <ProjectsSection />
+      <ExperienceSection />
       <SkillsSection />
+      <AppraisalSection />
       <ContactSection />
       <HomeFooterQuote />
     </main>
   </div>
 </template>
-
 
 <script setup lang="ts">
 import NoiseOverlay from '@/components/NoiseOverlay.vue'
@@ -22,6 +22,7 @@ import HomeHero from '@/components/HomeHero.vue'
 import AppraisalSection from '@/components/AppraisalSection.vue'
 import HomeFooterQuote from '@/components/HomeFooterQuote.vue'
 import ProjectsSection from '@/components/ProjectsSection.vue'
+import ExperienceSection from '@/components/ExperienceSection.vue'
 import SkillsSection from '@/components/SkillsSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
 </script>
@@ -29,24 +30,14 @@ import ContactSection from '@/components/ContactSection.vue'
 <style scoped>
 .home-page {
   min-height: 100vh;
-
   position: relative;
-
-  background: #0c0e14;
-
-
-  color: #f3f4f6;
+  overflow: clip;
 }
-
 .home-container {
   position: relative;
-
   z-index: 1;
-
-  width: min(1100px, 92%);
-
+  width: var(--page-width);
   margin: 0 auto;
-
-  padding-bottom: 80px;
+  padding-bottom: 48px;
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -8,7 +8,12 @@ const copied = ref(false)
 let copyTimeout
 
 const copyEmail = async () => {
-  await navigator.clipboard.writeText(email)
+  try {
+    await navigator.clipboard.writeText(email)
+  } catch {
+    window.location.href = `mailto:${email}`
+    return
+  }
   copied.value = true
 
   window.clearTimeout(copyTimeout)
@@ -16,15 +21,12 @@ const copyEmail = async () => {
     copied.value = false
   }, 1800)
 }
+onUnmounted(() => window.clearTimeout(copyTimeout))
 </script>
 
 <template>
-  <section class="contact-section">
-    <sl-card class="contact-card">
-      <p class="section-label">
-        {{ t('contact.contact') }}
-      </p>
-
+  <section id="contact" class="contact-section">
+    <div class="contact-card">
       <h2>
         {{ t('contact.title') }}
       </h2>
@@ -101,132 +103,99 @@ const copyEmail = async () => {
           </span>
         </button>
       </div>
-    </sl-card>
+    </div>
   </section>
 </template>
 
 <style scoped>
 .contact-section {
-  width: 100%;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  position: relative;
+  margin-top: 100px;
+  padding: 72px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 32px;
 }
-
 .contact-card {
-  display: block;
-  width: 100%;
-}
-
-.contact-card::part(base) {
-  background: rgba(18, 21, 30, 0.72);
-  backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
-  padding: 48px 32px;
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
   text-align: center;
 }
-
-.section-label {
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #8b93a7;
-  font-size: 0.8rem;
-  margin-bottom: 12px;
-}
-
 .contact-card h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 20px;
+  font-size: clamp(3rem, 6vw, 5.3rem);
+  line-height: 1.03;
+  margin: 0 auto 24px;
+  max-width: 16ch;
 }
-
 .contact-description {
-  color: #c7cedb;
-  max-width: 700px;
+  color: var(--muted);
+  max-width: 60ch;
   margin: 0 auto 32px;
   line-height: 1.8;
 }
-
 .contact-actions {
-  display: grid;
-  justify-items: center;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
-
 .social-links {
   display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
+  gap: 32px;
 }
-
 .contact-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  text-decoration: none;
-  color: #f3f4f6;
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 12px 24px;
-  border-radius: 12px;
-  transition: 0.2s ease;
-  background: rgba(255, 255, 255, 0.02);
+  gap: 20px;
+  padding: 10px 0;
+  color: var(--paper);
   font: inherit;
+  font-size: 0.9rem;
   cursor: pointer;
+  background: transparent;
+  border: 0;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-color: var(--line);
+  transition: color 0.2s;
 }
-
+.contact-link:hover {
+  color: var(--accent);
+}
 .email-link {
-  position: relative;
-  width: min(100%, 430px);
-  gap: 14px;
-  justify-content: center;
-  padding-inline: 52px;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  padding: 16px 22px;
+  border-radius: 4px;
+  text-decoration: none;
 }
-
 .email-text {
-  min-width: 0;
   overflow-wrap: anywhere;
-  text-align: center;
+  min-width: 0;
+  text-align: left;
 }
-
 .copy-icon-wrap {
-  position: absolute;
-  right: 18px;
-  display: inline-flex;
-  color: #9ba4b8;
+  display: flex;
+  color: var(--accent);
+  flex-shrink: 0;
 }
-
 .copy-icon {
   width: 18px;
   height: 18px;
 }
-
-.contact-link:hover,
-.contact-link:focus-visible {
-  transform: translateY(-2px);
-  border-color: rgba(255,255,255,0.25);
-}
-
-@media (max-width: 768px) {
-  .contact-card::part(base) {
-    padding: 36px 20px;
+@media (max-width: 760px) {
+  .contact-section {
+    margin-top: 64px;
+    padding-block: 56px;
   }
-
-  .contact-link,
-  .social-links {
-    width: 100%;
+  .contact-description {
+    font-size: 0.95rem;
   }
-
-  .social-links {
-    display: grid;
-  }
-
   .email-link {
-    padding-inline: 42px;
-  }
-
-  .copy-icon-wrap {
-    right: 14px;
+    font-size: 0.8rem;
+    padding-inline: 16px;
+    gap: 12px;
   }
 }
 </style>

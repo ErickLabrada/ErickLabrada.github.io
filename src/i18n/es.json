@@ -57,6 +57,12 @@
       "description": "Experimentos técnicos, herramientas para desarrolladores, proyectos de automatización e ideas creadas para aprender, explorar o resolver algún problema que me resultara interesante."
     },
     "items": {
+      "salesAgentAI": {
+        "description": "Agentes de IA configurables para ventas de hardware y consultas de productos",
+        "fullDescription": "En MEDIAÉREA, contribuí a Sales Agent AI, un framework en Python para asistentes de ventas de hardware. Mi trabajo se centró en infraestructura reutilizable para agentes: configuración YAML validada con Pydantic, registro e instanciación de agentes, contexto de conversación y un cliente LLM asíncrono con respuestas en streaming mediante LiteLLM/Ollama. También implementé un orquestador que dirige solicitudes a agentes especializados y un ciclo acotado de llamadas a herramientas que conecta las preguntas sobre productos con el pipeline existente de lenguaje natural a SQL, SmartQuery. Añadí comandos de CLI para conversaciones interactivas y pruebas de humo, pruebas automatizadas, scripts de validación y documentación técnica.",
+        "challenges": "El principal reto de ingeniería fue coordinar las respuestas del modelo, el historial de conversación y la ejecución de herramientas, manteniendo la configuración de los agentes separada de su comportamiento en ejecución. El enrutamiento y las llamadas a herramientas requerían manejar JSON malformado, agentes o herramientas no disponibles y errores de ejecución. Trabajé en mecanismos de respaldo, ejecución acotada y pruebas de estos flujos, incluyendo pruebas aisladas que no requerían un modelo en ejecución.",
+        "learnings": "Este proyecto fortaleció mi experiencia construyendo infraestructura reutilizable para agentes, más allá de prompts aislados. Trabajé con integración asíncrona de LLM, creación de agentes basada en configuración, enrutamiento de solicitudes, ejecución de herramientas y pruebas de flujos que dependen de modelos. También reforzó el valor de las demostraciones por CLI y la documentación técnica para facilitar la validación y extensión de un sistema de IA en evolución."
+      },
       "itzai": {
         "description": "Asistente de IA multicomponente para comunicación empresarial en tiempo real",
         "fullDescription": "Durante mi internship en GILA Software, trabajé en un asistente de IA personalizable y multitenant para comunicación en tiempo real mediante lenguaje natural. Contribuí a la arquitectura del sistema y desarrollé y orquesté varios componentes del MVP, incluyendo pipelines de speech-to-text, text-to-speech, RAG y enrutamiento de solicitudes. Debido a un acuerdo de confidencialidad, no puedo compartir detalles de implementación ni el código fuente, pero las publicaciones oficiales de GILA proporcionan contexto adicional sobre el proyecto.",
@@ -98,12 +104,6 @@
         "fullDescription": "Un motor de renderizado construido desde cero utilizando conceptos de álgebra lineal como matrices de proyección, transformaciones de coordenadas y transformaciones de rotación para renderizado en tiempo real.",
         "challenges": "Sin un motor gráfico existente que manejara las matemáticas subyacentes, tuve que convertir conceptos de álgebra lineal en comportamientos de renderizado que pudieran observarse y depurarse.",
         "learnings": "Construir el renderer desde cero me permitió comprender mejor la proyección, rotación, los sistemas de coordenadas y las matemáticas detrás de los gráficos en tiempo real."
-      },
-      "sartreCat": {
-        "description": "Plataforma anónima de recopilación de opiniones para la autorreflexión",
-        "fullDescription": "Un experimento personal construido alrededor de una pregunta sencilla: ¿cómo me perciben las personas cuando pueden responder de forma completamente anónima? La plataforma recopila respuestas escritas anónimas y las almacena para su posterior análisis. Fue diseñada pensando en futuros experimentos de NLP, incluyendo análisis de sentimiento, clustering y otras técnicas para identificar temas y patrones recurrentes.",
-        "challenges": "El desafío fue mantener sencilla la experiencia de proporcionar opiniones mientras se recopilaban los datos en una estructura que pudiera permitir análisis significativos posteriormente. Debido a que las respuestas son subjetivas y no estructuradas, el diseño del proceso de recopilación también debía considerar cómo estas decisiones podrían afectar el análisis futuro.",
-        "learnings": "El proyecto me enseñó a diseñar la recopilación de datos teniendo en cuenta el análisis posterior sin sobreingenierizar la implementación inicial. También me proporcionó un entorno práctico para explorar NLP sobre texto subjetivo y no estructurado."
       },
       "peerReview": {
         "description": "Análisis automatizado de merge requests y patrones de revisión de código",
@@ -159,6 +159,25 @@
         "title": "Idiomas",
         "description": "Capacidad para comunicarme y colaborar en entornos internacionales de ingeniería.",
         "technologies": "Español (Nativo) • Inglés (Fluido)"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "roles": {
+      "mediaaerea": {
+        "title": "Desarrollador Full Stack y de IA",
+        "type": "Tiempo completo",
+        "start": "Jul 2025",
+        "end": "Actualidad",
+        "location": "Ciudad Obregón, Sonora, México · Híbrido"
+      },
+      "gila": {
+        "title": "Desarrollador de Software de IA",
+        "type": "Prácticas profesionales",
+        "start": "Feb 2025",
+        "end": "May 2025",
+        "location": "Remoto"
       }
     }
   }

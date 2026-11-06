@@ -8,6 +8,7 @@ import opengo from "@/assets/projects/open-go-readme.png";
 import engine3d from "@/assets/projects/3D_Engine.gif";
 import facecat from "@/assets/projects/facecat.png";
 import ecommerceAdmin from "@/assets/projects/ecommerceAdmin.png";
+import salesagent from "@/assets/projects/sales_agent.png";
 import ecommerceStorefront from "@/assets/projects/ecommerceStorefront.png";
 
 export type ProjectCategory = "professional" | "personal";
@@ -18,6 +19,7 @@ export type Project = {
   translationKey: string;
   category: ProjectCategory;
   image: string;
+  imageOrientation?: "portrait";
   technologies: string[];
   rotation: number;
   visibleInArchive: boolean;
@@ -75,6 +77,17 @@ export const projects: Project[] = [
     visibleInArchive: true,
   },
   {
+    slug: "sales-agent-ai",
+    title: "Sales Agent AI",
+    translationKey: "salesAgentAI",
+    category: "professional",
+    image: salesagent,
+    imageOrientation: "portrait",
+    technologies: ["Python", "Ollama", "LiteLLM", "Pydantic", "Typer"],
+    rotation: 0.7,
+    visibleInArchive: true,
+  },
+  {
     slug: "omniaerea",
     title: "OmniAerea",
     translationKey: "omniAerea",
@@ -93,16 +106,6 @@ export const projects: Project[] = [
     technologies: ["Java"],
     rotation: -1.4,
     visibleInArchive: false,
-  },
-  {
-    slug: "sartres-cat",
-    title: "Sartre's Cat",
-    translationKey: "sartreCat",
-    category: "personal",
-    image: sartre,
-    technologies: ["Vue", "TypeScript", "Python", "Hugging Face", "Docker"],
-    rotation: -0.9,
-    visibleInArchive: true,
   },
   {
     slug: "peer-review",

@@ -8,22 +8,15 @@ const { t } = useI18n()
 
 <template>
   <section class="hero-section">
-    <sl-card class="hero-card">
+    <div class="hero-card">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="hero-label">
-            {{ t('homeHero.label') }}
-          </p>
-
           <h1>
             {{ t('homeHero.title') }}
           </h1>
 
           <div class="hero-meta">
-            <span
-              class="location-icon"
-              aria-hidden="true"
-            ></span>
+            <span class="location-icon" aria-hidden="true"></span>
 
             <span>
               {{ t('homeHero.location') }}
@@ -34,13 +27,7 @@ const { t } = useI18n()
             {{ t('homeHero.description') }}
           </p>
 
-          <a
-            :href="cv"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            class="primary-button"
-          >
+          <a :href="cv" target="_blank" rel="noopener noreferrer" download class="primary-button">
             <svg
               class="download-icon"
               aria-hidden="true"
@@ -61,160 +48,147 @@ const { t } = useI18n()
           </a>
         </div>
 
-        <figure class="hero-portrait">
-          <img
-            :src="profilePhoto"
-            alt="Erick Labrada"
-          />
-        </figure>
+        <div class="portrait-space">
+          <svg class="orbital-lines" viewBox="0 0 500 500" fill="none" aria-hidden="true">
+            <circle cx="250" cy="250" r="218" />
+            <ellipse cx="250" cy="250" rx="242" ry="95" transform="rotate(-34 250 250)" />
+            <path class="orbit-star" d="M429 102v18m-9-9h18M65 337v12m-6-6h12" />
+            <circle class="orbit-point" cx="355" cy="59" r="4" />
+          </svg>
+          <figure class="hero-portrait">
+            <img :src="profilePhoto" alt="Erick Labrada" />
+            <figcaption>{{ t('homeHero.label') }}</figcaption>
+          </figure>
+        </div>
       </div>
-    </sl-card>
+    </div>
   </section>
 </template>
 
 <style scoped>
 .hero-section {
-  margin-top: 40px;
+  padding: 88px 0 104px;
 }
-
-.hero-card::part(base) {
-  backdrop-filter: blur(18px);
-  background: rgba(18, 21, 30, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: 48px;
-}
-
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
-  gap: 48px;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 64px;
   align-items: center;
 }
-
 .hero-copy {
   min-width: 0;
 }
-
-.hero-label {
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #8b93a7;
-  font-size: 0.8rem;
-  margin-bottom: 16px;
-}
-
 h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1;
+  max-width: 9ch;
+  margin: 0 0 24px;
+  font-size: clamp(3.6rem, 6.8vw, 6rem);
+  line-height: 0.99;
+}
+.hero-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.875rem;
   margin-bottom: 24px;
 }
-
-.hero-meta {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  margin: -10px 0 24px;
-  color: #9ba4b8;
-  font-size: 0.95rem;
-}
-
 .location-icon {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  border: 2px solid currentColor;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-}
-
-.location-icon::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 4px;
-  height: 4px;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
   border-radius: 50%;
-  background: currentColor;
 }
-
 .hero-description {
-  max-width: 640px;
-  font-size: 1.1rem;
+  max-width: 49ch;
+  color: var(--muted);
+  font-size: 1.08rem;
   line-height: 1.8;
-  color: #c7cedb;
-  margin-bottom: 32px;
+  margin: 0 0 32px;
 }
-
-.hero-warning {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 32px;
-  color: #8b93a7;
-  font-size: 0.95rem;
-}
-
 .primary-button {
   display: inline-flex;
+  gap: 12px;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border: none;
-  background: #f3f4f6;
-  color: #0c0e14;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.2s ease;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 14px 24px;
+  border-radius: 4px;
+  font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
+  transition: background 0.2s;
 }
-
+.primary-button:hover {
+  background: var(--accent);
+}
 .download-icon {
   width: 18px;
   height: 18px;
-  flex: 0 0 auto;
 }
-
-.primary-button:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+.portrait-space {
+  position: relative;
+  padding: 24px;
 }
-
+.orbital-lines {
+  position: absolute;
+  width: 135%;
+  height: 135%;
+  left: -17.5%;
+  top: -17.5%;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.orbit-star {
+  stroke: var(--accent);
+}
+.orbit-point {
+  fill: var(--accent);
+  stroke: none;
+}
 .hero-portrait {
-  width: min(100%, 320px);
-  justify-self: center;
-  margin: 0;
-  padding: 12px 12px 52px;
-  background: #f5f1e8;
-  border: 1px solid #d9d4c8;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
-  transform: rotate(2deg);
-}
-
-.hero-portrait img {
-  display: block;
+  position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  max-width: 334px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 12px 12px 20px;
+  box-shadow: 0 24px 55px #0005;
+  transform: rotate(5deg);
 }
-
-@media (max-width: 860px) {
-  .hero-card::part(base) {
-    padding: 36px 24px;
+.hero-portrait img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.75);
+}
+figcaption {
+  font-family: 'Caveat', cursive;
+  font-size: 1.45rem;
+  text-align: center;
+  color: var(--ink);
+  padding-top: 15px;
+  line-height: 1.2;
+}
+@media (max-width: 760px) {
+  .hero-section {
+    padding: 48px 0 64px;
   }
-
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 46px;
   }
-
-  .hero-portrait {
-    order: -1;
-    width: min(100%, 280px);
+  h1 {
+    max-width: 11ch;
+    font-size: clamp(3.6rem, 12vw, 5rem);
+  }
+  .portrait-space {
+    width: min(78%, 330px);
+    justify-self: center;
+    padding: 15px;
+  }
+  .hero-description {
+    font-size: 1rem;
   }
 }
 </style>
