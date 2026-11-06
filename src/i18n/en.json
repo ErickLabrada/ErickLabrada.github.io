@@ -13,8 +13,8 @@
   "homeHero": {
     "label": "Portfolio and Projects Archive",
     "title": "Hello World, I'm Erick.",
-    "description": "Backend and AI-focused engineer building production systems, automation tools, and AI-powered applications. I turn complex workflows into practical, maintainable software.",
-    "cv": "Resume",
+    "description": "I build backend services, AI applications, and developer tools with Python, TypeScript, and Go. My work spans production ticketing systems, e-commerce services, and LLM orchestration.",
+    "cv": "Download résumé",
     "location": "Mexico"
   },
   "homeInfoGrid": {
@@ -50,15 +50,15 @@
     },
     "professional": {
       "title": "Professional Work",
-      "description": "Systems built for real teams, users, and business requirements, often under production and operational constraints."
+      "description": "Explore my contributions to production systems, legacy migrations, e-commerce services, and AI applications."
     },
     "personal": {
       "title": "Experiments & Side Projects",
-      "description": "Technical experiments, developer tools, automation projects, and ideas built to learn, explore, or solve a problem I found interesting."
+      "description": "Developer tools, automation, and machine learning experiments, with notes on the problems, constraints, and lessons behind them."
     },
     "items": {
       "salesAgentAI": {
-        "description": "Configurable AI agents for hardware sales and product queries",
+        "description": "Python agent infrastructure with configuration, routing, streaming, and bounded tool execution",
         "fullDescription": "At MEDIAÉREA, I contributed to Sales Agent AI, a Python framework for hardware sales assistants. My work focused on reusable agent infrastructure: YAML configuration validated with Pydantic, agent registration and instantiation, conversation context, and an asynchronous LLM client supporting streamed responses through LiteLLM/Ollama. I also implemented an orchestrator that routes requests to specialized agents and a bounded tool-calling loop that connects product questions to the existing SmartQuery natural-language-to-SQL pipeline. I added CLI commands for interactive conversations and smoke checks, automated tests, validation scripts, and technical documentation.",
         "challenges": "The main engineering challenge was coordinating model responses, conversation history, and tool execution while keeping agent configuration separate from runtime behavior. Routing and tool calls required handling malformed JSON, unavailable agents or tools, and execution errors. I worked on fallback behavior, bounded execution, and tests for these paths, including isolated tests that did not require a live model.",
         "learnings": "This project strengthened my experience building reusable agent infrastructure rather than isolated prompts. I worked with asynchronous LLM integration, configuration-driven agent creation, request routing, tool execution, and testing model-dependent workflows. It also reinforced the value of CLI demonstrations and technical documentation for making an evolving AI system easier to validate and extend."
@@ -70,7 +70,7 @@
         "learnings": "This was where I developed my first substantial practical experience with AI. I gained hands-on experience with LLM applications, RAG, the Hugging Face ecosystem, speech pipelines, system orchestration, and designing AI systems around real project constraints."
       },
       "ticketReceiver": {
-        "description": "Production task management system for distributed workflows",
+        "description": "Production ticketing maintenance, new features, and a real-time workload dashboard",
         "fullDescription": "After joining MediaAerea, I was assigned to support, stabilize, and develop new features for an actively used and unstable production system within a distributed, multi-tenant ticketing platform. Working with the team, I helped improve system reliability while continuing to deliver new functionality. One of the main additions was a real-time dashboard that provided accessible, data-driven insights into team productivity, workload, and ticket performance. These improvements contributed to a 34% reduction in average ticket resolution time, a 35% reduction in closure time, a 118% increase in tickets resolved before their promised date, and a 64% increase in tickets resolved before their deadline.",
         "challenges": "The main challenge was understanding an unfamiliar and largely undocumented codebase while learning the business rules behind it. At the same time, the system was actively used by clients, requiring hotfixes and new features to be delivered without disrupting ongoing operations. This meant balancing reliability, development speed, and changing business requirements while working with production data and workflows.",
         "learnings": "This project gave me substantial experience working with production software: troubleshooting live systems, shipping patches and features, collaborating with DevOps, analyzing operational data, optimizing existing code, and working within legacy systems where business logic is not always explicitly documented."
@@ -112,7 +112,7 @@
         "learnings": "The project strengthened my experience with engineering analytics, data extraction from development workflows, and metric design. It also reinforced the importance of treating metrics as context for decision-making rather than as substitutes for human judgment."
       },
       "openGoReadme": {
-        "description": "CLI tool that generates README files from any repository",
+        "description": "Go CLI combining AST-based repository summaries with LLM-assisted documentation",
         "fullDescription": "A Go CLI tool that automatically generates structured README.md files from software repositories. It analyzes repository structure and source code using AST-based summaries, selects relevant files through an LLM, and generates documentation through a two-pass, context-aware pipeline.",
         "challenges": "The main challenge was determining which parts of a repository provide useful context for documentation. Passing an entire codebase to an LLM is inefficient and introduces unnecessary noise, so the system combines deterministic AST analysis with LLM-based file selection before generating the final documentation.",
         "learnings": "The project taught me how to combine deterministic program analysis with generative AI in a single pipeline. It also gave me practical experience with context selection for LLM applications and developer tooling in Go."
